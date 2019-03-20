@@ -1,5 +1,5 @@
 package com.aishang.service;
 
-public class IUserService {
+public interface IUserService {
 
 }
