@@ -7,6 +7,7 @@
 --%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -21,7 +22,7 @@
 <body>
 
 <div class="sign-logo w1200">
-    <h1 class="zl-h11"><a href="index.html" title="宅客微购"><img src="images/zl2-01.gif" /></a></h1>
+    <h1 class="zl-h11"><a href="${pageContext.request.contextPath}/index.html" title="宅客微购"><img src="images/zl2-01.gif" /></a></h1>
 </div>
 <form action="${pageContext.request.contextPath}/registration.jsp" method="post">
 <div class="sign-con w1200">
@@ -34,8 +35,8 @@
         <button class="slig-btn">登录</button>
         <p>已有账号？请<a href="#">登录</a><a href="#" class="wj">忘记密码？</a></p>
         <div class="sign-qx">
-            <a href="#" class="f-r"><img src="images/sign-xinlan.gif" /></a>
-            <a href="#" class="qq f-r"><img src="images/sign-qq.gif" /></a>
+            <a href="${pageContext.request.contextPath}" class="f-r"><img src="images/sign-xinlan.gif" /></a>
+            <a href="${pageContext.request.contextPath}" class="qq f-r"><img src="images/sign-qq.gif" /></a>
             <div style="clear:both;"></div>
         </div>
     </div>
