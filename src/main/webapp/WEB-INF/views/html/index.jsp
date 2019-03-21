@@ -35,7 +35,7 @@
 <div class="logo-search w1200">
     <div class="logo-box f-l">
         <div class="logo f-l">
-            <a href="${pageContext.request.contextPath}/index.html" title="中林logo"><img src="images/zl2-01.gif" /></a>
+            <a href="${pageContext.request.contextPath}/index.html" title="中林logo"><img src="${pageContext.request.contextPath}/images/zl2-01.gif" /></a>
         </div>
         <div class="shangjia f-l">
             <a href="${pageContext.request.contextPath}/JavaScript:;" class="shangjia-a1">[ 切换城市 ]</a>
@@ -660,7 +660,7 @@
         <div class="zl-con-right f-l">
             <div class="zl-rbox lihover">
                 <div class="rbox-left f-l">
-                    <div class="rbox-ltop"><a href="${pageContext.request.contextPath}/商品详情.html"><img src="images/zl2-48.png" /></a></div>
+                    <div class="rbox-ltop"><a href="${pageContext.request.contextPath}/商品详情.html"><img src="${pageContext.request.contextPath}/images/zl2-48.png" /></a></div>
                     <ul class="rbox-lft">
                         <li>
                             <a href="${pageContext.request.contextPath}/商品详情.html" class="a1">周黑鸭 鸭翅</a>
@@ -689,17 +689,17 @@
                     <li>
                         <a href="商品详情.html" class="a1">DNZ新西兰进口蜂蜜</a>
                         <p>￥199.00/500ML</p>
-                        <a href="商品详情.html" class="a2"><img src="images/zl2-42.gif" /></a>
+                        <a href="商品详情.html" class="a2"><img src="${pageContext.request.contextPath}/images/zl2-42.gif" /></a>
                     </li>
                     <li>
                         <a href="商品详情.html" class="a1">可口可乐樱桃味碳酸饮料</a>
                         <p>￥5.90/罐</p>
-                        <a href="商品详情.html" class="a2"><img src="images/zl2-48.gif" /></a>
+                        <a href="商品详情.html" class="a2"><img src="${pageContext.request.contextPath}/images/zl2-48.gif" /></a>
                     </li>
                     <li>
                         <a href="商品详情.html" class="a1">马爹利蓝带干邑白兰地</a>
                         <p>￥3450.00/件</p>
-                        <a href="商品详情.html" class="a2"><img src="images/zl2-43.gif" /></a>
+                        <a href="商品详情.html" class="a2"><img src="${pageContext.request.contextPath}/images/zl2-43.gif" /></a>
                     </li>
                     <div style="clear:both;"></div>
                 </ul>
@@ -707,22 +707,22 @@
             </div>
             <div class="zl-rbox lihover">
                 <div class="rbox-left f-l">
-                    <div class="rbox-ltop"><a href="商品详情.html"><img src="images/zl2-48.png" /></a></div>
+                    <div class="rbox-ltop"><a href="商品详情.html"><img src="${pageContext.request.contextPath}/images/zl2-48.png" /></a></div>
                     <ul class="rbox-lft">
                         <li>
                             <a href="商品详情.html" class="a1">特产中国山西大枣</a>
                             <p>￥25.00/袋</p>
-                            <a href="商品详情.html" class="a2"><img src="images/zl2-44.gif" /></a>
+                            <a href="商品详情.html" class="a2"><img src="${pageContext.request.contextPath}/images/zl2-44.gif" /></a>
                         </li>
                         <li>
                             <a href="商品详情.html" class="a1">Wonderful 盐焗开心果</a>
                             <p>￥39.00/袋</p>
-                            <a href="商品详情.html" class="a2"><img src="images/zl2-45.gif" /></a>
+                            <a href="商品详情.html" class="a2"><img src="${pageContext.request.contextPath}/images/zl2-45.gif" /></a>
                         </li>
                         <li>
                             <a href="商品详情.html" class="a1">周黑鸭 鸭翅</a>
                             <p>￥25.00/袋</p>
-                            <a href="商品详情.html" class="a2"><img src="images/zl2-46.gif" /></a>
+                            <a href="商品详情.html" class="a2"><img src="${pageContext.request.contextPath}/images/zl2-46.gif" /></a>
                         </li>
                         <div style="clear:both;"></div>
                     </ul>
@@ -731,22 +731,22 @@
                     <li>
                         <a href="商品详情.html" class="a1">DNZ新西兰进口蜂蜜</a>
                         <p>￥199.00/500ML</p>
-                        <a href="商品详情.html" class="a2"><img src="images/zl2-42.gif" /></a>
+                        <a href="商品详情.html" class="a2"><img src="${pageContext.request.contextPath}/images/zl2-42.gif" /></a>
                     </li>
                     <li>
                         <a href="商品详情.html" class="a1">马爹利蓝带干邑白兰地</a>
                         <p>￥3450.00/件</p>
-                        <a href="商品详情.html" class="a2"><img src="images/zl2-43.gif" /></a>
+                        <a href="商品详情.html" class="a2"><img src="${pageContext.request.contextPath}/images/zl2-43.gif" /></a>
                     </li>
                     <li>
                         <a href="商品详情.html" class="a1">人头马XO香槟干邑白兰地</a>
                         <p>￥1950.00/件</p>
-                        <a href="商品详情.html" class="a2"><img src="images/zl2-47.gif" /></a>
+                        <a href="商品详情.html" class="a2"><img src="${pageContext.request.contextPath}/images/zl2-47.gif" /></a>
                     </li>
                     <li>
                         <a href="商品详情.html" class="a1">可口可乐樱桃味碳酸饮料</a>
                         <p>￥5.90/罐</p>
-                        <a href="商品详情.html" class="a2"><img src="images/zl2-48.gif" /></a>
+                        <a href="商品详情.html" class="a2"><img src="${pageContext.request.contextPath}/images/zl2-48.gif" /></a>
                     </li>
                     <div style="clear:both;"></div>
                 </ul>
@@ -762,10 +762,10 @@
     <div class="zl-title1" style="border-color:#FF9A02;">
         <h3 class="title1-h3 f-l">2F  餐饮娱乐</h3>
         <ul class="title1-ul1 title1-ul2 f-r">
-            <li class="current"><a href="JavaScript:;">特色火锅</a></li>
-            <li><a href="JavaScript:;">极品中餐</a></li>
-            <li><a href="JavaScript:;">西式面点</a></li>
-            <li><a href="JavaScript:;">香锅烧烤</a></li>
+            <li class="current"><a href="${pageContext.request.contextPath}/JavaScript:;">特色火锅</a></li>
+            <li><a href="${pageContext.request.contextPath}/JavaScript:;">极品中餐</a></li>
+            <li><a href="${pageContext.request.contextPath}/JavaScript:;">西式面点</a></li>
+            <li><a href="${pageContext.request.contextPath}/JavaScript:;">香锅烧烤</a></li>
             <div style="clear:both;"></div>
         </ul>
         <div style="clear:both;"></div>
@@ -773,16 +773,16 @@
     <div class="zl-con">
         <div class="zl-con-left f-l" style="background:#FBEAD0;">
             <div class="zl-tu">
-                <img src="images/zl2-34.gif" class="zl-img" />
+                <img src="${pageContext.request.contextPath}/images/zl2-34.gif" class="zl-img" />
             </div>
             <p class="zl-lp" style="color:#FF9901;">
                 周末，嗨起来</br>
                 兄弟，躁起来
             </p>
             <ul class="zl-lhover" style=" background:#FF9A02;">
-                <li><a href="JavaScript:;">山珍海味</a></li>
-                <li><a href="JavaScript:;">度假酒店</a></li>
-                <li><a href="JavaScript:;">青年旅社</a></li>
+                <li><a href="${pageContext.request.contextPath}/JavaScript:;">山珍海味</a></li>
+                <li><a href="${pageContext.request.contextPath}/JavaScript:;">度假酒店</a></li>
+                <li><a href="${pageContext.request.contextPath}/JavaScript:;">青年旅社</a></li>
                 <div style="clear:both;"></div>
             </ul>
         </div>
@@ -790,75 +790,237 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-57.png" /></a>
+                        <a href="商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-57.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="商品详情（餐饮）.html">豆米锅</a>
                     </div>
                     <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
                         <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
                         <p>电话：023-63310530</p>
                     </div>
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-51.png" /></a>
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-51.png" /></a>
                     </div>
                     <div class="sy-tit1">
-                        <a href="商品详情（餐饮）.html">k1刷锅达人</a>
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">k1刷锅达人</a>
                     </div>
                     <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
                         <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
                         <p>电话：023-63310530</p>
                     </div>
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-52.png" /></a>
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-52.png" /></a>
                     </div>
                     <div class="sy-tit1">
-                        <a href="商品详情（餐饮）.html">蜀公馆成都老火锅</a>
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">蜀公馆成都老火锅</a>
                     </div>
                     <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
                         <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
                         <p>电话：023-63310530</p>
                     </div>
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-53.png" /></a>
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-53.png" /></a>
                     </div>
                     <div class="sy-tit1">
-                        <a href="v">小肥羊</a>
+                        <a href="${pageContext.request.contextPath}/v">小肥羊</a>
                     </div>
                     <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
                         <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
                         <p>电话：023-63310530</p>
                     </div>
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-54.png" /></a>
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-54.png" /></a>
                     </div>
                     <div class="sy-tit1">
-                        <a href="商品详情（餐饮）.html">重庆刘一手老火锅</a>
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">重庆刘一手老火锅</a>
                     </div>
                     <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
                         <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
                         <p>电话：023-63310530</p>
                     </div>
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-55.png" /></a>
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-55.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">好骨气火锅</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <div style="clear:both;"></div>
+            </ul>
+            <ul class="zl-rul1 lihover">
+                <li>
+                    <div class="sy-tu1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-53.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">豆米锅</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="sy-tu1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-52.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">蜀公馆成都老火锅</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="sy-tu1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-53.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">小肥羊</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="sy-tu1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-54.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">重庆刘一手老火锅</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="sy-tu1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-51.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">k1刷锅达人</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="sy-tu1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-55.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">好骨气火锅</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <div style="clear:both;"></div>
+            </ul>
+            <ul class="zl-rul1 lihover">
+                <li>
+                    <div class="sy-tu1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-52.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">蜀公馆成都老火锅</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="sy-tu1">
+                        <a href="商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-54.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">重庆刘一手老火锅</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="sy-tu1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-53.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">豆米锅</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="sy-tu1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-51.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">k1刷锅达人</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="sy-tu1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-55.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="商品详情（餐饮）.html">好骨气火锅</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="${pageContext.request.contextPath}/商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="sy-tu1">
+                        <a href="${pageContext.request.contextPath}/商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-53.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="商品详情（餐饮）.html">小肥羊</a>
                     </div>
                     <div class="sy-tit2">
                         <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
@@ -871,20 +1033,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-53.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="商品详情（餐饮）.html">豆米锅</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-52.png" /></a>
+                        <a href="商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-52.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="商品详情（餐饮）.html">蜀公馆成都老火锅</a>
@@ -897,7 +1046,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-53.png" /></a>
+                        <a href="商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-53.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="商品详情（餐饮）.html">小肥羊</a>
@@ -910,75 +1059,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-54.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="商品详情（餐饮）.html">重庆刘一手老火锅</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-51.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="商品详情（餐饮）.html">k1刷锅达人</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-55.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="商品详情（餐饮）.html">好骨气火锅</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <div style="clear:both;"></div>
-            </ul>
-            <ul class="zl-rul1 lihover">
-                <li>
-                    <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-52.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="商品详情（餐饮）.html">蜀公馆成都老火锅</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-54.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="商品详情（餐饮）.html">重庆刘一手老火锅</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-53.png" /></a>
+                        <a href="商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-53.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="商品详情（餐饮）.html">豆米锅</a>
@@ -991,88 +1072,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-51.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="商品详情（餐饮）.html">k1刷锅达人</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-55.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="商品详情（餐饮）.html">好骨气火锅</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-53.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="商品详情（餐饮）.html">小肥羊</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <div style="clear:both;"></div>
-            </ul>
-            <ul class="zl-rul1 lihover">
-                <li>
-                    <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-52.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="商品详情（餐饮）.html">蜀公馆成都老火锅</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-53.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="商品详情（餐饮）.html">小肥羊</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-53.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="商品详情（餐饮）.html">豆米锅</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="商品详情（餐饮）.html">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-54.png" /></a>
+                        <a href="商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-54.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="商品详情（餐饮）.html">重庆刘一手老火锅</a>
@@ -1085,7 +1085,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-55.png" /></a>
+                        <a href="商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-55.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="商品详情（餐饮）.html">好骨气火锅</a>
@@ -1098,7 +1098,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="商品详情（餐饮）.html"><img src="images/zl2-51.png" /></a>
+                        <a href="商品详情（餐饮）.html"><img src="${pageContext.request.contextPath}/images/zl2-51.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="商品详情（餐饮）.html">k1刷锅达人</a>
@@ -1134,7 +1134,7 @@
     <div class="zl-con">
         <div class="zl-con-left f-l" style="background:#F4FCEF;">
             <div class="zl-tu">
-                <img src="images/zl2-35.gif" class="zl-img" />
+                <img src="${pageContext.request.contextPath}/images/zl2-35.gif" class="zl-img" />
             </div>
             <p class="zl-lp" style="color:#73B42D;">
                 清洁维修搬家？</br>
@@ -1161,7 +1161,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="JavaScript:;"><img src="images/zl2-56.png" /></a>
+                        <a href="JavaScript:;"><img src="${pageContext.request.contextPath}/images/zl2-56.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="JavaScript:;">重庆保全净清洁服务公司</a>
@@ -1174,7 +1174,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="JavaScript:;"><img src="images/zl2-57.png" /></a>
+                        <a href="JavaScript:;"><img src="${pageContext.request.contextPath}/images/zl2-57.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="JavaScript:;">怡乐老人护理院</a>
@@ -1187,7 +1187,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-58.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-58.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">UME国际管家中心</a>
@@ -1200,7 +1200,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-59.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-59.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆爱车洗车公司</a>
@@ -1213,7 +1213,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-60.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-60.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">智乐园宝贝托管中心</a>
@@ -1226,7 +1226,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-57.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-57.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆保全净清洁服务公司</a>
@@ -1242,7 +1242,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-58.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-58.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">UME国际管家中心</a>
@@ -1255,7 +1255,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-57.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-57.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">怡乐老人护理院</a>
@@ -1268,7 +1268,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-60.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-60.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">智乐园宝贝托管中心</a>
@@ -1281,7 +1281,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-59.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-59.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆爱车洗车公司</a>
@@ -1294,7 +1294,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-57.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-57.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆保全净清洁服务公司</a>
@@ -1307,7 +1307,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-56.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-56.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆保全净清洁服务公司</a>
@@ -1323,7 +1323,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-60.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-60.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">智乐园宝贝托管中心</a>
@@ -1336,7 +1336,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-56.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-56.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆保全净清洁服务公司</a>
@@ -1349,7 +1349,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-59.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-59.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆爱车洗车公司</a>
@@ -1362,7 +1362,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-57.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-57.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆保全净清洁服务公司</a>
@@ -1375,7 +1375,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-57.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-57.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">怡乐老人护理院</a>
@@ -1388,7 +1388,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-58.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-58.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">UME国际管家中心</a>
@@ -1404,7 +1404,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-58.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-58.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">UME国际管家中心</a>
@@ -1417,7 +1417,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-57.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-57.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">怡乐老人护理院</a>
@@ -1430,7 +1430,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-57.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-57.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆保全净清洁服务公司</a>
@@ -1443,7 +1443,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-59.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-59.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆爱车洗车公司</a>
@@ -1456,7 +1456,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-60.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-60.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">智乐园宝贝托管中心</a>
@@ -1469,7 +1469,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-56.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-56.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆保全净清洁服务公司</a>
@@ -1485,7 +1485,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-59.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-59.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆爱车洗车公司</a>
@@ -1498,7 +1498,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-57.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-57.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆保全净清洁服务公司</a>
@@ -1511,7 +1511,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-56.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-56.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆保全净清洁服务公司</a>
@@ -1524,7 +1524,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-60.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-60.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">智乐园宝贝托管中心</a>
@@ -1537,7 +1537,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-57.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-57.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">怡乐老人护理院</a>
@@ -1550,7 +1550,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-58.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-58.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">UME国际管家中心</a>
@@ -1566,7 +1566,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-57.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-57.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆保全净清洁服务公司</a>
@@ -1579,7 +1579,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-56.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-56.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆保全净清洁服务公司</a>
@@ -1592,7 +1592,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-57.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-57.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">怡乐老人护理院</a>
@@ -1605,7 +1605,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-58.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-58.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">UME国际管家中心</a>
@@ -1618,7 +1618,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-59.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-59.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">重庆爱车洗车公司</a>
@@ -1631,7 +1631,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-60.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-60.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">智乐园宝贝托管中心</a>
@@ -1667,7 +1667,7 @@
     <div class="zl-con">
         <div class="zl-con-left f-l" style="background:#F8E9EE;">
             <div class="zl-tu">
-                <img src="images/zl2-36.gif" class="zl-img" />
+                <img src="${pageContext.request.contextPath}/images/zl2-36.gif" class="zl-img" />
             </div>
             <p class="zl-lp" style="color:#BB2B51;">
                 清洁维修搬家？</br>
@@ -1687,7 +1687,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-61.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-61.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">Viceroy维丝瑞女子spa会所</a>
@@ -1700,7 +1700,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-62.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-62.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">魁美胸护理中心</a>
@@ -1713,7 +1713,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-63.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-63.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">A+1SPA</a>
@@ -1726,7 +1726,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-64.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-64.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">欧皇美容养生</a>
@@ -1739,7 +1739,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-65.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-65.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">优肤美颜护理中心</a>
@@ -1752,7 +1752,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-61.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-61.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">Viceroy维丝瑞女子spa会所</a>
@@ -1768,7 +1768,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-61.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-61.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">Viceroy维丝瑞女子spa会所</a>
@@ -1781,7 +1781,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-63.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-63.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">A+1SPA</a>
@@ -1794,7 +1794,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-65.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-65.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">优肤美颜护理中心</a>
@@ -1807,7 +1807,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-62.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-62.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">魁美胸护理中心</a>
@@ -1820,7 +1820,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-64.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-64.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">欧皇美容养生</a>
@@ -1833,7 +1833,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-61.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-61.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">Viceroy维丝瑞女子spa会所</a>
@@ -1849,7 +1849,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-64.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-64.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">欧皇美容养生</a>
@@ -1862,7 +1862,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-65.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-65.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">优肤美颜护理中心</a>
@@ -1875,7 +1875,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-61.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-61.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">Viceroy维丝瑞女子spa会所</a>
@@ -1888,7 +1888,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-63.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-63.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">A+1SPA</a>
@@ -1901,7 +1901,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-61.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-61.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">Viceroy维丝瑞女子spa会所</a>
@@ -1914,7 +1914,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-62.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-62.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">魁美胸护理中心</a>
@@ -1930,7 +1930,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-64.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-64.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">欧皇美容养生</a>
@@ -1943,7 +1943,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-65.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-65.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">优肤美颜护理中心</a>
@@ -1956,7 +1956,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-62.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-62.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">魁美胸护理中心</a>
@@ -1969,7 +1969,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-63.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-63.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">A+1SPA</a>
@@ -1982,7 +1982,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-61.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-61.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">Viceroy维丝瑞女子spa会所</a>
@@ -1995,7 +1995,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-61.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-61.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">Viceroy维丝瑞女子spa会所</a>
@@ -2011,7 +2011,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-61.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-61.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">Viceroy维丝瑞女子spa会所</a>
@@ -2024,7 +2024,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-62.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-62.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">魁美胸护理中心</a>
@@ -2037,7 +2037,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-64.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-64.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">欧皇美容养生</a>
@@ -2050,7 +2050,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-65.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-65.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">优肤美颜护理中心</a>
@@ -2063,7 +2063,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-61.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-61.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">Viceroy维丝瑞女子spa会所</a>
@@ -2076,7 +2076,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-63.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-63.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">A+1SPA</a>
@@ -2092,7 +2092,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-61.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-61.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">Viceroy维丝瑞女子spa会所</a>
@@ -2105,7 +2105,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-61.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-61.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">Viceroy维丝瑞女子spa会所</a>
@@ -2118,7 +2118,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-62.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-62.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">魁美胸护理中心</a>
@@ -2131,7 +2131,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-63.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-63.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">A+1SPA</a>
@@ -2144,7 +2144,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-65.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-65.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">优肤美颜护理中心</a>
@@ -2157,7 +2157,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-64.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-64.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">欧皇美容养生</a>
@@ -2196,7 +2196,7 @@
     <div class="zl-con">
         <div class="zl-con-left f-l" style="background:#E3F1FB;">
             <div class="zl-tu">
-                <img src="images/zl2-37.gif" class="zl-img" />
+                <img src="${pageContext.request.contextPath}/images/zl2-37.gif" class="zl-img" />
             </div>
             <p class="zl-lp" style="color:#35A3D5;">
                 知识，从来都是</br>
@@ -2219,7 +2219,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2232,7 +2232,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-67.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-67.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -2245,7 +2245,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-68.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-68.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -2258,7 +2258,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-69.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-69.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -2271,7 +2271,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-70.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-70.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -2284,7 +2284,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2300,7 +2300,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2313,7 +2313,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-68.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-68.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -2326,7 +2326,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-69.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-69.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -2339,7 +2339,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2352,7 +2352,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-67.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-67.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -2365,7 +2365,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-70.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-70.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -2381,7 +2381,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-68.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-68.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -2394,7 +2394,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-69.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-69.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -2407,7 +2407,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2420,7 +2420,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-70.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-70.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -2433,7 +2433,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2446,7 +2446,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-67.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-67.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -2462,7 +2462,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-67.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-67.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -2475,7 +2475,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-70.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-70.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -2488,7 +2488,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2501,7 +2501,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-68.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-68.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -2514,7 +2514,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-69.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-69.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -2527,7 +2527,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2543,7 +2543,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2556,7 +2556,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-69.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-69.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -2569,7 +2569,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2582,7 +2582,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-67.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-67.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -2595,7 +2595,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-70.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-70.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -2608,7 +2608,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-68.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-68.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -2624,7 +2624,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2637,7 +2637,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-67.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-67.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -2650,7 +2650,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-68.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-68.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -2663,7 +2663,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-70.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-70.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -2676,7 +2676,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2689,7 +2689,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-69.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-69.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -2705,7 +2705,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2718,7 +2718,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-67.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-67.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -2731,7 +2731,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2744,7 +2744,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-69.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-69.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -2757,7 +2757,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-70.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-70.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -2770,7 +2770,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-68.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-68.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -2786,7 +2786,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2799,7 +2799,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2812,7 +2812,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-67.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-67.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -2825,7 +2825,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-68.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-68.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -2838,7 +2838,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-69.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-69.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -2851,7 +2851,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-70.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-70.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -2867,7 +2867,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-67.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-67.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -2880,7 +2880,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-70.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-70.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -2893,7 +2893,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-68.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-68.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -2906,7 +2906,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2919,7 +2919,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-69.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-69.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -2932,7 +2932,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-66.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-66.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -2971,7 +2971,7 @@
     <div class="zl-con">
         <div class="zl-con-left f-l" style="background:#F8EEE2;">
             <div class="zl-tu">
-                <img src="images/zl2-38.gif" class="zl-img" />
+                <img src="${pageContext.request.contextPath}/images/zl2-38.gif" class="zl-img" />
             </div>
             <p class="zl-lp" style="color:#8F7353;">
                 速度、卓越</br>
@@ -2993,7 +2993,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3006,7 +3006,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-72.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-72.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -3019,7 +3019,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-73.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-73.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -3032,7 +3032,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-74.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-74.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -3045,7 +3045,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-75.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-75.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -3058,7 +3058,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3074,7 +3074,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3087,7 +3087,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-72.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-72.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -3100,7 +3100,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3113,7 +3113,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-74.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-74.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -3126,7 +3126,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-75.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-75.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -3139,7 +3139,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-73.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-73.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -3155,7 +3155,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-74.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-74.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -3168,7 +3168,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-75.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-75.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -3181,7 +3181,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3194,7 +3194,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-72.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-72.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -3207,7 +3207,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-73.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-73.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -3220,7 +3220,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3236,7 +3236,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-74.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-74.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -3249,7 +3249,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-75.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-75.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -3262,7 +3262,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3275,7 +3275,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3288,7 +3288,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-72.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-72.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -3301,7 +3301,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-73.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-73.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -3317,7 +3317,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3330,7 +3330,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-72.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-72.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -3343,7 +3343,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-73.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-73.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -3356,7 +3356,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3369,7 +3369,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-74.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-74.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -3382,7 +3382,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-75.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-75.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -3398,7 +3398,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-75.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-75.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -3411,7 +3411,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3424,7 +3424,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3437,7 +3437,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-72.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-72.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -3450,7 +3450,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-73.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-73.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -3463,7 +3463,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-74.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-74.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -3479,7 +3479,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3492,7 +3492,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-72.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-72.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -3505,7 +3505,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3518,7 +3518,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-74.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-74.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -3531,7 +3531,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-75.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-75.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -3544,7 +3544,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-73.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-73.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -3560,7 +3560,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-73.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-73.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -3573,7 +3573,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-74.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-74.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -3586,7 +3586,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-75.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-75.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -3599,7 +3599,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3612,7 +3612,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-72.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-72.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -3625,7 +3625,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3641,7 +3641,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3654,7 +3654,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-71.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-71.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3667,7 +3667,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-74.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-74.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -3680,7 +3680,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-75.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-75.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -3693,7 +3693,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-72.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-72.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -3706,7 +3706,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-73.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-73.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -3745,7 +3745,7 @@
     <div class="zl-con">
         <div class="zl-con-left f-l" style="background:#F8EEE2;">
             <div class="zl-tu">
-                <img src="images/zl2-39.gif" class="zl-img" />
+                <img src="${pageContext.request.contextPath}/images/zl2-39.gif" class="zl-img" />
             </div>
             <p class="zl-lp" style="color:#C3573B;">
                 人生很短</br>
@@ -3767,7 +3767,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-76.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-76.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3780,7 +3780,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-77.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-77.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -3793,7 +3793,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-78.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-78.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -3806,7 +3806,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-79.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-79.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -3819,7 +3819,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-80.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-80.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -3832,7 +3832,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-76.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-76.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3848,7 +3848,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-78.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-78.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -3861,7 +3861,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-79.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-79.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -3874,7 +3874,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-77.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-77.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -3887,7 +3887,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-80.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-80.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -3900,7 +3900,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-76.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-76.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3913,7 +3913,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-76.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-76.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3929,7 +3929,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-76.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-76.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -3942,7 +3942,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-77.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-77.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -3955,7 +3955,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-78.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-78.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -3968,7 +3968,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-79.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-79.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -3981,7 +3981,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-80.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-80.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -3994,7 +3994,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-76.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-76.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -4010,7 +4010,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-76.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-76.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -4023,7 +4023,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-80.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-80.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -4036,7 +4036,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-76.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-76.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -4049,7 +4049,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-78.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-78.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -4062,7 +4062,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-77.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-77.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -4091,7 +4091,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-76.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-76.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -4104,7 +4104,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-76.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-76.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -4117,7 +4117,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-79.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-79.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -4143,91 +4143,10 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-77.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-77.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="#">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-78.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="#">CASTER舞蹈教室</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="#">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <div style="clear:both;"></div>
-            </ul>
-            <ul class="zl-rul1 lihover">
-                <li>
-                    <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-79.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="#">穷画舍</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="#">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-80.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="#">南艺画室</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="#">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-77.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="#">海上音乐吉他培训中心</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="#">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-76.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="#">咖啡爱上钢琴课</a>
-                    </div>
-                    <div class="sy-tit2">
-                        <p><a href="#">都市新大新特色豆米锅</a></p>
-                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
-                        <p>电话：023-63310530</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-76.png" /></a>
-                    </div>
-                    <div class="sy-tit1">
-                        <a href="#">咖啡爱上钢琴课</a>
                     </div>
                     <div class="sy-tit2">
                         <p><a href="#">都市新大新特色豆米锅</a></p>
@@ -4253,7 +4172,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-79.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-79.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -4279,7 +4198,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-77.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-77.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -4305,7 +4224,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-76.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-76.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -4334,7 +4253,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-79.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-79.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -4347,7 +4266,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-80.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-80.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -4360,10 +4279,10 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-76.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-77.png" /></a>
                     </div>
                     <div class="sy-tit1">
-                        <a href="#">咖啡爱上钢琴课</a>
+                        <a href="#">海上音乐吉他培训中心</a>
                     </div>
                     <div class="sy-tit2">
                         <p><a href="#">都市新大新特色豆米锅</a></p>
@@ -4386,7 +4305,88 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-77.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-76.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="#">咖啡爱上钢琴课</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="#">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="sy-tu1">
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-78.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="#">CASTER舞蹈教室</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="#">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <div style="clear:both;"></div>
+            </ul>
+            <ul class="zl-rul1 lihover">
+                <li>
+                    <div class="sy-tu1">
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-79.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="#">穷画舍</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="#">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="sy-tu1">
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-80.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="#">南艺画室</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="#">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="sy-tu1">
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-76.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="#">咖啡爱上钢琴课</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="#">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="sy-tu1">
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-76.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="#">咖啡爱上钢琴课</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="#">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="sy-tu1">
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-77.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -5042,7 +5042,7 @@
     <div class="zl-con">
         <div class="zl-con-left f-l" style="background:#F8EEE2;">
             <div class="zl-tu">
-                <img src="images/zl2-41.gif" class="zl-img" />
+                <img src="${pageContext.request.contextPath}/images/zl2-41.gif" class="zl-img" />
             </div>
             <p class="zl-lp" style="color:#EF7F07;">
                 你差一场说走</br>
@@ -5062,7 +5062,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-81.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-81.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -5075,7 +5075,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-82.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-82.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -5088,7 +5088,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-83.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-83.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -5101,7 +5101,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-84.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-84.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -5114,7 +5114,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-85.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-85.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -5127,7 +5127,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-81.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-81.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -5143,7 +5143,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-85.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-85.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -5156,7 +5156,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-81.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-81.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -5169,7 +5169,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-82.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-82.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -5182,7 +5182,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-83.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-83.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -5195,7 +5195,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-84.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-84.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -5208,7 +5208,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-81.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-81.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -5224,7 +5224,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-82.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-82.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -5237,7 +5237,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-83.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-83.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -5250,7 +5250,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-85.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-85.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -5263,7 +5263,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-81.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-81.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -5276,7 +5276,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-81.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-81.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -5289,7 +5289,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-84.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-84.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -5305,7 +5305,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-84.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-84.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -5318,7 +5318,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-85.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-85.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -5331,7 +5331,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-81.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-81.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -5344,7 +5344,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-81.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-81.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -5357,7 +5357,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-82.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-82.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -5370,7 +5370,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-83.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-83.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -5386,7 +5386,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-83.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-83.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -5399,7 +5399,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-81.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-81.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -5412,7 +5412,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-82.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-82.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -5425,7 +5425,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-81.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-81.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -5438,7 +5438,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-84.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-84.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -5451,7 +5451,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-85.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-85.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -5467,7 +5467,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-82.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-82.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -5480,7 +5480,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-83.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-83.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -5493,7 +5493,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-84.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-84.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -5506,7 +5506,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-85.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-85.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -5519,7 +5519,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-81.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-81.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -5532,7 +5532,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-81.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-81.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -5555,35 +5555,35 @@
     <ul class="footer-info1 w1200">
         <li>
             <div class="ft-tu1">
-                <a href="JavaScript:;"><img src="images/zl2-86.gif" /></a>
+                <a href="JavaScript:;"><img src="${pageContext.request.contextPath}/images/zl2-86.gif" /></a>
             </div>
             <h3><a href="JavaScript:;">号码保障</a></h3>
             <P>所有会员，手机短信验证</P>
         </li>
         <li>
             <div class="ft-tu1">
-                <a href="JavaScript:;"><img src="images/zl2-87.gif" /></a>
+                <a href="JavaScript:;"><img src="${pageContext.request.contextPath}/images/zl2-87.gif" /></a>
             </div>
             <h3><a href="JavaScript:;">6*12小时客服</a></h3>
             <P>有任何问题随时免费资讯</P>
         </li>
         <li>
             <div class="ft-tu1">
-                <a href="JavaScript:;"><img src="images/zl2-88.gif" /></a>
+                <a href="JavaScript:;"><img src="${pageContext.request.contextPath}/images/zl2-88.gif" /></a>
             </div>
             <h3><a href="JavaScript:;">专业专攻</a></h3>
             <P>我们只专注于建筑行业的信息服务</P>
         </li>
         <li>
             <div class="ft-tu1">
-                <a href="JavaScript:;"><img src="images/zl2-89.gif" /></a>
+                <a href="JavaScript:;"><img src="${pageContext.request.contextPath}/images/zl2-89.gif" /></a>
             </div>
             <h3><a href="JavaScript:;">注册有礼</a></h3>
             <P>随时随地注册有大礼包</P>
         </li>
         <li>
             <div class="ft-tu1">
-                <a href="JavaScript:;"><img src="images/zl2-90.gif" /></a>
+                <a href="JavaScript:;"><img src="${pageContext.request.contextPath}/images/zl2-90.gif" /></a>
             </div>
             <h3><a href="JavaScript:;">值得信赖</a></h3>
             <P>专业的产品，专业的团队</P>
@@ -5647,9 +5647,9 @@
             <a href="#">互联网药品交易服务资格证</a>
         </p>
         <div class="ft-if3-tu1">
-            <a href="#"><img src="images/zl2-91.gif" /></a>
-            <a href="#"><img src="images/zl2-92.gif" /></a>
-            <a href="#"><img src="images/zl2-93.gif" /></a>
+            <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-91.gif" /></a>
+            <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-92.gif" /></a>
+            <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-93.gif" /></a>
         </div>
     </div>
 </div>
@@ -5657,29 +5657,29 @@
 <!--固定右侧-->
 <ul class="youce">
     <li class="li1">
-        <a href="index.html" class="li1-tu1"><img src="images/zl2-94.png" /></a>
+        <a href="index.html" class="li1-tu1"><img src="${pageContext.request.contextPath}/images/zl2-94.png" /></a>
         <a href="index.html" class="li1-zi1">返回首页</a>
     </li>
     <li class="li2">
-        <a href="购物车.html"><img src="images/zl2-95.png" />购</br>物</br>车</a>
+        <a href="购物车.html"><img src="${pageContext.request.contextPath}/images/zl2-95.png" />购</br>物</br>车</a>
     </li>
     <li class="li3">
-        <a href="${pageContext.request.contextPath}" class="li1-tu2"><img src="images/zl2-96.png" /></a>
+        <a href="${pageContext.request.contextPath}" class="li1-tu2"><img src="${pageContext.request.contextPath}/images/zl2-96.png" /></a>
         <a href="${pageContext.request.contextPath}" class="li1-zi2">我关注的品牌</a>
     </li>
     <li class="li3">
-        <a href="${pageContext.request.contextPath}浏览记录.html" class="li1-tu2"><img src="images/zl2-97.png" /></a>
+        <a href="${pageContext.request.contextPath}浏览记录.html" class="li1-tu2"><img src="${pageContext.request.contextPath}/images/zl2-97.png" /></a>
         <a href="${pageContext.request.contextPath}浏览记录.html" class="li1-zi2">我看过的</a>
     </li>
     <li class="li4">
-        <a href="${pageContext.request.contextPath}JavaScript:;" class="li1-tu2"><img src="images/zl2-98.gif" /></a>
+        <a href="${pageContext.request.contextPath}JavaScript:;" class="li1-tu2"><img src="i${pageContext.request.contextPath}/mages/zl2-98.gif" /></a>
         <div class="li4-ewm">
-            <a href="${pageContext.request.contextPath}JavaScript:;"><img src="images/zl2-101.gif" /></a>
+            <a href="${pageContext.request.contextPath}JavaScript:;"><img src="${pageContext.request.contextPath}/images/zl2-101.gif" /></a>
             <p>扫一扫</p>
         </div>
     </li>
     <li class="li3 li5">
-        <a href="${pageContext.request.contextPath}" class="li1-tu2"><img src="images/zl2-99.gif" /></a>
+        <a href="${pageContext.request.contextPath}" class="li1-tu2"><img src="${pageContext.request.contextPath}/images/zl2-99.gif" /></a>
         <a href="${pageContext.request.contextPath}" class="li1-zi2">返回顶部</a>
     </li>
 </ul>
