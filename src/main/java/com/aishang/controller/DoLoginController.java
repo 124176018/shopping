@@ -29,8 +29,11 @@ public class DoLoginController {
     }
 
     @RequestMapping("loginuser.do")
-    public String loginuser(User user, HttpServletResponse response, Model model, String save) throws UnsupportedEncodingException {
+    public String loginuser(User user, HttpServletResponse response, String save) throws UnsupportedEncodingException {
         User user1 = userService.findUser(user);
+        if (user1==null){
+            return "login";
+        }
         session.setAttribute("sessionuser", user1);
         Cookie cookie = new Cookie("user", URLEncoder.encode((user1.getUsername() + "-" + user1.getPassword()), "UTF-8"));
         if (cookie != null) {

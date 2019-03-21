@@ -11,7 +11,9 @@ public class UserService implements IUserService{
 
     @Override
     public void addUser(User user) {
+
         userMapper.addUser(user);
+
     }
 
     @Override
