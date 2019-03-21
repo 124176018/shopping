@@ -8,6 +8,7 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -21,6 +22,17 @@
 </head>
 
 <body>
+<script type="text/javascript">
+    window.onload = function() {
+        var strcookie = decodeURI(document.cookie);//获取cookie字符串
+        var arrcookie = strcookie.split(";");
+        var arruser = arrcookie[1].split("=");
+        var arruserName = arruser[1].split("-");
+        var arrusername1= arruserName[0].split(",");
+        var username = arrusername1;
+        document.getElementById('username').value = username;
+    };
+</script>
 
 <div class="sign-logo w1200">
     <h1 class="zl-h11"><a href="${pageContext.request.contextPath}/index.html" title="宅客微购"><img src="${pageContext.request.contextPath}/images/zl2-01.gif" /></a></h1>
@@ -30,12 +42,20 @@
     <img src="${pageContext.request.contextPath}/images/logn-tu.gif" class="sign-contu f-l" />
     <div class="sign-ipt f-l">
         <p>用户名</p>
-        <input type="text" placeholder="手机号/邮箱" id="username" name="username"/>
+        <input type="text" class="text" placeholder="手机号/邮箱" id="username" name="username"
+               value="${fn:split(cookie.user.value, '-')[0]}" onfocus="this.value = '';"
+               onblur="if (this.value =='') {this.value ='请输入用户名';}"/>
+
         <p>密码</p>
-        <input type="text" placeholder="密码可见" id="password" name="password"/><br />
+        <input type="text" placeholder="密码可见" id="password" name="password"
+               value="${fn:split(cookie.user.value,'-')[1]}" onfocus="this.value = '';"
+               onblur="if (this.value == '') {this.value = '${fn:split(cookie.user.value,'-')[1]}';}"/><br />
         <button class="slig-btn">登录</button>
-        <p>已有账号？请<a href="#">登录</a><a href="${pageContext.request.contextPath}/#" class="wj">忘记密码？</a></p>
+        <p>没有账号？请<a href="${pageContext.request.contextPath}/user/getRegistration.do">注册</a><a href="${pageContext.request.contextPath}/#" class="wj">忘记密码？</a></p>
+        <input type="checkbox" name="save" value="1"<c:if test="${fn:split(cookie.user.value,'-')[0]!=null}">checked</c:if>><i
+            style="color: #9111aa;">一周内免登陆</i>">
         <div class="sign-qx">
+
             <a href="${pageContext.request.contextPath}" class="f-r"><img src="${pageContext.request.contextPath}/images/sign-xinlan.gif" /></a>
             <a href="${pageContext.request.contextPath}" class="qq f-r"><img src="${pageContext.request.contextPath}/images/sign-qq.gif" /></a>
             <div style="clear:both;"></div>

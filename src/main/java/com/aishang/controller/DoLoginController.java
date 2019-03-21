@@ -1,4 +1,5 @@
 package com.aishang.controller;
+
 import com.aishang.po.User;
 import com.aishang.service.IUserService;
 import org.springframework.stereotype.Controller;
@@ -6,31 +7,57 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
-import javax.jms.Session;
 import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 
 
 @Controller
 @RequestMapping("/user")
 public class DoLoginController {
- @Resource
- private IUserService userService;
+    @Resource
+    private IUserService userService;
+    @Resource
+    private HttpSession session;
 
- @RequestMapping("loginuser.do")
- public String loginuser(User user) {
-  User user1 = userService.findUser(user);
+    /* 用户登录*/
+    @RequestMapping("getlogin.do")
+    public String getlogin() {
+        return "login";
+    }
 
-  System.out.println(user1+"ni shi ");
-  if (user1==null) {
-   System.out.println(user1 + "啥比玩意111");
-   return "index";
-  }
+    @RequestMapping("loginuser.do")
+    public String loginuser(User user, HttpServletResponse response, Model model, String save) throws UnsupportedEncodingException {
+        User user1 = userService.findUser(user);
+        session.setAttribute("sessionuser", user1);
+        Cookie cookie = new Cookie("user", URLEncoder.encode((user1.getUsername() + "-" + user1.getPassword()), "UTF-8"));
+        if (cookie != null) {
+            if (save != null) {
+                cookie.setMaxAge(60 * 60 * 24 * 7);
+                cookie.setPath("/");
+                response.addCookie(cookie);
+            } else {
+                cookie.setMaxAge(0);
+                cookie.setPath("/");
+                response.addCookie(cookie);
+            }
+            return "index";
+        }
+        return "login";
+    }
 
-  System.out.println(user1 + "啥比玩意");
+    /* 注册用户*/
+    @RequestMapping("getRegistration.do")
+    public String getRegistration() {
+        return "registration";
+    }
 
-  return "index";
- }
+    @RequestMapping("registration.do")
+    public String registration(User user) {
+        userService.addUser(user);
+        return "login";
+    }
+
 }
