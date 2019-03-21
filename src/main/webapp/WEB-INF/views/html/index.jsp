@@ -4516,7 +4516,7 @@
     <div class="zl-con">
         <div class="zl-con-left f-l" style="background:#F0F6F2;">
             <div class="zl-tu">
-                <img src="images/zl2-40.gif" class="zl-img" />
+                <img src="${pageContext.request.contextPath}/images/zl2-40.gif" class="zl-img" />
             </div>
             <p class="zl-lp" style="color:#5B7F4F;">
                 只有想不到</br>
@@ -4536,7 +4536,7 @@
             <ul class="zl-rul1 lihover">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-76.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-76.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
@@ -4549,7 +4549,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-77.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-77.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">海上音乐吉他培训中心</a>
@@ -4562,7 +4562,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-78.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-78.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">CASTER舞蹈教室</a>
@@ -4575,7 +4575,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-79.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-79.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">穷画舍</a>
@@ -4588,7 +4588,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-80.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-80.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">南艺画室</a>
@@ -4601,7 +4601,7 @@
                 </li>
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="images/zl2-76.png" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-76.png" /></a>
                     </div>
                     <div class="sy-tit1">
                         <a href="#">咖啡爱上钢琴课</a>
