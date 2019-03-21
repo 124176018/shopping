@@ -1,5 +1,6 @@
 package com.aishang.dao;
 import com.aishang.po.User;
+import org.apache.ibatis.annotations.Param;
 
 public interface UserMapper {
     /*往user表里添加用户信息的方法*/
@@ -7,5 +8,5 @@ public interface UserMapper {
     /*根据用户名查询user表里是否有这个用户为AXAJ做准备*/
     User findUserByName(String username);
     /*根据查询user表验证是否存在这个用户用于登录验证*/
-    User findUser(String username, String password );
+    User findUser(User user);
 }

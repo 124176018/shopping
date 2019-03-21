@@ -4,7 +4,7 @@ import com.aishang.po.User;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 
-@Service
+@Service("userService")
 public class UserService implements IUserService{
     @Resource
     private UserMapper userMapper;
@@ -20,7 +20,7 @@ public class UserService implements IUserService{
     }
 
     @Override
-    public User findUser(String username, String password) {
-        return userMapper.findUser(username,password);
+    public User findUser(User user) {
+        return this.userMapper.findUser(user);
     }
 }

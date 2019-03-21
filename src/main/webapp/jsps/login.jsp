@@ -25,14 +25,14 @@
 <div class="sign-logo w1200">
     <h1 class="zl-h11"><a href="${pageContext.request.contextPath}/index.html" title="宅客微购"><img src="${pageContext.request.contextPath}/images/zl2-01.gif" /></a></h1>
 </div>
-<form action="${pageContext.request.contextPath}/registration.jsp" method="post">
+<form action="${pageContext.request.contextPath}/user/loginuser.do" method="post">
 <div class="sign-con w1200">
     <img src="${pageContext.request.contextPath}/images/logn-tu.gif" class="sign-contu f-l" />
     <div class="sign-ipt f-l">
         <p>用户名</p>
-        <input type="text" placeholder="手机号/邮箱" id="userName" name="userName"/>
+        <input type="text" placeholder="手机号/邮箱" id="username" name="username"/>
         <p>密码</p>
-        <input type="text" placeholder="密码可见" id="userPwd" name="userPwd"/><br />
+        <input type="text" placeholder="密码可见" id="password" name="password"/><br />
         <button class="slig-btn">登录</button>
         <p>已有账号？请<a href="#">登录</a><a href="${pageContext.request.contextPath}/#" class="wj">忘记密码？</a></p>
         <div class="sign-qx">

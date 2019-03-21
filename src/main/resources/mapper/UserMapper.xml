@@ -9,10 +9,10 @@
     </insert>
     <!--根据用户名查询user表里是否有这个用户为AXAJ做准备-->
     <select id="findUserByName" parameterType="String" resultType="User">
-        SELECT COUNT (*) FROM user WHERE username= #{username}
+        SELECT * FROM user WHERE username= #{username}
     </select>
     <!--根据查询user表验证是否存在这个用户用于登录验证-->
     <select id="findUser" parameterType="User" resultType="User">
-        SELECT COUNT (*) FROM user WHERE username= #{username} and password=#{password}
+        SELECT * FROM user WHERE username= #{username} and password=#{password}
     </select>
 </mapper>
