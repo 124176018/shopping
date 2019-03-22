@@ -25,10 +25,9 @@
 <script type="text/javascript">
     window.onload = function() {
         var strcookie = decodeURI(document.cookie);//获取cookie字符串
-        var arrcookie = strcookie.split(";");
-        var arruser = arrcookie[1].split("=");
+        var arruser = strcookie.split("=");
         var arruserName = arruser[1].split("-");
-        var arrusername1= arruserName[0].split(",");
+        var arrusername1= arruserName[0];
         var username = arrusername1;
         document.getElementById('username').value = username;
     };
