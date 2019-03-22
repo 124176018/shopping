@@ -19,110 +19,95 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/adduser.js"></script>
     <script type="text/javascript">
         //添加用户名验证用户名是否存在
-        $(function(){
+        $(function () {
             var username = $("#username");
             var msg = $("#msg");
-            var sbb =$("#sbb");
-            username.blur(function(){ //焦点移开事件
+            var sbb = $("#sbb");
+            username.blur(function () { //焦点移开事件
                 $.ajax({ //ajax调用
-                    url:"${pageContext.request.contextPath}/user/doregistration.do",//访问服务器地址
-                    type:"GET",
-                    data:{
-                        username : username.val(), //传递参数
+                    url: "${pageContext.request.contextPath}/user/doregistration.do",//访问服务器地址
+                    type: "GET",
+                    data: {
+                        username: username.val(), //传递参数
                     },
-                    dataType:"text",
-                    success:function(data){
-                        if(data.trim() == "yes"){
+                    dataType: "text",
+                    success: function (data) {
+                        if (data.trim() == "yes") {
                             msg.html("<span  color='red' class='dui'>可以使用</span >");
-                            sbb.attr("disabled",false);
-                        }else{
+                            sbb.attr("disabled", false);
+                        } else {
                             msg.html("<span  color='blue' class='cuo'>不可以使用</span >");
-                            sbb.attr("disabled",true);
+                            sbb.attr("disabled", true);
                         }
 
                     }
                 });
             });
 
-          //验证注册邮箱
+            //验证注册邮箱
             $("#email").blur(function () {
                 var Email = new String(document.getElementById("email").value);
-                var positionDot = Email.indexOf(".",positionAt);
+                var positionDot = Email.indexOf(".", positionAt);
                 var positionAt = Email.indexOf("@");
-                var msg2 =$("#msg2");
-                var sbb =$("#sbb");
-                if (Email==null||Email==""){
+                var msg2 = $("#msg2");
+                var sbb = $("#sbb");
+                if (Email == null || Email == "") {
                     msg2.html("<span color='blue' class='cuo'>请输入邮箱</span>");
-                    sbb.attr("disabled",true);
-                } else if(positionAt==-1){
-                    msg2.html("<span color='blue' class='cuo'>邮箱格式不正确</span>");
-                    sbb.attr("disabled",true);
-                }else if(positionDot==-1) {
+                    sbb.attr("disabled", true);
+                } else if (positionAt == -1) {
                     msg2.html("<span color='blue' class='cuo'>邮箱格式不正确</span>");
                     sbb.attr("disabled", true);
-                }else if(positionDot==Email.length-1 || positionDot == positionAt+1){
+                } else if (positionDot == -1) {
                     msg2.html("<span color='blue' class='cuo'>邮箱格式不正确</span>");
                     sbb.attr("disabled", true);
-                }else{
+                } else if (positionDot == Email.length - 1 || positionDot == positionAt + 1) {
+                    msg2.html("<span color='blue' class='cuo'>邮箱格式不正确</span>");
+                    sbb.attr("disabled", true);
+                } else {
                     msg2.html("<span color='ride' class='dui'>邮箱格式正确</span>");
                 }
             })
-/*判断手机号是否符合规则*/
+            /*判断手机号是否符合规则*/
             $("#phone").blur(function () {
-            var phone =$("#phone").val();
-            var msg1 =$("#msg1");
-            var sbb=$("#sbb");
-            var myreg=/^((0?1[358]\d{9})|((0(10|2[1-3]|[3-9]\d{2}))?[1-9]\d{6,7}))$/;
-                if (myreg.test(phone)){
+                var phone = $("#phone").val();
+                var msg1 = $("#msg1");
+                var sbb = $("#sbb");
+                var myreg = /^((0?1[358]\d{9})|((0(10|2[1-3]|[3-9]\d{2}))?[1-9]\d{6,7}))$/;
+                if (myreg.test(phone)) {
                     msg1.html("<span  color='red' class='dui'>可以使用</span >");
-                    sbb.attr("disabled",false);
+                    sbb.attr("disabled", false);
 
-                }else {
+                } else {
                     msg1.html("<span  color='blue' class='cuo'>请输入正确的手机号</span >");
-                    sbb.attr("disabled",true);
+                    sbb.attr("disabled", true);
                 }
 
             })
             /*判断俩吃密码是否一致*/
             $("#password1").blur(function dopassword() {
-                var password=$("#password").val();
-                var password1=$("#password1").val();
-                var sbb=$("#sbb");
-                var msg3=$("#msg3");
-                alert("ni bu hao ");
-                if (password!=password1){
-                    msg3.html("<span class='cuo' color='blue'>俩次密码不一致</span>");
-                    sbb.attr("disabled",true);
-                }else{
-                    msg3.html("<span class='dui' color='ride'>俩次密码一致</span>");
-                    sbb.attr("disable",false);
+                var password = $("#password").val();
+                var password1 = $("#password1").val();
+                var sbb = $("#sbb");
+                var msg3 = $("#msg3");
+                if (password != password1) {
+                    alert("俩次密码不一致")
+                    sbb.attr("disabled", true);
+                } else {
+                    sbb.attr("disable", false);
                 }
 
             })
-            /*密码只能是字母和数字*/
-           /* $("#password").blur(function dopassword1(){
-                var password=$("#password").val();
-                var msg4=$("#msg4");
-                var en =password.charAt(0);
-                var sbb=$("#sbb");
-                if (!(en>=a||en<=z||en>=A&&en<=Z||en>=0&&en<=9)){
-                    msg4.html("<span class='cuo' color='blue'>密码只能是字母和数字</span>");
-                    sbb.attr("disable",true);
-                }else {
-                    msg4.html("<span class='dui' color='ride'>密码格式正确</span>");
-                    sbb.attr("disable",false);
-                }
-            })*/
+            /*判断密码位数和密码格式*/
             $("#password").blur(function dopasswordnumber() {
-                var password =$("#password").val();
-                var msg5 =$("#msg5");
-                var sbb =$("#sbb");
-                if (password.length>=1&&password.length<=16){
+                var password = $("#password").val();
+                var msg5 = $("#msg5");
+                var sbb = $("#sbb");
+                if (password.length >= 1 && password.length <= 16) {
                     msg5.html("<span class='dui'color='blue'>密码格式正确</span>");
-                    sbb.attr("disable",false);
-                }else{
+                    sbb.attr("disable", false);
+                } else {
                     msg5.html("<span class='cuo'color='ride'>最多位16位</span>");
-                    sbb.attr("disable",true);
+                    sbb.attr("disable", true);
                 }
             })
 
@@ -137,7 +122,8 @@
 <div class="zl-header">
     <div class="zl-hd w1200">
         <p class="hd-p1 f-l">
-            Hi!您好，欢迎来到宅客微购，请登录 <a href="${pageContext.request.contextPath}/注册.html">【免费注册】</a>
+            <c:if test="">Hi!您好，欢迎来到宅客微购</c:if>
+            <c:if test="">Hi!您好，欢迎来到宅客微购，请登录 <a href="${pageContext.request.contextPath}/注册.html">【免费注册】</a></c:if>
         </p>
         <p class="hd-p2 f-r">
             <a href="${pageContext.request.contextPath}/index.html">返回首页 (个人中心)</a><span>|</span>
