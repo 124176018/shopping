@@ -20,6 +20,18 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhonglin.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/adduser.js"></script>
+    <script type="text/javascript">
+        /*记住我切中文名字字符串*/
+        window.onload = function () {
+            var strcookie = decodeURI(document.cookie);//获取cookie字符串
+            var arruser = strcookie.split("=");
+            var arruserName = arruser[1].split("-");
+            var arrusername1 = arruserName[0];
+            var username = arrusername1;
+            document.getElementById('username').value = username;
+        };
+
+    </script>
 </head>
 
 <body>

@@ -23,6 +23,6 @@ public class UserService implements IUserService{
 
     @Override
     public User findUser(User user) {
-        return this.userMapper.findUser(user);
+        return userMapper.findUser(user);
     }
 }

@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page isELIgnored="false" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -110,6 +111,20 @@
                     sbb.attr("disable", true);
                 }
             })
+            /*判断验证码是否正确*/
+            $("#codeid").blur(function checkcode() {
+                var total=0;
+                var msg6 = $("#msg6");
+                var codeid = $("#codeid").val();
+                if (codeid.length != 4) {
+                    msg6.html("<span class='cuo'color='ride'>验证码错误</span>");
+                    sbb.attr("disable", true);
+                } else {
+                    msg6.html("<span color='blue'>      </span>");
+                }
+
+            })
+
 
         });
     </script>
@@ -122,8 +137,8 @@
 <div class="zl-header">
     <div class="zl-hd w1200">
         <p class="hd-p1 f-l">
-            <c:if test="">Hi!您好，欢迎来到宅客微购</c:if>
-            <c:if test="">Hi!您好，欢迎来到宅客微购，请登录 <a href="${pageContext.request.contextPath}/注册.html">【免费注册】</a></c:if>
+
+           Hi!您好，欢迎来到宅客微购，请登录 <a href="${pageContext.request.contextPath}/注册.html">【免费注册】</a>
         </p>
         <p class="hd-p2 f-r">
             <a href="${pageContext.request.contextPath}/index.html">返回首页 (个人中心)</a><span>|</span>
@@ -241,17 +256,16 @@
         </div>
         <div class="psw psw3">
             <p class="psw-p1">验证码</p>
-            <input type="text" placeholder="请输入手机验证码"/>
-        </div>
-        <div class="psw psw3">
-            <p class="psw-p1">验证码</p>
-            <input type="text" placeholder="请输入验证码" id="numbers" name="numbers"/>
+            <input type="text" placeholder="请输入验证码" id="codeid" name="code"/>
+            <span id="msg6"></span>
         </div>
         <div class="yanzhentu">
             <div class="yz-tu f-l">
-                <img src="${pageContext.request.contextPath}/images/psw-yanzhengtu.gif"/>
+                <img src="${pageContext.request.contextPath}/user/getcodeimage.do"
+                     onclick="this.src='${pageContext.request.contextPath}/user/getcodeimage.do?'+Math.round(Math.random()*100)"
+                     width="150" height="50"/>
             </div>
-            <p class="f-l">看不清？<a href="${pageContext.request.contextPath}/#">换张图</a></p>
+            <p class="f-l">看不清？点击图片换图</p>
             <div style="clear:both;"></div>
         </div>
         <div class="agreement">
@@ -259,7 +273,7 @@
             <p>我有阅读并同意<span>《宅客微购网站服务协议》</span></p>
         </div>
         <button class="psw-btn" id="sbb" type="submit">立即注册</button>
-        <p class="sign-in">已有账号？请<a href="${pageContext.request.contextPath}/#">登录</a></p>
+        <p class="sign-in">已有账号？请<a href="${pageContext.request.contextPath}/user/loginuser.do">登录</a></p>
     </div>
 </form>
 

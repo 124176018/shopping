@@ -4,7 +4,7 @@ function checked(form) {
     var password1 = form.password1;
     var phone = form.phone;
     var email = form.email;
-    var numbers = form.numbers;
+    var code = form.code;
 
     if (username.value == "") {
         alert("用户名不能为空");
@@ -21,21 +21,12 @@ function checked(form) {
     }else if (email.value==""){
         alert("邮箱不能为空");
         return false;
-    }else if (numbers.value ==""){
-        alert("验证码不能为空");
+    }else if (code.value ==""){
+        alert("验证码错误");
         return false;
     };
 }
 
 
-/*记住我切中文名字字符串*/
-window.onload = function () {
-    var strcookie = decodeURI(document.cookie);//获取cookie字符串
-    var arruser = strcookie.split("=");
-    var arruserName = arruser[1].split("-");
-    var arrusername1 = arruserName[0];
-    var username = arrusername1;
-    document.getElementById('username').value = username;
-};
 
 
