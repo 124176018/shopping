@@ -1,6 +1,6 @@
 package com.aishang.po;
 
-public class relevancelable {
+public class Relevancelable {
     private Integer rid;
     private Integer pid;
     private Integer lid;
@@ -31,7 +31,7 @@ public class relevancelable {
 
     @Override
     public String toString() {
-        return "relevancelable{" +
+        return "Relevancelable{" +
                 "rid=" + rid +
                 ", pid=" + pid +
                 ", lid=" + lid +

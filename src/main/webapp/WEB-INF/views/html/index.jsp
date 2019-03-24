@@ -519,13 +519,6 @@
             </div>
         </div>
         <ul class="nav-font f-l">
-            <li><a href="${pageContext.request.contextPath}/在线商城首页.html">在线商城</a></li>
-            <li><a href="${pageContext.request.contextPath}/餐饮娱乐首页.html">餐饮娱乐</a></li>
-            <li><a href="${pageContext.request.contextPath}/家政服务首页.html">家政服务</a></li>
-            <li><a href="${pageContext.request.contextPath}/美容美发首页.html">美容美发</a></li>
-            <li><a href="${pageContext.request.contextPath}/教育培训首页.html">教育培训</a></li>
-            <li><a href="${pageContext.request.contextPath}/汽车房产首页.html">汽车房产</a></li>
-            <li><a href="${pageContext.request.contextPath}/家居建材首页.html">家居建材</a></li>
             <li><a href="${pageContext.request.contextPath}/二手市场首页.html">二手市场</a><span><img src="${pageContext.request.contextPath}/images/zl2-05.gif" /></span></li>
             <div style="clear:both;"></div>
         </ul>

@@ -1,6 +1,6 @@
 package com.aishang.po;
 
-public class categorysecond {
+public class CategorySecond {
     private Integer csid;
     private String csname;
     private Integer cid;
@@ -40,7 +40,7 @@ public class categorysecond {
 
     @Override
     public String toString() {
-        return "categorysecond{" +
+        return "CategorySecond{" +
                 "csid=" + csid +
                 ", csname='" + csname + '\'' +
                 ", cid=" + cid +

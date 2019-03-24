@@ -1,6 +1,6 @@
 package com.aishang.po;
 
-public class adminuser {
+public class AdminUser {
     private Integer uid;
     private String username;
     private String password;
@@ -21,6 +21,15 @@ public class adminuser {
         this.username = username;
     }
 
+    @Override
+    public String toString() {
+        return "AdminUser{" +
+                "uid=" + uid +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
+
     public String getPassword() {
         return password;
     }
@@ -29,12 +38,5 @@ public class adminuser {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "adminuser{" +
-                "uid=" + uid +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
+
 }

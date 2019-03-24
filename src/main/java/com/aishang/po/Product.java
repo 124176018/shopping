@@ -2,7 +2,7 @@ package com.aishang.po;
 
 import java.util.Date;
 
-public class product {
+public class Product {
     private Integer pid;
     private String pname;
     private Double market_price;
@@ -78,7 +78,7 @@ public class product {
 
     @Override
     public String toString() {
-        return "product{" +
+        return "Product{" +
                 "pid=" + pid +
                 ", pname='" + pname + '\'' +
                 ", market_price=" + market_price +

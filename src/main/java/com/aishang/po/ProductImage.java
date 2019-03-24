@@ -1,6 +1,6 @@
 package com.aishang.po;
 
-public class productimage {
+public class ProductImage {
     private Integer pmid;
     private Integer pid;
     private String image;
@@ -40,7 +40,7 @@ public class productimage {
 
     @Override
     public String toString() {
-        return "productimage{" +
+        return "ProductImage{" +
                 "pmid=" + pmid +
                 ", pid=" + pid +
                 ", image='" + image + '\'' +

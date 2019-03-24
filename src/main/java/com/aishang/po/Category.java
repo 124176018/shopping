@@ -1,18 +1,9 @@
 package com.aishang.po;
 
-public class category {
+public class Category {
     private Integer cid;
     private String cnname;
     private Integer cstate;
-
-    @Override
-    public String toString() {
-        return "category{" +
-                "cid=" + cid +
-                ", cnname='" + cnname + '\'' +
-                ", cstate=" + cstate +
-                '}';
-    }
 
     public Integer getCid() {
         return cid;
@@ -36,5 +27,14 @@ public class category {
 
     public void setCstate(Integer cstate) {
         this.cstate = cstate;
+    }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "cid=" + cid +
+                ", cnname='" + cnname + '\'' +
+                ", cstate=" + cstate +
+                '}';
     }
 }

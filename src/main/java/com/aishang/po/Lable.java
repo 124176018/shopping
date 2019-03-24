@@ -1,6 +1,6 @@
 package com.aishang.po;
 
-public class lable {
+public class Lable {
     private Integer lid;
     private String lname;
     private Integer csid;
@@ -31,7 +31,7 @@ public class lable {
 
     @Override
     public String toString() {
-        return "lable{" +
+        return "Lable{" +
                 "lid=" + lid +
                 ", lname='" + lname + '\'' +
                 ", csid=" + csid +

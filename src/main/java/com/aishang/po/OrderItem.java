@@ -1,6 +1,6 @@
 package com.aishang.po;
 
-public class orderitem {
+public class OrderItem {
     private Integer itemid;
     private Integer count;
     private Double subtotal;
@@ -49,7 +49,7 @@ public class orderitem {
 
     @Override
     public String toString() {
-        return "orderitem{" +
+        return "OrderItem{" +
                 "itemid=" + itemid +
                 ", count=" + count +
                 ", subtotal=" + subtotal +
