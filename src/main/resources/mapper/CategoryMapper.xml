@@ -7,4 +7,24 @@
     <select id="findCateName"  resultType="category">
         SELECT * FROM category
     </select>
+    <!-- 上下级数据结构通过cid查询 -->
+    <resultMap type="CategoyrExt" id="CategoryExtMap">
+        <id column="cid" property="cid"/>
+        <result column="cname" property="cname"/>
+        <result column="cstate" property="cstate"/>
+        <!-- collection用于一对多 -->
+        <collection  property="categorysSeconds" ofType="CategorySecond">
+            <id column="csid" property="csid"/><!--1.数据库字段2.po类里的字段 -->
+            <result column="csname" property="csname"/>
+            <result column="cid" property="cid"/>
+            <result column="csstate" property="csstate"/>
+        </collection>
+    </resultMap>
+    <!--查询表里二级目录有哪些-->
+    <select id="categorysSeconds" parameterType="int" resultMap="CategoryExtMap">
+       select * from categorysecond
+         left join category
+         on category.cid = categorysecond.cid
+         where category.cid = #{cid}
+     </select>
 </mapper>
