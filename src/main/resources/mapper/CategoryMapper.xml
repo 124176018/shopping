@@ -3,9 +3,8 @@
 
 <!-- 设置为CategoryMapper接口方法提供sql语句配置 -->
 <mapper namespace="com.aishang.dao.CategoryMapper">
-<!-- 根据id查询表里有哪些一级类目-->
-    <select id="findCateByid" parameterType="int" resultType="Category">
-        SELECT * FROM category WHERE cid=#{cid}
-
+<!-- 查询表里有哪些一级类目-->
+    <select id="findCateName"  resultType="category">
+        SELECT * FROM category
     </select>
 </mapper>

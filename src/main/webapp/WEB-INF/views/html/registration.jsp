@@ -66,6 +66,7 @@
                     sbb.attr("disabled", true);
                 } else {
                     msg2.html("<span color='ride' class='dui'>邮箱格式正确</span>");
+                    sbb.attr("disable", false);
                 }
             })
             /*判断手机号是否符合规则*/
@@ -111,19 +112,28 @@
                     sbb.attr("disable", true);
                 }
             })
-            /*判断验证码是否正确*/
-            $("#codeid").blur(function checkcode() {
-                var total=0;
-                var msg6 = $("#msg6");
-                var codeid = $("#codeid").val();
-                if (codeid.length != 4) {
-                    msg6.html("<span class='cuo'color='ride'>验证码错误</span>");
-                    sbb.attr("disable", true);
-                } else {
-                    msg6.html("<span color='blue'>      </span>");
-                }
+            var msg6 = $("#msg6");
+            var codeid = $("#codeid");
+            codeid.blur(function checkcode() { //焦点移开事件
+                $.ajax({ //ajax调用
+                    url: "${pageContext.request.contextPath}/user/getregistration.do",//访问服务器地址
+                    type: "GET",
+                    data: {
+                        codeid: codeid.val(), //传递参数
+                    },
+                    dataType: "text",
+                    success: function (data) {
+                        if (data.trim() == "yes") {
+                            msg6.html("<span  color='red' class='dui'>验证码正确</span >");
+                            sbb.attr("disabled", false);
+                        } else {
+                            msg6.html("<span  color='blue' class='cuo'>验证码不正确</span >");
+                            sbb.attr("disabled", true);
+                        }
 
-            })
+                    }
+                });
+            });
 
 
         });
@@ -256,7 +266,7 @@
         </div>
         <div class="psw psw3">
             <p class="psw-p1">验证码</p>
-            <input type="text" placeholder="请输入验证码" id="codeid" name="code"/>
+            <input type="text" placeholder="请输入验证码" id="codeid" name="codename"/>
             <span id="msg6"></span>
         </div>
         <div class="yanzhentu">

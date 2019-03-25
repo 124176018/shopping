@@ -3,6 +3,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -519,9 +520,14 @@
             </div>
         </div>
         <ul class="nav-font f-l">
-            <li><a href="${pageContext.request.contextPath}/二手市场首页.html">二手市场</a><span><img src="${pageContext.request.contextPath}/images/zl2-05.gif" /></span></li>
+            <c:forEach items="${listcateName}" var="lm">
+                <li><a href="在线商城首页.html">${lm.cname}</a></li>
+
+            </c:forEach>
+            <img src="${pageContext.request.contextPath}/images/zl2-05.gif" /></span></li>
             <div style="clear:both;"></div>
         </ul>
+
         <div style="clear:both;"></div>
     </div>
 </div>

@@ -6,7 +6,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -28,6 +30,19 @@ public class UserController {
             out.print("no");
         }
             out.close();
+    }
+    @RequestMapping("getregistration.do")
+    /*AXAJ判断验证码是否想等*/
+    public void getregistration(HttpServletRequest request,HttpServletResponse response,String codeid) throws IOException {
+        PrintWriter out = response.getWriter();
+        HttpSession session = request.getSession();
+        String codeimage = (String) session.getAttribute("code");
+        if (codeid.equals(codeimage)){
+            out.print("yes");
+        }else {
+            out.print("no");
+        }
+        out.close();
     }
 
 }

@@ -2,7 +2,7 @@ package com.aishang.po;
 
 public class Category {
     private Integer cid;
-    private String cnname;
+    private String cname;
     private Integer cstate;
 
     public Integer getCid() {
@@ -13,12 +13,12 @@ public class Category {
         this.cid = cid;
     }
 
-    public String getCnname() {
-        return cnname;
+    public String getCname() {
+        return cname;
     }
 
     public void setCnname(String cnname) {
-        this.cnname = cnname;
+        this.cname = cnname;
     }
 
     public Integer getCstate() {
@@ -33,7 +33,7 @@ public class Category {
     public String toString() {
         return "Category{" +
                 "cid=" + cid +
-                ", cnname='" + cnname + '\'' +
+                ", cnname='" + cname + '\'' +
                 ", cstate=" + cstate +
                 '}';
     }
