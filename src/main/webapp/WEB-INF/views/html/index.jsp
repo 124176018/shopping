@@ -243,13 +243,6 @@
 <div class="zl-info w1200">
     <div class="zl-title1" style="border-color:#FF9A02;">
         <h3 class="title1-h3 f-l">${louceng.cname}</h3>
-        <ul class="title1-ul1 title1-ul2 f-r">
-            <li class="current"><a href="${pageContext.request.contextPath}/JavaScript:;">特色火锅</a></li>
-            <li><a href="${pageContext.request.contextPath}/JavaScript:;">极品中餐</a></li>
-            <li><a href="${pageContext.request.contextPath}/JavaScript:;">西式面点</a></li>
-            <li><a href="${pageContext.request.contextPath}/JavaScript:;">香锅烧烤</a></li>
-            <div style="clear:both;"></div>
-        </ul>
         <div style="clear:both;"></div>
     </div>
     <div class="zl-con">
@@ -263,14 +256,28 @@
             </p>
             <ul class="zl-lhover" style=" background:#FF9A02;">
                 <c:forEach items="${louceng.categorysSeconds}" var="louceng1">
-                <li><a href="${pageContext.request.contextPath}/JavaScript:;">${louceng1.csname}</a></li>
+                    <li><a href="${pageContext.request.contextPath}/JavaScript:;">${louceng1.csname}</a></li>
                 </c:forEach>
                 <div style="clear:both;"></div>
             </ul>
         </div>
         <div class="zl-con-right f-l">
             <ul class="zl-rul1 lihover">
-
+    <c:forEach items="${louceng.categorysSeconds}" var="louceng2">
+                <li>
+                    <div class="sy-tu1">
+                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-84.png" /></a>
+                    </div>
+                    <div class="sy-tit1">
+                        <a href="#">${louceng2.csname}</a>
+                    </div>
+                    <div class="sy-tit2">
+                        <p><a href="#">都市新大新特色豆米锅</a></p>
+                        <p>地址：渝中区石油路174号龙湖时代天A馆L3-20</p>
+                        <p>电话：023-63310530</p>
+                    </div>
+                </li>
+    </c:forEach>
                 <div style="clear:both;"></div>
             </ul>
             <ul class="zl-rul1 lihover">
