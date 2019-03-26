@@ -50,7 +50,7 @@ public class DoLoginController {
                 response.addCookie(cookie);
             }
             return "redirect:/cate/selectCateName.do";
-           /* return "index";*/
+
         }
         return "login";
     }
@@ -62,34 +62,37 @@ public class DoLoginController {
     }
 
     @RequestMapping("registration.do")
-    public String registration(User user, HttpServletRequest request,HttpServletResponse response,String codename) throws IOException {
+    public String registration(User user, HttpServletRequest request,HttpServletResponse response,String codename)  {
         /*正则表达式后端验证邮箱的正确格式和手机号的正确格式以及验证码是否正确*/
         HttpSession session = request.getSession();
-        PrintWriter out = response.getWriter();
         String eg = "(?=^[\\w.@]{6,50}$)\\w+@\\w+(?:\\.[\\w]{2,3}){1,2}";
         String mobileRegex = "^1(3|4|5|7|8)\\d{9}$";
         String codeimage = (String) session.getAttribute("code");
-        /*System.out.println("asfd@asdf.com".matches(eg));输出结果为false*/
         /* System.out.println("2321222".matches(mobileRegex));输出结果为false*/
-        /*验证添加的用户信息不能为空和空字符串*/
-        if ((user.getUsername() != null && !user.getUsername() .equals("") ) &&
-                (user.getPassword() != null && !user.getPassword().equals("") ) &&
-                (user.getEmail() != null && !user.getEmail().equals("") ) &&
-                (user.getPhone() != null && !user.getPhone().equals("") ) &&
-                (codename != null && !codename.equals(""))) {
-            if (user.getEmail().matches(eg)
-                    && user.getPhone().matches(mobileRegex)
-                    && codename.equals(codeimage)) {
-                       userService.addUser(user);
+        PrintWriter out = null;
+        try {
+            out = response.getWriter();
+            /*验证添加的用户信息不能为空和空字符串*/
+            if ((user.getUsername() != null && !user.getUsername() .equals("") ) &&
+                    (user.getPassword() != null && !user.getPassword().equals("") ) &&
+                    (user.getEmail() != null && !user.getEmail().equals("") ) &&
+                    (user.getPhone() != null && !user.getPhone().equals("") ) &&
+                    (codename != null && !codename.equals(""))) {
+                if (user.getEmail().matches(eg)
+                        && user.getPhone().matches(mobileRegex)
+                        && codename.equals(codeimage)) {
+                    userService.addUser(user);
+
+                } else {
+                    return "registration";
+                }
 
             } else {
-                out.print("no");
                 return "registration";
+
             }
-
-        } else {
-            return "registration";
-
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
         return "login";

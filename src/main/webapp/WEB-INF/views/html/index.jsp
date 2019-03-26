@@ -10,7 +10,7 @@
     <title>中林首页</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/zhonglingxm2.css" />
-    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jQuery.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhonglin.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhongling2.js"></script>
 </head>
@@ -119,415 +119,33 @@
 <div class="nav-box">
     <div class="nav-kuai w1200">
         <div class="nav-kuaijie f-l">
-            <a href="${pageContext.request.contextPath}/JavaScript:;" class="kj-tit1">商品分类快捷</a>
+            <a href="JavaScript:;" class="kj-tit1">商品分类快捷</a>
             <div class="kuaijie-box">
+                <c:forEach items="${listcateNameseconds}" var="lmo">
                 <div class="kuaijie-info">
                     <dl class="kj-dl1">
-                        <dt><img src="${pageContext.request.contextPath}/images/zl2-07.gif" /><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">食品/饮料/酒水</a></dt>
-                        <dd>
-                            <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">饼干糕点</a><span>|</span>
-                            <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">冲调保健</a><span>|</span>
-                            <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">酒水</a>
-                        </dd>
+                        <dt><img src="${pageContext.request.contextPath}/images/zl2-07.gif" /><a href="搜索列表(有品牌).html">${lmo.cname}</a></dt>
                     </dl>
                     <div class="kuaijie-con">
+                        <c:forEach items="${lmo.categorysSeconds}" var="lmoo">
                         <dl class="kj-dl2" style="display:inline-block">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
+                            <dt><a href="搜索列表(有品牌).html">${lmoo.csname}</a></dt>
                         </dl>
-                        <dl class="kj-dl2" style="display:inline-block">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2" style="display:inline-block">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2" style="display:inline-block">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2" style="display:inline-block">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2" style="display:inline-block">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2" style="display:inline-block">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2" style="display:inline-block">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2" style="display:inline-block">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2" style="display:inline-block">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
+                        </c:forEach>
                         <div style="clear:both;"></div>
                     </div>
+
                 </div>
-                <div class="kuaijie-info">
-                    <dl class="kj-dl1">
-                        <dt><img src="${pageContext.request.contextPath}/images/zl2-08.gif" /><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">粮油副食</a></dt>
-                        <dd>
-                            <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">厨房调味</a><span>|</span>
-                            <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">大米/面粉</a><span>|</span>
-                            <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">方便速食</a>
-                        </dd>
-                    </dl>
-                    <div class="kuaijie-con">
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <div style="clear:both;"></div>
-                    </div>
-                </div>
-                <div class="kuaijie-info">
-                    <dl class="kj-dl1">
-                        <dt><img src="${pageContext.request.contextPath}/images/zl2-09.gif" /><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">家庭清洁</a></dt>
-                        <dd>
-                            <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">厨房清洁</a><span>|</span>
-                            <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">纸品湿巾</a><span>|</span>
-                            <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">家私</a>
-                        </dd>
-                    </dl>
-                    <div class="kuaijie-con">
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <div style="clear:both;"></div>
-                    </div>
-                </div>
-                <div class="kuaijie-info">
-                    <dl class="kj-dl1">
-                        <dt><img src="${pageContext.request.contextPath}/images/zl2-10.gif" /><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">美妆洗护/个人护理</a></dt>
-                        <dd>
-                            <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a><span>|</span>
-                            <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗发护发</a>
-                        </dd>
-                    </dl>
-                    <div class="kuaijie-con">
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <div style="clear:both;"></div>
-                    </div>
-                </div>
-                <div class="kuaijie-info">
-                    <dl class="kj-dl1">
-                        <dt><img src="${pageContext.request.contextPath}/images/zl2-11.gif" /><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">母婴用品/玩具</a></dt>
-                        <dd>
-                            <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">宝宝喂养/洗护清洁</a><span>|</span>
-                            <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">玩具</a><span>|</span>
-                            <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">奶粉/辅食</a>
-                        </dd>
-                    </dl>
-                    <div class="kuaijie-con">
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <div style="clear:both;"></div>
-                    </div>
-                </div>
-                <div class="kuaijie-info">
-                    <dl class="kj-dl1">
-                        <dt><img src="${pageContext.request.contextPath}/images/zl2-12.gif" /><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">家居/家电</a></dt>
-                    </dl>
-                    <div class="kuaijie-con">
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗浴用品/身体护理</a></dt>
-                            <dd>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">护手霜</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">香皂</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">沐浴露</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">花露水</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">泡浴/盐浴</a><span>|</span>
-                                <a href="${pageContext.request.contextPath}/搜索列表(有品牌).html">洗手液</a>
-                            </dd>
-                        </dl>
-                        <div style="clear:both;"></div>
-                    </div>
-                </div>
+                </c:forEach>
             </div>
         </div>
         <ul class="nav-font f-l">
-            <c:forEach items="${listcateName}" var="lm">
-                <li><a href="在线商城首页.html">${lm.cname}</a></li>
-
-            </c:forEach>
-            <img src="${pageContext.request.contextPath}/images/zl2-05.gif" /></span></li>
+       <c:forEach items="${listcateNameseconds}" var="lmo">
+        <li><a href="在线商城首页.html">${lmo.cname}</a></li>
+        </c:forEach>
+            <li><a href="二手市场首页.html">二手市场</a><span><img src="${pageContext.request.contextPath}/images/zl2-05.gif" /></span></li>
             <div style="clear:both;"></div>
         </ul>
-
         <div style="clear:both;"></div>
     </div>
 </div>
@@ -621,7 +239,7 @@
 <!--1F  在线商城-->
 <div class="zl-info w1200">
     <div class="zl-title1">
-        <h3 class="title1-h3 f-l">1F  在线商城</h3>
+        <h3 class="title1-h3 f-l"></h3>
         <ul class="title1-ul1 f-r">
             <li class="current"><a href="${pageContext.request.contextPath}/JavaScript:;">食品/饮料/酒水</a></li>
             <li><a href="${pageContext.request.contextPath}/JavaScript:;">粮油副食</a></li>
@@ -759,7 +377,7 @@
 <!--2F  餐饮娱乐-->
 <div class="zl-info w1200">
     <div class="zl-title1" style="border-color:#FF9A02;">
-        <h3 class="title1-h3 f-l">2F  餐饮娱乐</h3>
+        <h3 class="title1-h3 f-l"></h3>
         <ul class="title1-ul1 title1-ul2 f-r">
             <li class="current"><a href="${pageContext.request.contextPath}/JavaScript:;">特色火锅</a></li>
             <li><a href="${pageContext.request.contextPath}/JavaScript:;">极品中餐</a></li>
@@ -1118,7 +736,7 @@
 <!--3F  家政服务-->
 <div class="zl-info w1200">
     <div class="zl-title1" style="border-color:#73B42D;">
-        <h3 class="title1-h3 f-l">3F  家政服务</h3>
+        <h3 class="title1-h3 f-l"></h3>
         <ul class="title1-ul1 title1-ul3 f-r">
             <li class="current"><a href="JavaScript:;">家居维修</a></li>
             <li><a href="JavaScript:;">开锁服务</a></li>
@@ -1651,7 +1269,7 @@
 <!--4F  美容美发-->
 <div class="zl-info w1200">
     <div class="zl-title1" style="border-color:#BC2B51;">
-        <h3 class="title1-h3 f-l">4F  美容美发</h3>
+        <h3 class="title1-h3 f-l"></h3>
         <ul class="title1-ul1 title1-ul4 f-r">
             <li class="current"><a href="JavaScript:;">美容养生</a></li>
             <li><a href="JavaScript:;">美发烫发</a></li>
@@ -2177,7 +1795,7 @@
 <!--5F  教育培训-->
 <div class="zl-info w1200">
     <div class="zl-title1" style="border-color:#35A3D6;">
-        <h3 class="title1-h3 f-l">5F  教育培训</h3>
+        <h3 class="title1-h3 f-l"></h3>
         <ul class="title1-ul1 title1-ul5 f-r">
             <li class="current"><a href="JavaScript:;">小学辅导</a></li>
             <li><a href="JavaScript:;">考试英语</a></li>
@@ -2952,7 +2570,7 @@
 <!--6F  汽车房产-->
 <div class="zl-info w1200">
     <div class="zl-title1" style="border-color:#8F7453;">
-        <h3 class="title1-h3 f-l">6F  汽车房产</h3>
+        <h3 class="title1-h3 f-l"></h3>
         <ul class="title1-ul1 title1-ul6 f-r">
             <li class="current"><a href="JavaScript:;">奔驰4s店</a></li>
             <li><a href="JavaScript:;">宝马4s店</a></li>

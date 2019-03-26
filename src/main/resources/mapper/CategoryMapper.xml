@@ -3,17 +3,14 @@
 
 <!-- 设置为CategoryMapper接口方法提供sql语句配置 -->
 <mapper namespace="com.aishang.dao.CategoryMapper">
-<!-- 查询表里有哪些一级类目-->
-    <select id="findCateName"  resultType="category">
-        SELECT * FROM category
-    </select>
+
     <!-- 上下级数据结构通过cid查询 -->
-    <resultMap type="CategoyrExt" id="CategoryExtMap">
+    <resultMap type="CategoryExt" id="categoryExtMap">
         <id column="cid" property="cid"/>
         <result column="cname" property="cname"/>
         <result column="cstate" property="cstate"/>
         <!-- collection用于一对多 -->
-        <collection  property="categorysSeconds" ofType="CategorySecond">
+        <collection  property="categorysSeconds" ofType="categorySecond">
             <id column="csid" property="csid"/><!--1.数据库字段2.po类里的字段 -->
             <result column="csname" property="csname"/>
             <result column="cid" property="cid"/>
@@ -21,10 +18,9 @@
         </collection>
     </resultMap>
     <!--查询表里二级目录有哪些-->
-    <select id="categorysSeconds" parameterType="int" resultMap="CategoryExtMap">
-       select * from categorysecond
-         left join category
+    <select id="findAllCateName"  resultMap="categoryExtMap">
+       select * from category
+         left join categorysecond
          on category.cid = categorysecond.cid
-         where category.cid = #{cid}
      </select>
 </mapper>
