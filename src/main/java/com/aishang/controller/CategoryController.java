@@ -20,6 +20,6 @@ public class CategoryController {
     public String selectCateName(Model model){
         List<CategoryExt> allCateName = categoryService.findAllCateName();
         model.addAttribute("listcateNameseconds",allCateName);
-        return "forward:/cate/doproducts.do";
+        return "index";
     }
 }

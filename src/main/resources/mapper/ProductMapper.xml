@@ -3,45 +3,66 @@
 
 
 <mapper namespace="com.aishang.dao.ProductMapper">
-    <resultMap id="categoryExtMap" type="CategoryExt">
-        <!--封装Category信息-->
-        <id column="cid" property="cid"/>
-        <result column="cname" property="cname"/>
-        <result column="cstate" property="cstate"/>
-        <!--封装CateSencond信息-->
-        <collection  property="categorysSeconds" ofType="categorySecond">
-            <id column="csid" property="csid"/><!--1.数据库字段2.po类里的字段 -->
-            <result column="csname" property="csname"/>
-            <result column="cid" property="cid"/>
-            <result column="csstate" property="csstate"/>
-          <!--封装Product-->
-            <collection property="products" ofType="product">
-                <id column="pid" property="pid"/><!--1.数据库字段2.po类里的字段 -->
-                <result column="pname" property="pname"/>
-                <result column="market_price" property="market_price"/>
-                <result column="shop_price" property="shop_price"/>
-                <result column="pdesc" property="pdesc"/>
-                <result column="pdate" property="pdate"/>
-                <result column="csid" property="csid"/>
-                <result column="pstate" property="pstate"/>
+    <resultMap id="productExtMap" type="ProductExt">
+        <!--封装Product-->
+        <id column="pid" property="pid"/><!--1.数据库字段2.po类里的字段 -->
+        <result column="pname" property="pname"/>
+        <result column="market_price" property="market_price"/>
+        <result column="shop_price" property="shop_price"/>
+        <result column="pdesc" property="pdesc"/>
+        <result column="pdate" property="pdate"/>
+        <result column="csid" property="csid"/>
+        <result column="pstate" property="pstate"/>
 
+        <collection property="categories" ofType="categoryExt">
+            <id column="cid" property="cid"/>
+            <result column="cname" property="cname"/>
+            <result column="cstate" property="cstate"/>
+            <!-- collection用于对多 -->
+            <collection property="categorysSeconds" ofType="categorySecond">
+                <id column="csid" property="csid"/><!--1.数据库字段2.po类里的字段 -->
+                <result column="csname" property="csname"/>
+                <result column="cid" property="cid"/>
+                <result column="csstate" property="csstate"/>
             </collection>
-
-
         </collection>
-
-
     </resultMap>
-    <select id="findAllProduct" resultMap="categoryExtMap" parameterType="Integer">
+    <select id="findAllProduct" resultMap="productExtMap" parameterType="int">
      SELECT *
      FROM category
-     LEFT JOIN categorysecond
+     RIGHT JOIN categorysecond
      ON category.cid = categorysecond.cid
-     LEFT JOIN product
+     RIGHT JOIN product
      ON categorysecond.csid= product.csid
      WHERE category.cid=#{cid}
 
     </select>
+
+    <!--点击二级类目显示所有商品-->
+    <resultMap id="CategorySencondExtMap" type="CategorySecondExt">
+            <id column="csid" property="csid"/>
+            <result column="csname" property="csname"/>
+            <result column="cid" property="cid"/>
+            <result column="csstate" property="csstate"/>
+        <collection property="products" ofType="product">
+            <id column="pid" property="pid"/><!--1.数据库字段2.po类里的字段 -->
+            <result column="pname" property="pname"/>
+            <result column="market_price" property="market_price"/>
+            <result column="shop_price" property="shop_price"/>
+            <result column="pdesc" property="pdesc"/>
+            <result column="pdate" property="pdate"/>
+            <result column="csid" property="csid"/>
+            <result column="pstate" property="pstate"/>
+        </collection>
+    </resultMap>
+    <select id="findSencondProduct" resultMap="CategorySencondExtMap" parameterType="int">
+            SELECT *
+            FROM categorysecond
+            LEFT JOIN product
+            ON categorysecond.csid = product.csid
+            WHERE categorysecond.csid=#{csid}
+        </select>
+
 </mapper>
 
 

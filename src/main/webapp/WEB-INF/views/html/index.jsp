@@ -124,12 +124,12 @@
                 <c:forEach items="${listcateNameseconds}" var="lmo">
                 <div class="kuaijie-info">
                     <dl class="kj-dl1">
-                        <dt><img src="${pageContext.request.contextPath}/images/zl2-07.gif" /><a href="搜索列表(有品牌).html">${lmo.cname}</a></dt>
+                        <dt><img src="${pageContext.request.contextPath}/images/zl2-07.gif" /><a href="">${lmo.cname}</a></dt>
                     </dl>
                     <div class="kuaijie-con">
                         <c:forEach items="${lmo.categorysSeconds}" var="lmoo">
                         <dl class="kj-dl2" style="display:inline-block">
-                            <dt><a href="搜索列表(有品牌).html">${lmoo.csname}</a></dt>
+                            <dt><a href="${pageContext.request.contextPath}/cate/doproductsenconds.do?csid=${lmoo.csid}">${lmoo.csname}</a></dt>
                         </dl>
                         </c:forEach>
                         <div style="clear:both;"></div>
@@ -141,7 +141,7 @@
         </div>
         <ul class="nav-font f-l">
        <c:forEach items="${listcateNameseconds}" var="lmo">
-        <li><a href="在线商城首页.html">${lmo.cname}</a></li>
+        <li><a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${lmo.cid}">${lmo.cname}</a></li>
         </c:forEach>
             <li><a href="二手市场首页.html">二手市场</a><span><img src="${pageContext.request.contextPath}/images/zl2-05.gif" /></span></li>
             <div style="clear:both;"></div>
