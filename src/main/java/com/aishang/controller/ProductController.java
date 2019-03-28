@@ -1,7 +1,5 @@
 package com.aishang.controller;
 import com.aishang.po.CategoryExt;
-import com.aishang.po.CategorySecond;
-import com.aishang.po.CategorySecondExt;
 import com.aishang.po.ProductExt;
 import com.aishang.service.CategoryService;
 import com.aishang.service.ProductService;
@@ -34,9 +32,10 @@ public class ProductController {
     @RequestMapping("doproductsenconds.do")
     public String doproductsenconds(int csid,Model model){
         /*点击二级类目显示商品的方法*/
-        List<CategorySecondExt> sencondProduct = productService.findSencondProduct(csid);
-        model.addAttribute("sencondProduct",sencondProduct);
-        System.out.println(sencondProduct+"这是什么");
+        List<ProductExt> allProduct = productService.findSencondProduct(csid);
+        List<CategoryExt> allCateName = categoryService.findAllCateName();
+        model.addAttribute("allProduct",allProduct);
+        model.addAttribute("allCateName",allCateName);
         return "serachproduct";
     }
 }

@@ -190,12 +190,12 @@
                 <div class="kuaijie-info">
 
                     <dl class="kj-dl1">
-                        <dt><img src="${pageContext.request.contextPath}/images/zl2-07.gif" /><a href="搜索列表(有品牌).html">${la.cname}</a></dt>
+                        <dt><img src="${pageContext.request.contextPath}/images/zl2-07.gif" /><a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${la.cid}">${la.cname}</a></dt>
                     </dl>
                     <div class="kuaijie-con">
                         <c:forEach items="${la.categorysSeconds}" var="lb">
                         <dl class="kj-dl2">
-                            <dt><a href="搜索列表(有品牌).html">${lb.csname}</a></dt>
+                            <dt><a href="${pageContext.request.contextPath}/cate/doproductsenconds.do?csid=${lb.csid}">${lb.csname}</a></dt>
                         </dl>
                         </c:forEach>
                         <div style="clear:both;"></div>

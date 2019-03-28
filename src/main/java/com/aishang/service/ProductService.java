@@ -1,7 +1,7 @@
 package com.aishang.service;
 import com.aishang.dao.ProductMapper;
 
-import com.aishang.po.CategorySecondExt;
+
 import com.aishang.po.ProductExt;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
@@ -18,7 +18,7 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public List<CategorySecondExt> findSencondProduct(int csid) {
+    public List<ProductExt> findSencondProduct(int csid) {
         return productMapper.findSencondProduct(csid);
     }
 
