@@ -36,15 +36,17 @@
      ON categorysecond.csid= product.csid
      WHERE category.cid=#{cid}
 
+
     </select>
 
     <!--点击二级类目显示所有商品-->
-    <select id="findSencondProduct" resultMap="productExtMap" parameterType="int">
+    <select id="findSencondProduct" resultMap="productExtMap" parameterType="pageBen">
             SELECT *
             FROM categorysecond
             LEFT JOIN product
             ON categorysecond.csid = product.csid
             WHERE categorysecond.csid=#{csid}
+            limit #{startIndex},#{pageSize}
         </select>
     <!--在搜索框搜索商品-->
 

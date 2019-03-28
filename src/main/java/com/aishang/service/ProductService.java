@@ -2,6 +2,7 @@ package com.aishang.service;
 import com.aishang.dao.ProductMapper;
 
 
+import com.aishang.po.PageBen;
 import com.aishang.po.ProductExt;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
@@ -20,6 +21,11 @@ public class ProductService implements IProductService {
     @Override
     public List<ProductExt> findSencondProduct(int csid) {
         return productMapper.findSencondProduct(csid);
+    }
+
+    @Override
+    public int findAllCount(PageBen pageBen) {
+        return 0;
     }
 
 

@@ -2,6 +2,8 @@ package com.aishang.service;
 
 
 
+import com.aishang.po.PageBen;
+import com.aishang.po.Product;
 import com.aishang.po.ProductExt;
 import org.springframework.stereotype.Service;
 
@@ -12,4 +14,8 @@ public interface IProductService {
     List<ProductExt> findAllProduct(int cid);
     /*点击二级目录显示二级类目下的商品*/
     List<ProductExt> findSencondProduct(int csid);
+    /*获取总页数*/
+   public int findAllCount(PageBen pageBen);
+
+
 }
