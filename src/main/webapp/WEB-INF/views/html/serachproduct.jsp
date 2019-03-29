@@ -195,7 +195,7 @@
                     <div class="kuaijie-con">
                         <c:forEach items="${la.categorysSeconds}" var="lb">
                         <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/cate/doproductsenconds.do?csid=${lb.csid}">${lb.csname}</a></dt>
+                            <dt><a href="${pageContext.request.contextPath}/cate/doproducts.do?csid=${lb.csid}">${lb.csname}</a></dt>
                         </dl>
                         </c:forEach>
                         <div style="clear:both;"></div>
@@ -272,7 +272,7 @@
     <div class="sp-con-info">
 
         <ul class="sp-info-r m-act beaut">
-            <c:forEach items="${allProduct}" var="ld">
+            <c:forEach items="${allProduct.list}" var="ld">
             <li style="border-bottom:0; border-right:0;">
                 <div class="li-top">
                     <a href="#" class="li-top-tu"><img src="${pageContext.request.contextPath}/images/beaut-con-li-tu2.gif" /></a>

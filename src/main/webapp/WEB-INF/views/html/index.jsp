@@ -129,7 +129,7 @@
                     <div class="kuaijie-con">
                         <c:forEach items="${lmo.categorysSeconds}" var="lmoo">
                         <dl class="kj-dl2" style="display:inline-block">
-                            <dt><a href="${pageContext.request.contextPath}/cate/doproductsenconds.do?csid=${lmoo.csid}">${lmoo.csname}</a></dt>
+                            <dt><a href="${pageContext.request.contextPath}/cate/doproducts.do?csid=${lmoo.csid}">${lmoo.csname}</a></dt>
                         </dl>
                         </c:forEach>
                         <div style="clear:both;"></div>

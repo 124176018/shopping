@@ -1,21 +1,13 @@
 package com.aishang.service;
-
-
-
-import com.aishang.po.PageBen;
-import com.aishang.po.Product;
+import com.aishang.po.PageBenForCate;
 import com.aishang.po.ProductExt;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 @Service
 public interface IProductService {
-    /*点击一级类目拿到所有商品*/
-    List<ProductExt> findAllProduct(int cid);
-    /*点击二级目录显示二级类目下的商品*/
-    List<ProductExt> findSencondProduct(int csid);
-    /*获取总页数*/
-   public int findAllCount(PageBen pageBen);
+    /*查询所有情况下的所有商品*/
+    void findAllProduct(PageBenForCate pageBenForCate);
+
 
 
 }

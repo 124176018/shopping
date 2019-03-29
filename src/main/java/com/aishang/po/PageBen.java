@@ -14,7 +14,6 @@ public class PageBen<T> {
 
     public void setPageNow(Integer pageNow) {
         this.pageNow = pageNow;
-
     }
 
     public Integer getPageSize() {
@@ -56,11 +55,10 @@ public class PageBen<T> {
         if (pageNow<0){
             pageNow=1;
         }
-
     }
 
     public Integer getStartIndex() {
-        return (getPageNow()-1)*pageSize;
+        return (getPageNow()-1)*pageSize>0?(getPageNow()-1)*pageSize:0;
     }
 
 

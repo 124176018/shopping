@@ -1,6 +1,7 @@
 package com.aishang.controller;
 import com.aishang.po.CategoryExt;
-import com.aishang.po.ProductExt;
+import com.aishang.po.PageBen;
+import com.aishang.po.PageBenForCate;
 import com.aishang.service.CategoryService;
 import com.aishang.service.ProductService;
 import org.springframework.stereotype.Controller;
@@ -14,28 +15,20 @@ import java.util.List;
 public class ProductController {
     @Resource
     private ProductService productService;
-
     @Resource
     private CategoryService categoryService;
 
     @RequestMapping("doproducts.do")
-    public String doproducts(int cid, Model model) {
+    public String doproducts(PageBenForCate pageBenForCate, Model model) {
+
         /*点击一级类目显示所有商品的方法*/
-        List<ProductExt> allProduct = productService.findAllProduct(cid);
+        productService.findAllProduct(pageBenForCate);
         /*拿到一级类目和二级类目的集合*/
         List<CategoryExt> allCateName = categoryService.findAllCateName();
         model.addAttribute("allCateName",allCateName);
-        model.addAttribute("allProduct", allProduct);
+        model.addAttribute("allProduct", pageBenForCate);
         return "serachproduct";
+    }
 
-    }
-    @RequestMapping("doproductsenconds.do")
-    public String doproductsenconds(int csid,Model model){
-        /*点击二级类目显示商品的方法*/
-        List<ProductExt> allProduct = productService.findSencondProduct(csid);
-        List<CategoryExt> allCateName = categoryService.findAllCateName();
-        model.addAttribute("allProduct",allProduct);
-        model.addAttribute("allCateName",allCateName);
-        return "serachproduct";
-    }
+
 }

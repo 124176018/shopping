@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-
 <mapper namespace="com.aishang.dao.ProductMapper">
     <resultMap id="productExtMap" type="ProductExt">
         <!--封装Product-->
@@ -27,29 +26,45 @@
             </collection>
         </collection>
     </resultMap>
-    <select id="findAllProduct" resultMap="productExtMap" parameterType="int">
+    <select id="findAllProduct" resultMap="productExtMap" parameterType="pageBenForCate">
      SELECT *
      FROM category
      RIGHT JOIN categorysecond
      ON category.cid = categorysecond.cid
      RIGHT JOIN product
      ON categorysecond.csid= product.csid
-     WHERE category.cid=#{cid}
-
-
+     <where>
+         <if test="cid!=null and cid!=''">
+              category.cid=#{cid}
+         </if>
+         <if test="csid!=null and csid!=''">
+             and categorysecond.csid=#{csid}
+         </if>
+         <if test="pname!=null and pname!=''">
+            and   product.pname like "%"#{pname}"%"
+         </if>
+     </where>
+             limit #{startIndex},#{pageSize}
     </select>
-
-    <!--点击二级类目显示所有商品-->
-    <select id="findSencondProduct" resultMap="productExtMap" parameterType="pageBen">
-            SELECT *
-            FROM categorysecond
-            LEFT JOIN product
-            ON categorysecond.csid = product.csid
-            WHERE categorysecond.csid=#{csid}
-            limit #{startIndex},#{pageSize}
-        </select>
-    <!--在搜索框搜索商品-->
-
+    <select id="findAllCount" resultType="Integer" parameterType="pageBenForCate">
+        SELECT COUNT(0)
+        FROM category
+        RIGHT JOIN categorysecond
+        ON category.cid = categorysecond.cid
+        RIGHT JOIN product
+        ON categorysecond.csid= product.csid
+        <where>
+            <if test="cid!=null ">
+                 category.cid=#{cid}
+            </if>
+            <if test="csid!=null ">
+                and categorysecond.csid=#{csid}
+            </if>
+            <if test="pname!=null ">
+                and   product.pname like "%"#{pname}"%"
+            </if>
+        </where>
+    </select>
 </mapper>
 
 
