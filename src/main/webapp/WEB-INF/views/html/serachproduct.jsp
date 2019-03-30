@@ -302,30 +302,109 @@
         </ul>
 
         <!--分页-->
+        <div class="jump-page f-l">
+            第【${allProduct.pageNow}】页&nbsp&nbsp&nbsp&nbsp&nbsp共【${allProduct.pageCount}】页
+        </div>
         <div class="paging">
             <div class="pag-left f-l">
-                <a href="#" class="about left-r f-l"><</a>
+                <c:if test="${allProduct.pageNow!=1}">
+                <a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}&pageNow=${allProduct.pageNow-1}" class="about left-r f-l">«</a>
+                </c:if>
                 <ul class="left-m f-l">
-                    <li><a href="#">1</a></li>
-                    <li class="current"><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">6</a></li>
-                    <li><a href="#">...</a></li>
-                    <li><a href="#">100</a></li>
+
+
+                        <%--中间页--%>
+                        <%--显示6页中间页[begin=起始页,end=最大页]--%>
+                        <%--总页数没有6页--%>
+                        <c:choose>
+                            <c:when test="${allProduct.pageCount <= 6}">
+                                <c:set var="begin" value="1"/>
+                                <c:set var="end" value="${allProduct.pageCount}"/>
+                            </c:when>
+                            <%--页数超过了6页--%>
+                            <c:otherwise>
+                                <c:set var="begin" value="${allProduct.pageNow - 1}"/>
+                                <c:set var="end" value="${allProduct.pageNow + 3}"/>
+                                <%--如果begin减1后为0,设置起始页为1,最大页为6--%>
+                                <c:if test="${begin -1 <= 0}">
+                                    <c:set var="begin" value="1"/>
+                                    <c:set var="end" value="6"/>
+                                </c:if>
+                                <%--如果end超过最大页,设置起始页=最大页-5--%>
+                                <c:if test="${end > allProduct.pageCount}">
+                                    <c:set var="begin" value="${allProduct.pageCount - 5}"/>
+                                    <c:set var="end" value="${allProduct.pageCount}"/>
+                                </c:if>
+                            </c:otherwise>
+                        </c:choose>
+                        <%--遍历--%>
+                        <c:forEach var="i" begin="${begin}" end="${end}">
+                            <%--当前页,选中--%>
+                            <c:choose>
+                                <c:when test="${i == allProduct.pageNow}">
+                                    <li class="active"><a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}&pageNow=${i}" class="about left-r f-l">${i}</a></li>
+                                </c:when>
+                                <%--不是当前页--%>
+                                <c:otherwise>
+                                    <li><a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}&pageNow=${i}" class="about left-r f-l">${i}</a></li>
+                                </c:otherwise>
+                            </c:choose>
+                        </c:forEach>
+
+                        <%--如果是第一页,不允许点击--%>
+                        <c:choose>
+                            <c:when test="${allProduct.pageNow == 1}">
+                                <li class="disabled">
+                                    <a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}&pageNow=1" class="about left-r f-l" aria-label="Previous">
+                                        <span aria-hidden="true">首页</span>
+                                    </a>
+                                </li>
+                            </c:when>
+                            <c:otherwise>
+                                <%-- 点击到首页--%>
+                                <li>
+                                    <a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}&pageNow=1" class="about left-r f-l" aria-label="Previous">
+                                        <span aria-hidden="true">首页</span>
+                                    </a>
+                                </li>
+                            </c:otherwise>
+                        </c:choose>
+
+                        <%--如果是最后一页,不允许点击--%>
+                        <c:choose>
+                            <c:when test="${allProduct.pageNow == allProduct.pageCount}">
+                                <li class="disabled">
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">尾页</span>
+                                    </a>
+                                </li>
+                            </c:when>
+                            <c:otherwise>
+                                <%-- 点击到尾页--%>
+                                <li>
+                                    <a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}&pageNow=${allProduct.pageCount}" class="about left-r f-l" aria-label="Next">
+                                        <span aria-hidden="true">尾页</span>
+                                    </a>
+                                </li>
+                            </c:otherwise>
+                        </c:choose>
+
                     <div style="clear:both;"></div>
                 </ul>
-                <a href="#" class="about left-l f-l">></a>
+                <c:if test="${allProduct.pageNow!=allProduct.pageCount}">
+                <a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}&pageNow=${allProduct.pageNow+1}" class="about left-l f-l">»</a>
+                </c:if>
                 <div style="clear:both;"></div>
             </div>
+            <form action="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}" method="post">
             <div class="pag-right f-l">
                 <div class="jump-page f-l">
-                    到第<input type="text" />页
+                    到第<input type="number" min="1" max="${allProduct.pageCount}" name="pageNow"/>页
                 </div>
-                <button class="f-l">确定</button>
+                <button class="f-l" type="submit" name="${allProduct.pageNow}">确定</button>
                 <div style="clear:both;"></div>
             </div>
+            </form>
             <div style="clear:both;"></div>
         </div>
     </div>
