@@ -168,14 +168,16 @@
         <a href="JavaScript:;"><img src="${pageContext.request.contextPath}/images/zl2-04.gif" /></a>
     </div>
     <div class="search f-r">
+        <form action="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}" method="post">
         <div class="search-info">
-            <input type="text" placeholder="请输入商品名称" />
-            <button>搜索</button>
+            <input  type="text" placeholder="请输入商品名称"name="pname" value="${allProduct.pname}"/>
+            <button type="submit">搜索</button>
             <div style="clear:both;"></div>
         </div>
         <ul class="search-ul">
             <div style="clear:both;"></div>
         </ul>
+        </form>
     </div>
     <div style="clear:both;"></div>
 </div>
@@ -312,7 +314,6 @@
                 </c:if>
                 <ul class="left-m f-l">
 
-
                         <%--中间页--%>
                         <%--显示6页中间页[begin=起始页,end=最大页]--%>
                         <%--总页数没有6页--%>
@@ -374,7 +375,7 @@
                         <c:choose>
                             <c:when test="${allProduct.pageNow == allProduct.pageCount}">
                                 <li class="disabled">
-                                    <a href="#" aria-label="Previous">
+                                    <a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}&pageNow=${allProduct.pageCount}" class="about left-r f-l" aria-label="Previous">
                                         <span aria-hidden="true">尾页</span>
                                     </a>
                                 </li>
