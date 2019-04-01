@@ -277,7 +277,7 @@
             <c:forEach items="${allProduct.list}" var="ld">
             <li style="border-bottom:0; border-right:0;">
                 <div class="li-top">
-                    <a href="#" class="li-top-tu"><img src="${pageContext.request.contextPath}/images/beaut-con-li-tu2.gif" /></a>
+                    <a href="${pageContext.request.contextPath}/cate/pdproducts.do?pid=${ld.pid}" class="li-top-tu"><img src="${pageContext.request.contextPath}/images/beaut-con-li-tu2.gif" /></a>
                     <p class="jiage"><span class="sp1">￥109</span><span class="sp2">￥209</span></p>
                 </div>
                 <p class="miaoshu">${ld.pname}</p>
@@ -353,6 +353,7 @@
                         </c:forEach>
 
                         <%--如果是第一页,不允许点击--%>
+                            <c:if test="${allProduct.pageNow != 1}">
                         <c:choose>
                             <c:when test="${allProduct.pageNow == 1}">
                                 <li class="disabled">
@@ -370,8 +371,10 @@
                                 </li>
                             </c:otherwise>
                         </c:choose>
+                            </c:if>
 
                         <%--如果是最后一页,不允许点击--%>
+                            <c:if test="${allProduct.pageNow != allProduct.pageCount}">
                         <c:choose>
                             <c:when test="${allProduct.pageNow == allProduct.pageCount}">
                                 <li class="disabled">
@@ -389,6 +392,7 @@
                                 </li>
                             </c:otherwise>
                         </c:choose>
+                            </c:if>
 
                     <div style="clear:both;"></div>
                 </ul>

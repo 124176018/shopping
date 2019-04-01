@@ -13,6 +13,13 @@
         <result column="csid" property="csid"/>
         <result column="pstate" property="pstate"/>
 
+        <association property="productImage"  javaType="productImage">
+            <id column="pmid" property="pmid"/>
+            <result column="pid" property="pid"/>
+            <result column="image" property="image"/>
+            <result column="thumbnail" property="thumbnail"/>
+        </association>
+
         <collection property="categories" ofType="categoryExt">
             <id column="cid" property="cid"/>
             <result column="cname" property="cname"/>
@@ -65,8 +72,33 @@
             </if>
         </where>
     </select>
-</mapper>
 
+    <resultMap id="productImageMap" type="productImageExt">
+        <id column="pid" property="pid"/><!--1.数据库字段2.po类里的字段 -->
+        <result column="pname" property="pname"/>
+        <result column="market_price" property="market_price"/>
+        <result column="shop_price" property="shop_price"/>
+        <result column="pdesc" property="pdesc"/>
+        <result column="pdate" property="pdate"/>
+        <result column="csid" property="csid"/>
+        <result column="pstate" property="pstate"/>
+
+        <association property="productImage"  javaType="productImage">
+            <id column="pmid" property="pmid"/>
+            <result column="pid" property="pid"/>
+            <result column="image" property="image"/>
+            <result column="thumbnail" property="thumbnail"/>
+
+        </association>
+    </resultMap>
+    <select id="findProduct" resultMap="productImageMap" parameterType="pageBenForCate">
+        SELECT *
+        FROM product
+        LEFT JOIN productimage
+        ON product.pid = productimage.pid
+        WHERE  product.pid = #{pid}
+    </select>
+</mapper>
 
 
 

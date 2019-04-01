@@ -2,6 +2,7 @@ package com.aishang.controller;
 import com.aishang.po.CategoryExt;
 import com.aishang.po.PageBen;
 import com.aishang.po.PageBenForCate;
+import com.aishang.po.ProductImageExt;
 import com.aishang.service.CategoryService;
 import com.aishang.service.ProductService;
 import org.springframework.stereotype.Controller;
@@ -28,6 +29,16 @@ public class ProductController {
         model.addAttribute("allCateName",allCateName);
         model.addAttribute("allProduct", pageBenForCate);
         return "serachproduct";
+    }
+    @RequestMapping("pdproducts.do")
+    public String pdproducts(Model model,PageBenForCate pageBenForCate,Integer pid){
+        productService.findAllProduct(pageBenForCate);
+        List<CategoryExt> allCateName = categoryService.findAllCateName();
+        model.addAttribute("allCateName",allCateName);
+        model.addAttribute("allProduct", pageBenForCate);
+        ProductImageExt dproduct = productService.findProduct(pageBenForCate);
+        model.addAttribute("dproduct",dproduct);
+        return "pdetails";
     }
 
 

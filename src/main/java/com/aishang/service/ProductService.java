@@ -2,6 +2,7 @@ package com.aishang.service;
 import com.aishang.dao.ProductMapper;
 import com.aishang.po.PageBenForCate;
 import com.aishang.po.ProductExt;
+import com.aishang.po.ProductImageExt;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.List;
@@ -25,4 +26,11 @@ public class ProductService implements IProductService {
 
 
     }
+
+    @Override
+    public ProductImageExt findProduct(PageBenForCate pageBenForCate) {
+        return productMapper.findProduct(pageBenForCate);
+    }
+
+
 }

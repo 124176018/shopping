@@ -1,8 +1,5 @@
 package com.aishang.controller;
-
-import com.aishang.po.Category;
 import com.aishang.po.CategoryExt;
-import com.aishang.po.CategorySecond;
 import com.aishang.service.CategoryService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

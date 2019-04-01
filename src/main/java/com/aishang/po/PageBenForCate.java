@@ -4,6 +4,15 @@ public class PageBenForCate<T> extends PageBen<T> {
     private Integer cid;
     private Integer csid;
     private String pname;
+    private Integer pid;
+
+    public Integer getPid() {
+        return pid;
+    }
+
+    public void setPid(Integer pid) {
+        this.pid = pid;
+    }
 
     public Integer getCid() {
         return cid;
