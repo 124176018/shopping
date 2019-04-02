@@ -14,11 +14,7 @@ public class ProductService implements IProductService {
 
     @Override
     public void findAllProduct(PageBenForCate pageBenForCate) {
-        System.out.println("panme="+pageBenForCate.getPname());
-        System.out.println("cid="+pageBenForCate.getCid());
-        System.out.println("csid="+pageBenForCate.getCsid());
-        System.out.println(pageBenForCate.getStartIndex());
-        System.out.println(pageBenForCate.getPageSize());
+
         Integer allCount = productMapper.findAllCount(pageBenForCate);/*获取总条数*/
         pageBenForCate.setTotalCount(allCount);/*总条数赋值*/
         List<ProductExt> allProduct = productMapper.findAllProduct(pageBenForCate);
@@ -28,8 +24,8 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public ProductImageExt findProduct(PageBenForCate pageBenForCate) {
-        return productMapper.findProduct(pageBenForCate);
+    public ProductImageExt findProduct(Integer pid) {
+        return productMapper.findProduct(pid);
     }
 
 

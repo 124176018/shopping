@@ -10,6 +10,6 @@ public interface ProductMapper {
 
    Integer findAllCount(PageBenForCate pageBenForCate);
 
-   ProductImageExt findProduct(PageBenForCate pageBenForCate);
+   ProductImageExt findProduct(Integer pid);
 
 }

@@ -1,5 +1,6 @@
 package com.aishang.po;
 import java.util.Date;
+import java.util.List;
 
 public class Product {
     private Integer pid;
@@ -10,6 +11,7 @@ public class Product {
     private Date pdate;
     private Integer csid;
     private Integer pstate;
+
 
     public Integer getPid() {
         return pid;

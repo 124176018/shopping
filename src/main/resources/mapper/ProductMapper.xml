@@ -13,13 +13,6 @@
         <result column="csid" property="csid"/>
         <result column="pstate" property="pstate"/>
 
-        <association property="productImage"  javaType="productImage">
-            <id column="pmid" property="pmid"/>
-            <result column="pid" property="pid"/>
-            <result column="image" property="image"/>
-            <result column="thumbnail" property="thumbnail"/>
-        </association>
-
         <collection property="categories" ofType="categoryExt">
             <id column="cid" property="cid"/>
             <result column="cname" property="cname"/>
@@ -34,24 +27,24 @@
         </collection>
     </resultMap>
     <select id="findAllProduct" resultMap="productExtMap" parameterType="pageBenForCate">
-     SELECT *
-     FROM category
-     RIGHT JOIN categorysecond
-     ON category.cid = categorysecond.cid
-     RIGHT JOIN product
-     ON categorysecond.csid= product.csid
-     <where>
-         <if test="cid!=null and cid!=''">
-              category.cid=#{cid}
-         </if>
-         <if test="csid!=null and csid!=''">
-             and categorysecond.csid=#{csid}
-         </if>
-         <if test="pname!=null and pname!=''">
-            and   product.pname like "%"#{pname}"%"
-         </if>
-     </where>
-             limit #{startIndex},#{pageSize}
+        SELECT *
+        FROM category
+        RIGHT JOIN categorysecond
+        ON category.cid = categorysecond.cid
+        RIGHT JOIN product
+        ON categorysecond.csid= product.csid
+        <where>
+            <if test="cid!=null and cid!=''">
+                category.cid=#{cid}
+            </if>
+            <if test="csid!=null and csid!=''">
+                and categorysecond.csid=#{csid}
+            </if>
+            <if test="pname!=null and pname!=''">
+                and   product.pname like "%"#{pname}"%"
+            </if>
+        </where>
+        limit #{startIndex},#{pageSize}
     </select>
     <select id="findAllCount" resultType="Integer" parameterType="pageBenForCate">
         SELECT COUNT(0)
@@ -62,7 +55,7 @@
         ON categorysecond.csid= product.csid
         <where>
             <if test="cid!=null ">
-                 category.cid=#{cid}
+                category.cid=#{cid}
             </if>
             <if test="csid!=null ">
                 and categorysecond.csid=#{csid}
@@ -83,13 +76,13 @@
         <result column="csid" property="csid"/>
         <result column="pstate" property="pstate"/>
 
-        <association property="productImage"  javaType="productImage">
+        <collection property="productImage"  ofType="productImage">
             <id column="pmid" property="pmid"/>
             <result column="pid" property="pid"/>
             <result column="image" property="image"/>
             <result column="thumbnail" property="thumbnail"/>
 
-        </association>
+        </collection>
     </resultMap>
     <select id="findProduct" resultMap="productImageMap" parameterType="pageBenForCate">
         SELECT *
@@ -99,6 +92,3 @@
         WHERE  product.pid = #{pid}
     </select>
 </mapper>
-
-
-

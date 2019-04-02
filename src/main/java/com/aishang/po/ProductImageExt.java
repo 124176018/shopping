@@ -1,13 +1,18 @@
 package com.aishang.po;
 
-public class ProductImageExt extends Product {
-    private ProductImage productImage;
+import java.util.List;
 
-    public ProductImage getProductImage() {
+public class ProductImageExt extends Product {
+
+    private List<ProductImage> productImage;
+
+    public List<ProductImage> getProductImage() {
         return productImage;
     }
 
-    public void setProductImage(ProductImage productImage) {
+    public void setProductImage(List<ProductImage> productImage) {
         this.productImage = productImage;
     }
+
+   
 }

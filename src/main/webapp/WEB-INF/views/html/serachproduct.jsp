@@ -1,3 +1,4 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: dell
@@ -169,14 +170,14 @@
     </div>
     <div class="search f-r">
         <form action="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}" method="post">
-        <div class="search-info">
-            <input  type="text" placeholder="请输入商品名称"name="pname" value="${allProduct.pname}"/>
-            <button type="submit">搜索</button>
-            <div style="clear:both;"></div>
-        </div>
-        <ul class="search-ul">
-            <div style="clear:both;"></div>
-        </ul>
+            <div class="search-info">
+                <input  type="text" placeholder="请输入商品名称"name="pname" value="${allProduct.pname}"/>
+                <button type="submit">搜索</button>
+                <div style="clear:both;"></div>
+            </div>
+            <ul class="search-ul">
+                <div style="clear:both;"></div>
+            </ul>
         </form>
     </div>
     <div style="clear:both;"></div>
@@ -189,21 +190,21 @@
             <a href="JavaScript:;" class="kj-tit1">商品分类快捷</a>
             <div class="kuaijie-box yjp-show1" style="display:none;">
                 <c:forEach items="${allCateName}" var="la">
-                <div class="kuaijie-info">
+                    <div class="kuaijie-info">
 
-                    <dl class="kj-dl1">
-                        <dt><img src="${pageContext.request.contextPath}/images/zl2-07.gif" /><a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${la.cid}">${la.cname}</a></dt>
-                    </dl>
-                    <div class="kuaijie-con">
-                        <c:forEach items="${la.categorysSeconds}" var="lb">
-                        <dl class="kj-dl2">
-                            <dt><a href="${pageContext.request.contextPath}/cate/doproducts.do?csid=${lb.csid}">${lb.csname}</a></dt>
+                        <dl class="kj-dl1">
+                            <dt><img src="${pageContext.request.contextPath}/images/zl2-07.gif" /><a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${la.cid}">${la.cname}</a></dt>
                         </dl>
-                        </c:forEach>
-                        <div style="clear:both;"></div>
-                    </div>
+                        <div class="kuaijie-con">
+                            <c:forEach items="${la.categorysSeconds}" var="lb">
+                                <dl class="kj-dl2">
+                                    <dt><a href="${pageContext.request.contextPath}/cate/doproducts.do?csid=${lb.csid}">${lb.csname}</a></dt>
+                                </dl>
+                            </c:forEach>
+                            <div style="clear:both;"></div>
+                        </div>
 
-                </div>
+                    </div>
                 </c:forEach>
             </div>
         </div>
@@ -233,7 +234,6 @@
         <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
         <li><a href="#"><img src="images/beaut-lg-tu3.gif" /></a></li>
         <li style="width:155px; border-right:0;"><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-
         <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
         <li><a href="#"><img src="images/beaut-lg-tu1.gif" /></a></li>
         <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
@@ -242,7 +242,6 @@
         <li><a href="#"><img src="images/beaut-lg-tu1.gif" /></a></li>
         <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
         <li style="width:155px; border-right:0;"><a href="#"><img src="images/beaut-lg-tu3.gif" /></a></li>
-
         <li><a href="#"><img src="images/beaut-lg-tu1.gif" /></a></li>
         <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
         <li><a href="#"><img src="images/beaut-lg-tu3.gif" /></a></li>
@@ -251,7 +250,6 @@
         <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
         <li><a href="#"><img src="images/beaut-lg-tu3.gif" /></a></li>
         <li style="width:155px; border-right:0;"><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-
         <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
         <li><a href="#"><img src="images/beaut-lg-tu1.gif" /></a></li>
         <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
@@ -310,50 +308,50 @@
         <div class="paging">
             <div class="pag-left f-l">
                 <c:if test="${allProduct.pageNow!=1}">
-                <a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}&pageNow=${allProduct.pageNow-1}" class="about left-r f-l">«</a>
+                    <a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}&pageNow=${allProduct.pageNow-1}" class="about left-r f-l">«</a>
                 </c:if>
                 <ul class="left-m f-l">
 
-                        <%--中间页--%>
-                        <%--显示6页中间页[begin=起始页,end=最大页]--%>
-                        <%--总页数没有6页--%>
-                        <c:choose>
-                            <c:when test="${allProduct.pageCount <= 6}">
+                    <%--中间页--%>
+                    <%--显示6页中间页[begin=起始页,end=最大页]--%>
+                    <%--总页数没有6页--%>
+                    <c:choose>
+                        <c:when test="${allProduct.pageCount <= 6}">
+                            <c:set var="begin" value="1"/>
+                            <c:set var="end" value="${allProduct.pageCount}"/>
+                        </c:when>
+                        <%--页数超过了6页--%>
+                        <c:otherwise>
+                            <c:set var="begin" value="${allProduct.pageNow - 1}"/>
+                            <c:set var="end" value="${allProduct.pageNow + 3}"/>
+                            <%--如果begin减1后为0,设置起始页为1,最大页为6--%>
+                            <c:if test="${begin -1 <= 0}">
                                 <c:set var="begin" value="1"/>
+                                <c:set var="end" value="6"/>
+                            </c:if>
+                            <%--如果end超过最大页,设置起始页=最大页-5--%>
+                            <c:if test="${end > allProduct.pageCount}">
+                                <c:set var="begin" value="${allProduct.pageCount - 5}"/>
                                 <c:set var="end" value="${allProduct.pageCount}"/>
+                            </c:if>
+                        </c:otherwise>
+                    </c:choose>
+                    <%--遍历--%>
+                    <c:forEach var="i" begin="${begin}" end="${end}">
+                        <%--当前页,选中--%>
+                        <c:choose>
+                            <c:when test="${i == allProduct.pageNow}">
+                                <li class="active"><a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}&pageNow=${i}" class="about left-r f-l">${i}</a></li>
                             </c:when>
-                            <%--页数超过了6页--%>
+                            <%--不是当前页--%>
                             <c:otherwise>
-                                <c:set var="begin" value="${allProduct.pageNow - 1}"/>
-                                <c:set var="end" value="${allProduct.pageNow + 3}"/>
-                                <%--如果begin减1后为0,设置起始页为1,最大页为6--%>
-                                <c:if test="${begin -1 <= 0}">
-                                    <c:set var="begin" value="1"/>
-                                    <c:set var="end" value="6"/>
-                                </c:if>
-                                <%--如果end超过最大页,设置起始页=最大页-5--%>
-                                <c:if test="${end > allProduct.pageCount}">
-                                    <c:set var="begin" value="${allProduct.pageCount - 5}"/>
-                                    <c:set var="end" value="${allProduct.pageCount}"/>
-                                </c:if>
+                                <li><a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}&pageNow=${i}" class="about left-r f-l">${i}</a></li>
                             </c:otherwise>
                         </c:choose>
-                        <%--遍历--%>
-                        <c:forEach var="i" begin="${begin}" end="${end}">
-                            <%--当前页,选中--%>
-                            <c:choose>
-                                <c:when test="${i == allProduct.pageNow}">
-                                    <li class="active"><a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}&pageNow=${i}" class="about left-r f-l">${i}</a></li>
-                                </c:when>
-                                <%--不是当前页--%>
-                                <c:otherwise>
-                                    <li><a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}&pageNow=${i}" class="about left-r f-l">${i}</a></li>
-                                </c:otherwise>
-                            </c:choose>
-                        </c:forEach>
+                    </c:forEach>
 
-                        <%--如果是第一页,不允许点击--%>
-                            <c:if test="${allProduct.pageNow != 1}">
+                    <%--如果是第一页,不允许点击--%>
+                    <c:if test="${allProduct.pageNow != 1}">
                         <c:choose>
                             <c:when test="${allProduct.pageNow == 1}">
                                 <li class="disabled">
@@ -371,10 +369,10 @@
                                 </li>
                             </c:otherwise>
                         </c:choose>
-                            </c:if>
+                    </c:if>
 
-                        <%--如果是最后一页,不允许点击--%>
-                            <c:if test="${allProduct.pageNow != allProduct.pageCount}">
+                    <%--如果是最后一页,不允许点击--%>
+                    <c:if test="${allProduct.pageNow != allProduct.pageCount}">
                         <c:choose>
                             <c:when test="${allProduct.pageNow == allProduct.pageCount}">
                                 <li class="disabled">
@@ -392,23 +390,23 @@
                                 </li>
                             </c:otherwise>
                         </c:choose>
-                            </c:if>
+                    </c:if>
 
                     <div style="clear:both;"></div>
                 </ul>
                 <c:if test="${allProduct.pageNow!=allProduct.pageCount}">
-                <a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}&pageNow=${allProduct.pageNow+1}" class="about left-l f-l">»</a>
+                    <a href="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}&pageNow=${allProduct.pageNow+1}" class="about left-l f-l">»</a>
                 </c:if>
                 <div style="clear:both;"></div>
             </div>
             <form action="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}&pname=${allProduct.pname}" method="post">
-            <div class="pag-right f-l">
-                <div class="jump-page f-l">
-                    到第<input type="number" min="1" max="${allProduct.pageCount}" name="pageNow"/>页
+                <div class="pag-right f-l">
+                    <div class="jump-page f-l">
+                        到第<input type="number" min="1" max="${allProduct.pageCount}" name="pageNow"/>页
+                    </div>
+                    <button class="f-l" type="submit" name="${allProduct.pageNow}">确定</button>
+                    <div style="clear:both;"></div>
                 </div>
-                <button class="f-l" type="submit" name="${allProduct.pageNow}">确定</button>
-                <div style="clear:both;"></div>
-            </div>
             </form>
             <div style="clear:both;"></div>
         </div>
@@ -521,3 +519,15 @@
 
 </body>
 </html>
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About

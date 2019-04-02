@@ -1,6 +1,5 @@
 package com.aishang.controller;
 import com.aishang.po.CategoryExt;
-import com.aishang.po.PageBen;
 import com.aishang.po.PageBenForCate;
 import com.aishang.po.ProductImageExt;
 import com.aishang.service.CategoryService;
@@ -33,10 +32,12 @@ public class ProductController {
     @RequestMapping("pdproducts.do")
     public String pdproducts(Model model,PageBenForCate pageBenForCate,Integer pid){
         productService.findAllProduct(pageBenForCate);
+
         List<CategoryExt> allCateName = categoryService.findAllCateName();
         model.addAttribute("allCateName",allCateName);
         model.addAttribute("allProduct", pageBenForCate);
-        ProductImageExt dproduct = productService.findProduct(pageBenForCate);
+        ProductImageExt dproduct = productService.findProduct(pid);
+        System.out.println(dproduct);
         model.addAttribute("dproduct",dproduct);
         return "pdetails";
     }

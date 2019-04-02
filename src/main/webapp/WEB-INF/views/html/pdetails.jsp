@@ -169,25 +169,16 @@
         <a href="JavaScript:;"><img src="${pageContext.request.contextPath}/images/zl2-04.gif" /></a>
     </div>
     <div class="search f-r">
-        <div class="search-info">
-            <input type="text" placeholder="请输入商品名称" />
-            <button>搜索</button>
-            <div style="clear:both;"></div>
-        </div>
-        <ul class="search-ul">
-            <li><a href="JavaScript:;">绿豆</a></li>
-            <li><a href="JavaScript:;">大米</a></li>
-            <li><a href="JavaScript:;">驱蚊</a></li>
-            <li><a href="JavaScript:;">洗面奶</a></li>
-            <li><a href="JavaScript:;">格力空调</a></li>
-            <li><a href="JavaScript:;">洗发</a></li>
-            <li><a href="JavaScript:;">护发</a></li>
-            <li><a href="JavaScript:;">葡萄</a></li>
-            <li><a href="JavaScript:;">脉动</a></li>
-            <li><a href="JavaScript:;">海鲜</a></li>
-            <li><a href="JavaScript:;">水产</a></li>
-            <div style="clear:both;"></div>
-        </ul>
+        <form action="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}" method="post">
+            <div class="search-info">
+                <input  type="text" placeholder="请输入商品名称"name="pname" value="${allProduct.pname}"/>
+                <button type="submit">搜索</button>
+                <div style="clear:both;"></div>
+            </div>
+            <ul class="search-ul">
+                <div style="clear:both;"></div>
+            </ul>
+        </form>
     </div>
     <div style="clear:both;"></div>
 </div>
@@ -233,27 +224,25 @@
         <div class="dt-if1-l f-l">
             <div class="dt-if1-datu">
                 <ul qie-da="">
-                    <li><a href="#"><img src="${pageContext.request.contextPath}/images/dt-if1-l-tuda1.gif" /></a></li>
-                    <li><a href="#"><img src="${pageContext.request.contextPath}/images/dt-if1-l-tuda2.gif" /></a></li>
-                    <li><a href="#"><img src="${pageContext.request.contextPath}/images/dt-if1-l-tuda3.gif" /></a></li>
-                    <li><a href="#"><img src="${pageContext.request.contextPath}/images/dt-if1-l-tuda4.gif" /></a></li>
-                    <li><a href="#"><img src="${pageContext.request.contextPath}/images/dt-if1-l-tuda5.gif" /></a></li>
-                    <li><a href="#"><img src="${pageContext.request.contextPath}/images/dt-if1-l-tuda6.gif" /></a></li>
-                    <li><a href="#"><img src="${pageContext.request.contextPath}/images/dt-if1-l-tuda7.gif" /></a></li>
+
+                        <c:forEach items="${dproduct.productImage}" var="immi">
+                        <li><a href="#"><img src="${pageContext.request.contextPath}/${immi.image}"width="359" height="360"></a></li>
+                        </c:forEach>
+
                     <div style="clear:both;"></div>
                 </ul>
             </div>
             <div class="dt-if1-qietu">
-                <a class="dt-qie-left f-l" href="JavaScript:;"><img src="${pageContext.request.contextPath}/images/dt-if1-qietu-left.gif" /></a>
+
+<%--<c:forEach items="${dproduct.productImage}" var="ixx">
+             <a class="dt-qie-left f-l" href="JavaScript:;"><img src="${pageContext.request.contextPath}/${ixx.image}" width="359" height="360" /></a>
+</c:forEach>--%>
                 <div class="dt-qie-con f-l">
                     <ul qie-xiao="">
-                        <li class="current"><a href="#"><img src="${pageContext.request.contextPath}/images/dt-if1-qietu1.gif" /></a></li>
-                        <li><a href="#"><img src="${pageContext.request.contextPath}/images/dt-if1-qietu2.gif" /></a></li>
-                        <li><a href="#"><img src="${pageContext.request.contextPath}/images/dt-if1-qietu3.gif" /></a></li>
-                        <li><a href="#"><img src="${pageContext.request.contextPath}/images/dt-if1-qietu4.gif" /></a></li>
-                        <li><a href="#"><img src="${pageContext.request.contextPath}/images/dt-if1-qietu5.gif" /></a></li>
-                        <li><a href="#"><img src="${pageContext.request.contextPath}/images/dt-if1-qietu6.gif" /></a></li>
-                        <li><a href="#"><img src="${pageContext.request.contextPath}/images/dt-if1-qietu7.gif" /></a></li>
+                        <c:forEach items="${dproduct.productImage}" var="ioo">
+                        <li class="current"><a href="#"><img src="${pageContext.request.contextPath}/${ioo.image}" width="60" height="60"/></a></li>
+                    </c:forEach>
+
                         <div style="clear:both;"></div>
                     </ul>
                 </div>
@@ -444,24 +433,16 @@
                 <div style="clear:both;"></div>
             </ul>
             <div style="border:1px solid #DBDBDB;" com-det-show="dt1">
-                <div class="if2-tu1">
-                    <img src="${pageContext.request.contextPath}/images/if2-tu1.gif" />
-                    <img src="${pageContext.request.contextPath}/images/if2-tu2.gif" style="margin-top:47px;" />
-                    <div style="clear:both;"></div>
-                </div>
-                <div class="if2-tu2">
-                    <img src="${pageContext.request.contextPath}/images/if2-tu3.gif" />
-                    <div style="clear:both;"></div>
-                </div>
-                <div class="if2-tu3">
-                    <img src="${pageContext.request.contextPath}/images/if2-tu4.gif" />
-                </div>
+
+
                 <ul class="if2-tu4">
-                    <li><img src="${pageContext.request.contextPath}/images/if2-tu5.gif" /></li>
-                    <li><img src="${pageContext.request.contextPath}/images/if2-tu6.gif" /></li>
-                    <li><img src="${pageContext.request.contextPath}/images/if2-tu7.gif" /></li>
+                    <c:forEach items="${dproduct.productImage}" var="imm">
+                    <li><img src="${pageContext.request.contextPath}/${imm.image}"/></li>
+                    </c:forEach>
                     <div style="clear:both;"></div>
                 </ul>
+
+
             </div>
             <div style="display:none;" com-det-show="dt2">
                 <dl class="if2-r-box2">

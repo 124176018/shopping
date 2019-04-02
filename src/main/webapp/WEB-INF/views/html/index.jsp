@@ -100,17 +100,16 @@
         <a href="${pageContext.request.contextPath}/JavaScript:;"><img src="${pageContext.request.contextPath}/images/zl2-04.gif" /></a>
     </div>
     <div class="search f-r">
-        <div class="search-info">
-            <input type="text" placeholder="请输入商品名称" />
-            <button>搜索</button>
-            <div style="clear:both;"></div>
-        </div>
-        <ul class="search-ul">
-            <li><a href="${pageContext.request.contextPath}/JavaScript:;">绿豆</a></li>
-            <li><a href="${pageContext.request.contextPath}/JavaScript:;">海鲜</a></li>
-            <li><a href="${pageContext.request.contextPath}/JavaScript:;">水产</a></li>
-            <div style="clear:both;"></div>
-        </ul>
+        <form action="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}" method="post">
+            <div class="search-info">
+                <input  type="text" placeholder="请输入商品名称"name="pname" value="${allProduct.pname}"/>
+                <button type="submit">搜索</button>
+                <div style="clear:both;"></div>
+            </div>
+            <ul class="search-ul">
+                <div style="clear:both;"></div>
+            </ul>
+        </form>
     </div>
     <div style="clear:both;"></div>
 </div>
