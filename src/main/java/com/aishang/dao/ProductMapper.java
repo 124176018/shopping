@@ -1,5 +1,6 @@
 package com.aishang.dao;
 import com.aishang.po.PageBenForCate;
+import com.aishang.po.Product;
 import com.aishang.po.ProductExt;
 import com.aishang.po.ProductImageExt;
 
@@ -11,5 +12,6 @@ public interface ProductMapper {
    Integer findAllCount(PageBenForCate pageBenForCate);
 
    ProductImageExt findProduct(Integer pid);
+
 
 }

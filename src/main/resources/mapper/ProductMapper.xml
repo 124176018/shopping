@@ -12,6 +12,7 @@
         <result column="pdate" property="pdate"/>
         <result column="csid" property="csid"/>
         <result column="pstate" property="pstate"/>
+        <result column="pimage" property="pimage"/>
 
         <collection property="categories" ofType="categoryExt">
             <id column="cid" property="cid"/>
@@ -75,6 +76,7 @@
         <result column="pdate" property="pdate"/>
         <result column="csid" property="csid"/>
         <result column="pstate" property="pstate"/>
+        <result column="pimage" property="pimage"/>
 
         <collection property="productImage"  ofType="productImage">
             <id column="pmid" property="pmid"/>
@@ -91,4 +93,5 @@
         ON product.pid = productimage.pid
         WHERE  product.pid = #{pid}
     </select>
+
 </mapper>

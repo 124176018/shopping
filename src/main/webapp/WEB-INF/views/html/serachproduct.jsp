@@ -271,12 +271,17 @@
 <div class="shopping-content w1200">
     <div class="sp-con-info">
 
+
+
         <ul class="sp-info-r m-act beaut">
             <c:forEach items="${allProduct.list}" var="ld">
             <li style="border-bottom:0; border-right:0;">
                 <div class="li-top">
-                    <a href="${pageContext.request.contextPath}/cate/pdproducts.do?pid=${ld.pid}" class="li-top-tu"><img src="${pageContext.request.contextPath}/images/beaut-con-li-tu2.gif" /></a>
+
+                    <a href="${pageContext.request.contextPath}/cate/pdproducts.do?pid=${ld.pid}" class="li-top-tu"><img src="${pageContext.request.contextPath}/${ld.pimage}" width="200" height="200"/></a>
+
                     <p class="jiage"><span class="sp1">￥109</span><span class="sp2">￥209</span></p>
+
                 </div>
                 <p class="miaoshu">${ld.pname}</p>
                 <div class="li-md">

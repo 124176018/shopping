@@ -1,6 +1,7 @@
 package com.aishang.service;
 import com.aishang.dao.ProductMapper;
 import com.aishang.po.PageBenForCate;
+import com.aishang.po.Product;
 import com.aishang.po.ProductExt;
 import com.aishang.po.ProductImageExt;
 import org.springframework.stereotype.Service;

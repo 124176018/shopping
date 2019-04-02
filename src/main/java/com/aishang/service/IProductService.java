@@ -1,8 +1,5 @@
 package com.aishang.service;
-import com.aishang.po.PageBenForCate;
-import com.aishang.po.ProductExt;
-import com.aishang.po.ProductImage;
-import com.aishang.po.ProductImageExt;
+import com.aishang.po.*;
 import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
@@ -11,7 +8,6 @@ public interface IProductService {
     void findAllProduct(PageBenForCate pageBenForCate);
     /*根据商品pid查询查询商品详细的信息*/
     ProductImageExt findProduct(Integer pid);
-
 
 
 }

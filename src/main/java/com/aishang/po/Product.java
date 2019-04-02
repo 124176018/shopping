@@ -11,7 +11,15 @@ public class Product {
     private Date pdate;
     private Integer csid;
     private Integer pstate;
+    private String pimage;
 
+    public String getPimage() {
+        return pimage;
+    }
+
+    public void setPimage(String pimage) {
+        this.pimage = pimage;
+    }
 
     public Integer getPid() {
         return pid;
