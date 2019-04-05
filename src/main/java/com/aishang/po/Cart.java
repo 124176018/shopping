@@ -30,10 +30,11 @@ public class Cart {
             int newproCount =cartItem.getProCount();
             cartItem.setProCount( oldproCount + newproCount);
             cartItems.put(pid,cartItem);
-
+            subTotal= (subTotal-oldproCount*cartItem.getProduct().getMarket_price()) + cartItem.getTotal();
         }else {
             cartItems.put(pid,cartItem);
+            subTotal= subTotal + cartItem.getTotal();
         }
-        subTotal= subTotal + cartItem.getTotal();
+
     }
 }

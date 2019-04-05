@@ -3,7 +3,9 @@ package com.aishang.controller;
 import com.aishang.po.*;
 import com.aishang.service.ProductService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import sun.text.normalizer.NormalizerBase;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +22,7 @@ public class CartController {
     /*添加商品到购物车*/
 
     @RequestMapping("getCart.do")
-    public String getCart(){
+    public String getCart() {
         return "cart";
     }
     @RequestMapping("addCartItem.do")
@@ -33,13 +35,18 @@ public class CartController {
         if(session.getAttribute("cart")==null){
            Cart cart = new Cart();
            cart.addCartItem(cartItem);
-            session.setAttribute("cart",cart);
+           session.setAttribute("cart",cart);
 
         }else {
             Cart cart1 = (Cart)session.getAttribute("cart");
              cart1.addCartItem(cartItem);
 
         }
-            out.print("yes");
+        out.print("yes");
     }
+    /*修改购物项物品的数量*/
+    @RequestMapping("upCartItem.do")
+    public String upCartItem(){
+        return null;
+    };
 }

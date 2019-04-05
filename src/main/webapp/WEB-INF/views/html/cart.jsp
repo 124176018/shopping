@@ -214,23 +214,28 @@
         <p class="p7">操作</p>
     </div>
 
+
+
     <div class="cart-con-info">
-        <div class="info-top">
+      <c:forEach items="${cart.cartItems}" var="gw">
+        <%--<div class="info-top">
             <input type="checkbox" value="" name="hobby"></input>
-            <span>商家：向东服饰专卖店</span>
-
-
-
-
-        </div>
+            <span>商家：微购直卖店</span>
+        </div>--%>
         <div class="info-mid">
+
             <input type="checkbox" value="" name="hobby" class="mid-ipt f-l"></input>
             <div class="mid-tu f-l">
-                <a href="#"><img src="${pageContext.request.contextPath}/images/dai1.gif" /></a>
+
+                <a href="#"><img src="${pageContext.request.contextPath}/${gw.product.pimage}"width="70" height="70" /></a>
+
             </div>
+
             <div class="mid-font f-l">
-                <a href="#">登高阁紫菜肉松鸡蛋卷 海苔蛋卷 糕点<br />江西特产小吃 休闲办公零食</a>
+
+                <a href="#">${gw.product.pname}</a>
                 <span>满赠</span>
+
             </div>
             <div class="mid-guige f-l">
                 <p>颜色：蓝色</p>
@@ -265,22 +270,27 @@
                 </div>
             </div>
             <div class="mid-sl f-l">
-                <a href="JavaScript:;" class="sl-left">-</a>
-                <input type="text" value="1" />
-                <a href="JavaScript:;" class="sl-right">+</a>
+               <%-- <a href="JavaScript:;" class="sl-left">-</a>--%>
+                <input type="number" value="${gw.proCount}" min="1" maxlength="2" class="mid-dj f-l"/>
+               <%-- <a href="JavaScript:;" class="sl-right">+</a>--%>
             </div>
-            <p class="mid-dj f-l">¥ <span>6</span>.00</p>
-            <p class="mid-je f-l">¥ <span>6</span>.00</p>
+
+            <p class="mid-dj f-l">¥ <span></span>${gw.product.market_price}</p>
+            <p class="mid-je f-l">¥ <span></span>${gw.total}</p>
+
             <div class="mid-chaozuo f-l">
                 <a href="#">移入收藏夹</a>
                 <a href="#">删除</a>
             </div>
             <div style="clear:both;"></div>
         </div>
+      </c:forEach>
     </div>
 
 
+
     <div class="cart-con-footer">
+
         <div class="quanxuan f-l">
             <input type="checkbox" value="" name="hobby"></input>
             <span>全选</span>
@@ -292,15 +302,18 @@
             <div class="jshj f-l">
                 <p>合计（不含运费）</p>
                 <p class="jshj-p2">
-                    ￥：<span>0</span>.00
+                    ￥：<span>${cart.subTotal}</span>.00
                 </p>
             </div>
             <a href="JavaScript:;" class="js-a1 f-l">结算</a>
             <div style="clear:both;"></div>
         </div>
         <div style="clear:both;"></div>
+
     </div>
 </div>
+
+
 
 <!--底部一块-->
 <div class="footer-box">
