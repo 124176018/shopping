@@ -46,7 +46,7 @@ public class CartController {
     }
     /*修改购物项物品的数量*/
     @RequestMapping("upCartItem.do")
-    public String upCartItem(){
+    public String upCartItem(HttpServletRequest request,HttpServletResponse response,CartItem cartItem){
         return null;
     };
 }
