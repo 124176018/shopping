@@ -36,7 +36,6 @@ public class ProductController {
         model.addAttribute("allProduct", pageBenForCate);
         /*商品详情中图片的显示对象里面有图片集合*/
         ProductImageExt dproduct = productService.findProduct(pid);
-        System.out.println(dproduct);
         model.addAttribute("dproduct",dproduct);
         return "pdetails";
     }

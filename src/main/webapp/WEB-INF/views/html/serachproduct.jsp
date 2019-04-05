@@ -20,6 +20,36 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jQuery.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhonglin.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhongling2.js"></script>
+    <script type="text/javascript">
+
+           function addCart(pid){
+               var proCount =$("#proCount");
+
+                $.ajax({
+                    url:"${pageContext.request.contextPath}/cart/addCartItem.do?pid="+pid,
+                    type:"get",
+                    data:{
+                        proCount:proCount.val()
+                    },
+                    dateType:"text",
+                    success:function (data) {
+                        if (data.trim()=="yes"){
+                            alert("添加购物车成功");
+
+                        } else{
+                            alert("添加购物车失败");
+                        }
+                    }
+                });
+
+            }
+
+
+
+
+
+
+    </script>
 </head>
 
 <body>
@@ -31,7 +61,7 @@
         </p>
         <p class="hd-p2 f-r">
             <a href="index.html">返回首页 (个人中心)</a><span>|</span>
-            <a href="购物车.html">我的购物车</a><span>|</span>
+            <a href="${pageContext.request.contextPath}/cart/getCart.do">我的购物车</a><span>|</span>
             <a href="我的订单.html">我的订单</a>
         </p>
         <div style="clear:both;"></div>
@@ -278,24 +308,20 @@
             <li style="border-bottom:0; border-right:0;">
                 <div class="li-top">
 
-                    <a href="${pageContext.request.contextPath}/cate/pdproducts.do?pid=${ld.pid}" class="li-top-tu"><img src="${pageContext.request.contextPath}/${ld.pimage}" width="200" height="200"/></a>
+                    <a href="${pageContext.request.contextPath}/cate/pdproducts.do?pid=${ld.pid}"class="li-top-tu" ><img src="${pageContext.request.contextPath}/${ld.pimage}" width="200" height="200"/></a>
 
-                    <p class="jiage"><span class="sp1">￥109</span><span class="sp2">￥209</span></p>
+                    <p class="jiage"><span class="sp1">￥${ld.market_price}</span></p>
 
                 </div>
                 <p class="miaoshu">${ld.pname}</p>
                 <div class="li-md">
                     <div class="md-l f-l">
-                        <p class="md-l-l f-l" ap="">1</p>
-                        <div class="md-l-r f-l">
-                            <a href="JavaScript:;" class="md-xs" at="">∧</a>
-                            <a href="JavaScript:;" class="md-xx" ab="">∨</a>
-                        </div>
+                        <input type="number" id="proCount" name="proCount"value="1" class="md-l-l f-l" ap="" min="1">
                         <div style="clear:both;"></div>
                     </div>
                     <div class="md-r f-l">
                         <button class="md-l-btn1">立即购买</button>
-                        <button class="md-l-btn2">加入购物车</button>
+                        <button class="md-l-btn2" onclick="addCart(${ld.pid})" type="submit">加入购物车</button>
                     </div>
                     <div style="clear:both;"></div>
                 </div>
