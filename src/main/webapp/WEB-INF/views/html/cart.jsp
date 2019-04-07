@@ -16,9 +16,35 @@
     <title>购物车</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/shopping-mall-index.css" />
-    <script type="text/javascript" src="js/jQuery.js"></script>
-    <script type="text/javascript" src="js/zhonglin.js"></script>
-    <script type="text/javascript" src="js/zhongling2.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jQuery.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhonglin.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhongling2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            $("#proCount").click(function () {
+                var ms=$("#ms").val();
+                var pid=$("#pid");
+                $.ajax({
+                    url:"${pageContext.request.contextPath}/cart/upCartItem.do",
+                    type:"get",
+                    data:{
+                        proCount:$("#proCount").val(),
+                        pid:$("#pid").val(),
+                    },
+                    success: function (data) {
+                        if (data.trim() == "yes") {
+
+
+                        }
+
+                    }
+                })
+
+            });
+
+        });
+    </script>
 </head>
 
 <body style="position:relative;">
@@ -227,7 +253,7 @@
             <input type="checkbox" value="" name="hobby" class="mid-ipt f-l"></input>
             <div class="mid-tu f-l">
 
-                <a href="#"><img src="${pageContext.request.contextPath}/${gw.product.pimage}"width="70" height="70" /></a>
+                <a href="#"><img src="${pageContext.request.contextPath}/${gw.product.pimage}"width="100" height="100" /></a>
 
             </div>
 
@@ -271,12 +297,13 @@
             </div>
             <div class="mid-sl f-l">
                <%-- <a href="JavaScript:;" class="sl-left">-</a>--%>
-                <input type="number" value="${gw.proCount}" min="1" maxlength="2" class="mid-dj f-l"/>
+                <input type="number" value="${gw.proCount}" min="1" maxlength="2" class="mid-dj f-l" id="proCount" style="width:50px; height:20px;"/>
+                   <input type="hidden" value="${gw.product.pid}" id="pid" />
                <%-- <a href="JavaScript:;" class="sl-right">+</a>--%>
             </div>
 
-            <p class="mid-dj f-l">¥ <span></span>${gw.product.market_price}</p>
-            <p class="mid-je f-l">¥ <span></span>${gw.total}</p>
+            <p class="mid-dj f-l">¥ <span>${gw.product.market_price}</span></p>
+            <p class="mid-je f-l">¥ <span id="ms">${gw.total}</span></p>
 
             <div class="mid-chaozuo f-l">
                 <a href="#">移入收藏夹</a>

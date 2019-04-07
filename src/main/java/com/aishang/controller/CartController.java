@@ -46,7 +46,17 @@ public class CartController {
     }
     /*修改购物项物品的数量*/
     @RequestMapping("upCartItem.do")
-    public String upCartItem(HttpServletRequest request,HttpServletResponse response,CartItem cartItem){
-        return null;
+    public void upCartItem(HttpServletRequest request,HttpServletResponse response,Integer pid,Integer proCount,CartItem cartItem) throws IOException {
+        HttpSession session = request.getSession();
+        PrintWriter out = response.getWriter();
+        System.out.println(proCount+"更改后商品数量");
+        System.out.println(pid+"更改的商品PID");
+        if(session.getAttribute("cart") != null){
+            Cart cart = (Cart)session.getAttribute("cart");
+            cart.updateCartItemCount(pid,proCount,cartItem);
+
+        }
+        out.print("yes");
+
     };
 }

@@ -37,4 +37,18 @@ public class Cart {
         }
 
     }
+    //手动更改数量
+    public void updateCartItemCount(Integer pid, Integer proCount,CartItem cartItem){
+        CartItem oldcartItem = cartItems.get(pid);
+        int oldproCount = oldcartItem.getProCount();
+        oldcartItem.setProCount(proCount);
+        oldcartItem.getTotal();
+
+
+        System.out.println(oldcartItem.getTotal());
+        subTotal= (subTotal-oldproCount*oldcartItem.getProduct().getMarket_price()) + oldcartItem.getTotal();
+        System.out.println(subTotal);
+
+
+    }
 }
