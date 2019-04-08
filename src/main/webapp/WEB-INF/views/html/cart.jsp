@@ -20,30 +20,42 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhonglin.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhongling2.js"></script>
     <script type="text/javascript">
-        $(function () {
-
-            $("#proCount").click(function () {
-                var ms=$("#ms").val();
-                var pid=$("#pid");
-                $.ajax({
-                    url:"${pageContext.request.contextPath}/cart/upCartItem.do",
-                    type:"get",
-                    data:{
-                        proCount:$("#proCount").val(),
-                        pid:$("#pid").val(),
-                    },
-                    success: function (data) {
-                        if (data.trim() == "yes") {
-
-
-                        }
+        function delcate(pid){
+         var subtotal=$("#subtotal");
+            subtotal= Number($("#subtotal").html())-Number($("#xiaoji"+pid).html());
+            $("#subtotal").html(subtotal);
+            $.ajax({
+                url:"${pageContext.request.contextPath}/cart/emptyCart.do?pid="+pid,
+                type:"get",
+                dateType:"text",
+                success:function (data) {
+                    if (data.trim()=="yes"){
+                        $("#re").remove();
+                        window.location.reload();
+                        alert("删除成功")
 
                     }
-                })
-
+                }
             });
 
-        });
+        }
+       function addnumber(pid) {
+           var subtotal = Number($("#subtotal").html()) + Number($("#shopprice"+pid).html());
+           $("#subtotal").html(subtotal);
+
+       }
+        function subnumber(pid) {
+            var proCount=$("#proCount"+pid).val();
+
+            if (proCount>1){
+                var subtotal = Number($("#subtotal").html()) - Number($("#shopprice"+pid).html());
+                $("#subtotal").html(subtotal);
+            }
+
+
+
+
+        }
     </script>
 </head>
 
@@ -242,7 +254,7 @@
 
 
 
-    <div class="cart-con-info">
+    <div class="cart-con-info" id="re">
       <c:forEach items="${cart.cartItems}" var="gw">
         <%--<div class="info-top">
             <input type="checkbox" value="" name="hobby"></input>
@@ -296,18 +308,18 @@
                 </div>
             </div>
             <div class="mid-sl f-l">
-               <%-- <a href="JavaScript:;" class="sl-left">-</a>--%>
-                <input type="number" value="${gw.proCount}" min="1" maxlength="2" class="mid-dj f-l" id="proCount" style="width:50px; height:20px;"/>
-                   <input type="hidden" value="${gw.product.pid}" id="pid" />
-               <%-- <a href="JavaScript:;" class="sl-right">+</a>--%>
+                <a href="JavaScript:;" class="sl-left" onclick="subnumber(${gw.product.pid})" id="subsbb" >-</a>
+                <input type="number" value="${gw.proCount}" min="1" maxlength="2" id="proCount${gw.product.pid}" />
+                   <%--<input type="hidden" value="${gw.product.pid}" id="pid${gw.product.pid}"   />--%>
+                <a href="JavaScript:;" class="sl-right" onclick="addnumber(${gw.product.pid})"  >+</a>
             </div>
 
-            <p class="mid-dj f-l">¥ <span>${gw.product.market_price}</span></p>
-            <p class="mid-je f-l">¥ <span id="ms">${gw.total}</span></p>
+            <p class="mid-dj f-l">¥ <span id="shopprice${gw.product.pid}">${gw.product.market_price}</span></p>
+            <p class="mid-je f-l" >¥ <span id="xiaoji${gw.product.pid}">${gw.total}</span></p>
 
             <div class="mid-chaozuo f-l">
                 <a href="#">移入收藏夹</a>
-                <a href="#">删除</a>
+                <a href="#" onclick="delcate(${gw.product.pid})">删除</a>
             </div>
             <div style="clear:both;"></div>
         </div>
@@ -328,8 +340,8 @@
         <div class="jiesuan f-r">
             <div class="jshj f-l">
                 <p>合计（不含运费）</p>
-                <p class="jshj-p2">
-                    ￥：<span>${cart.subTotal}</span>.00
+                <p class="jshj-p2" >
+                    ￥：<span id="subtotal">${cart.subTotal}</span>
                 </p>
             </div>
             <a href="JavaScript:;" class="js-a1 f-l">结算</a>

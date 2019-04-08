@@ -23,7 +23,7 @@
     <script type="text/javascript">
 
            function addCart(pid){
-               var proCount =$("#proCount");
+               var proCount =$("#proCount"+pid);
 
                 $.ajax({
                     url:"${pageContext.request.contextPath}/cart/addCartItem.do?pid="+pid,
@@ -310,7 +310,7 @@
                 <p class="miaoshu">${ld.pname}</p>
                 <div class="li-md">
                     <div class="md-l f-l">
-                        <input type="number" id="proCount" name="proCount"value="1" class="md-l-l f-l" ap="" min="1">
+                        <input type="number" id="proCount${ld.pid}" name="proCount"value="1" class="md-l-l f-l" ap="" min="1">
                         <div style="clear:both;"></div>
                     </div>
                     <div class="md-r f-l">

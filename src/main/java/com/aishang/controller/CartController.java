@@ -44,19 +44,33 @@ public class CartController {
         }
         out.print("yes");
     }
-    /*修改购物项物品的数量*/
+   /* 修改购物项物品的数量*//*
     @RequestMapping("upCartItem.do")
-    public void upCartItem(HttpServletRequest request,HttpServletResponse response,Integer pid,Integer proCount,CartItem cartItem) throws IOException {
+    public void upCartItem(HttpServletRequest request,HttpServletResponse response,Integer pid,Integer proCount) throws IOException {
         HttpSession session = request.getSession();
         PrintWriter out = response.getWriter();
         System.out.println(proCount+"更改后商品数量");
         System.out.println(pid+"更改的商品PID");
         if(session.getAttribute("cart") != null){
             Cart cart = (Cart)session.getAttribute("cart");
-            cart.updateCartItemCount(pid,proCount,cartItem);
+            cart.updateCartItemCount(pid,proCount);
 
         }
         out.print("yes");
 
-    };
+    };*/
+    /*清空购物车里的购物项*/
+    @RequestMapping("emptyCart.do")
+    public void emptyCart(HttpServletRequest request ,HttpServletResponse response ,Integer pid) throws IOException {
+        HttpSession session = request.getSession();
+        PrintWriter out = response.getWriter();
+            Cart cart = (Cart)session.getAttribute("cart");
+            cart.emptyCartItem(pid);
+            session.setAttribute("cart",cart);
+            out.print("yes");
+
+
+
+
+    }
 }

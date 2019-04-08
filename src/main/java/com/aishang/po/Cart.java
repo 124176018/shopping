@@ -33,22 +33,28 @@ public class Cart {
             subTotal= (subTotal-oldproCount*cartItem.getProduct().getMarket_price()) + cartItem.getTotal();
         }else {
             cartItems.put(pid,cartItem);
+
             subTotal= subTotal + cartItem.getTotal();
         }
 
     }
-    //手动更改数量
-    public void updateCartItemCount(Integer pid, Integer proCount,CartItem cartItem){
+   /*//手动更改数量
+    public void updateCartItemCount(Integer pid, Integer proCount){
         CartItem oldcartItem = cartItems.get(pid);
         int oldproCount = oldcartItem.getProCount();
         oldcartItem.setProCount(proCount);
-        oldcartItem.getTotal();
-
-
         System.out.println(oldcartItem.getTotal());
         subTotal= (subTotal-oldproCount*oldcartItem.getProduct().getMarket_price()) + oldcartItem.getTotal();
         System.out.println(subTotal);
 
 
+    }*/
+    /*清空购物车里的购物项*/
+    public void emptyCartItem(Integer pid){
+        subTotal=subTotal-cartItems.get(pid).getTotal();
+       cartItems.remove(pid);
+
+
     }
+
 }
