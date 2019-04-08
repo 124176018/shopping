@@ -21,22 +21,28 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhongling2.js"></script>
     <script type="text/javascript">
         function delcate(pid){
-         var subtotal=$("#subtotal");
-            subtotal= Number($("#subtotal").html())-Number($("#xiaoji"+pid).html());
-            $("#subtotal").html(subtotal);
-            $.ajax({
-                url:"${pageContext.request.contextPath}/cart/emptyCart.do?pid="+pid,
-                type:"get",
-                dateType:"text",
-                success:function (data) {
-                    if (data.trim()=="yes"){
-                        $("#re").remove();
-                        window.location.reload();
-                        alert("删除成功")
+            if(!confirm("是否删除？删除请点击“确定”")){
+                return false;
+            }else{
+                var subtotal=$("#subtotal");
+                subtotal= Number($("#subtotal").html())-Number($("#xiaoji"+pid).html());
+                $("#subtotal").html(subtotal);
+                $.ajax({
+                    url:"${pageContext.request.contextPath}/cart/emptyCart.do?pid="+pid,
+                    type:"get",
+                    dateType:"text",
+                    success:function (data) {
+                        if (data.trim()=="yes"){
+                            $("#re").remove();
+                            window.location.reload();
+                            return true;
+                            alert("删除成功");
 
+                        }
                     }
-                }
-            });
+                });
+            }
+
 
         }
        function addnumber(pid) {
@@ -309,7 +315,7 @@
             </div>
             <div class="mid-sl f-l">
                 <a href="JavaScript:;" class="sl-left" onclick="subnumber(${gw.product.pid})" id="subsbb" >-</a>
-                <input type="number" value="${gw.proCount}" min="1" maxlength="2" id="proCount${gw.product.pid}" />
+                <input type="number" value="${gw.proCount}" min="1" maxlength="2" id="proCount${gw.product.pid}"/>
                    <%--<input type="hidden" value="${gw.product.pid}" id="pid${gw.product.pid}"   />--%>
                 <a href="JavaScript:;" class="sl-right" onclick="addnumber(${gw.product.pid})"  >+</a>
             </div>
@@ -457,6 +463,15 @@
         </div>
     </div>
 </div>
+<style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    input[type="number"]{
+        -moz-appearance: textfield;
+    }
+</style>
 </body>
 </html>
 
