@@ -49,12 +49,14 @@ public class Cart {
 
 
     }*/
-    /*清空购物车里的购物项*/
+    /*删除购物车里的购物项*/
     public void emptyCartItem(Integer pid){
         subTotal=subTotal-cartItems.get(pid).getTotal();
        cartItems.remove(pid);
-
-
     }
-
+/*清空购物车里所有的购物信息*/
+    public void clearItem(){
+        subTotal=0;
+        cartItems.clear();
+    }
 }

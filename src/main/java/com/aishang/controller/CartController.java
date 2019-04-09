@@ -59,7 +59,7 @@ public class CartController {
         out.print("yes");
 
     };*/
-    /*清空购物车里的购物项*/
+    /*删除购物车里的购物项*/
     @RequestMapping("emptyCart.do")
     public void emptyCart(HttpServletRequest request ,HttpServletResponse response ,Integer pid) throws IOException {
         HttpSession session = request.getSession();
@@ -69,8 +69,16 @@ public class CartController {
             session.setAttribute("cart",cart);
             out.print("yes");
 
-
-
+    }
+    /*清空购物车所有的购物信息*/
+    @RequestMapping("clearCart.do")
+    public void clearCart(HttpServletRequest request ,HttpServletResponse response) throws IOException {
+        HttpSession session = request.getSession();
+        PrintWriter out = response.getWriter();
+        Cart cart = (Cart)session.getAttribute("cart");
+        cart.clearItem();
+        session.setAttribute("cart",cart);
+        out.print("yes");
 
     }
 }

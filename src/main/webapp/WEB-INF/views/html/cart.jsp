@@ -47,8 +47,27 @@
         }
 
         function clearcart() {
-            $("#re").remove();
-            $("#zonge").remove();
+            if(!confirm("是否清空？删除请点击“确定”")){
+                return false;
+            }else{
+                var subtotal=$("#subtotal");
+                subtotal= Number($("#subtotal").html())-Number($("#subtotal").html());
+                $("#subtotal").html(subtotal);
+                $.ajax({
+                    url:"${pageContext.request.contextPath}/cart/clearCart.do",
+                    type:"get",
+                    dateType:"text",
+                    success:function (data) {
+                        if (data.trim()=="yes"){
+                            $("#re").remove();
+                            window.location.reload();
+                            return true;
+
+                        }
+                    }
+                });
+            }
+
 
         }
        function addnumber(pid) {
