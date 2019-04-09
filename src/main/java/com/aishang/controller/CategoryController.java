@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -18,12 +20,14 @@ public class CategoryController {
     private ProductService productService;
 
     @RequestMapping("selectCateName.do")
-    public String selectCateName(Model model, PageBenForCate pageBenForCate){
+    public String selectCateName(Model model, PageBenForCate pageBenForCate, HttpServletRequest request){
+        HttpSession session = request.getSession();
         List<CategoryExt> allCateName = categoryService.findAllCateName();
         productService.findAllProduct(pageBenForCate);
         model.addAttribute("allCateName",allCateName);
         model.addAttribute("allProduct", pageBenForCate);
         model.addAttribute("listcateNameseconds",allCateName);
+        session.setAttribute("allProduct",pageBenForCate);
         return "index";
     }
 }

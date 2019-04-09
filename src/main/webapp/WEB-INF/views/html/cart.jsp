@@ -45,6 +45,12 @@
 
 
         }
+
+        function clearcart() {
+            $("#re").remove();
+            $("#zonge").remove();
+
+        }
        function addnumber(pid) {
            var subtotal = Number($("#subtotal").html()) + Number($("#shopprice"+pid).html());
            $("#subtotal").html(subtotal);
@@ -240,9 +246,9 @@
 <!--内容开始-->
 <div class="cart-content w1200">
     <ul class="cart-tit-nav">
-        <li class="current"><a href="#">全部商品   21</a></li>
-        <li><a href="#">降价商品   1</a></li>
-        <li><a href="#">进口商品   1</a></li>
+        <li class="current"><a href="#">全部商品</a></li>
+        <%--<li><a href="#">降价商品   1</a></li>
+        <li><a href="#">进口商品   1</a></li>--%>
         <div style="clear:both;"></div>
     </ul>
     <div class="cart-con-tit">
@@ -316,7 +322,6 @@
             <div class="mid-sl f-l">
                 <a href="JavaScript:;" class="sl-left" onclick="subnumber(${gw.product.pid})" id="subsbb" >-</a>
                 <input type="number" value="${gw.proCount}" min="1" maxlength="2" id="proCount${gw.product.pid}"/>
-                   <%--<input type="hidden" value="${gw.product.pid}" id="pid${gw.product.pid}"   />--%>
                 <a href="JavaScript:;" class="sl-right" onclick="addnumber(${gw.product.pid})"  >+</a>
             </div>
 
@@ -324,7 +329,7 @@
             <p class="mid-je f-l" >¥ <span id="xiaoji${gw.product.pid}">${gw.total}</span></p>
 
             <div class="mid-chaozuo f-l">
-                <a href="#">移入收藏夹</a>
+               <%-- <a href="#">移入收藏夹</a>--%>
                 <a href="#" onclick="delcate(${gw.product.pid})">删除</a>
             </div>
             <div style="clear:both;"></div>
@@ -339,14 +344,14 @@
         <div class="quanxuan f-l">
             <input type="checkbox" value="" name="hobby"></input>
             <span>全选</span>
-            <a href="#">删除</a>
-            <a href="#">加入收藏夹</a>
-            <p>（此处始终在屏幕下方）</p>
+            <a href="#" onclick="clearcart()">清空购物车</a>
+           <%-- <a href="#">加入收藏夹</a>--%>
+
         </div>
         <div class="jiesuan f-r">
             <div class="jshj f-l">
                 <p>合计（不含运费）</p>
-                <p class="jshj-p2" >
+                <p class="jshj-p2" id="zonge" >
                     ￥：<span id="subtotal">${cart.subTotal}</span>
                 </p>
             </div>

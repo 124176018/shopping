@@ -298,12 +298,11 @@
 
 
         <ul class="sp-info-r m-act beaut">
+
             <c:forEach items="${allProduct.list}" var="ld">
             <li style="border-bottom:0; border-right:0;">
                 <div class="li-top">
-
                     <a href="${pageContext.request.contextPath}/cate/pdproducts.do?pid=${ld.pid}"class="li-top-tu" ><img src="${pageContext.request.contextPath}/${ld.pimage}" width="200" height="200"/></a>
-
                     <p class="jiage"><span class="sp1">￥${ld.market_price}</span></p>
 
                 </div>
@@ -313,10 +312,18 @@
                         <input type="number" id="proCount${ld.pid}" name="proCount"value="1" class="md-l-l f-l" ap="" min="1">
                         <div style="clear:both;"></div>
                     </div>
+
                     <div class="md-r f-l">
-                        <button class="md-l-btn1">立即购买</button>
+
+                        <button class="md-l-btn1">
+
+                            <%--<a href="${pageContext.request.contextPath}/cart/getCart.do?pid=${ld.pid}&proCount=${gw.proCount}">--%>立即购买<%--</a>--%>
+
+                         </button>
                         <button class="md-l-btn2" onclick="addCart(${ld.pid})" type="submit">加入购物车</button>
+
                     </div>
+
                     <div style="clear:both;"></div>
                 </div>
                 <p class="pingjia">88888评价</p>
