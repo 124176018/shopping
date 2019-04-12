@@ -34,6 +34,7 @@ public class DoLoginController {
     public String loginuser(User user, HttpServletResponse response, String save) throws UnsupportedEncodingException {
         User user1 = userService.findUser(user);
         session.setAttribute("su", user1);
+
         if (user1 == null) {
             return "login";
         }

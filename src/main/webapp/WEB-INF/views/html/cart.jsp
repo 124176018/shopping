@@ -82,11 +82,21 @@
                 var subtotal = Number($("#subtotal").html()) - Number($("#shopprice"+pid).html());
                 $("#subtotal").html(subtotal);
             }
+        }
+        //全选框
+        function allCheck(){
 
-
-
+            $("input[name='hobby']").each(function() {
+                if($("#checkAll").attr("checked", true)){
+                    $(this).attr("checked", true)
+                }
+            });
 
         }
+
+
+
+
     </script>
 </head>
 
@@ -238,25 +248,17 @@
         <a href="JavaScript:;"><img src="${pageContext.request.contextPath}/images/zl2-04.gif" /></a>
     </div>
     <div class="search f-r">
+        <form action="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}" method="post">
         <div class="search-info">
-            <input type="text" placeholder="请输入商品名称" />
+            <input  type="text" placeholder="请输入商品名称"name="pname" value="${allProduct.pname}"/>
             <button>搜索</button>
             <div style="clear:both;"></div>
         </div>
         <ul class="search-ul">
             <li><a href="JavaScript:;">绿豆</a></li>
-            <li><a href="JavaScript:;">大米</a></li>
-            <li><a href="JavaScript:;">驱蚊</a></li>
-            <li><a href="JavaScript:;">洗面奶</a></li>
-            <li><a href="JavaScript:;">格力空调</a></li>
-            <li><a href="JavaScript:;">洗发</a></li>
-            <li><a href="JavaScript:;">护发</a></li>
-            <li><a href="JavaScript:;">葡萄</a></li>
-            <li><a href="JavaScript:;">脉动</a></li>
-            <li><a href="JavaScript:;">海鲜</a></li>
-            <li><a href="JavaScript:;">水产</a></li>
             <div style="clear:both;"></div>
         </ul>
+        </form>
     </div>
     <div style="clear:both;"></div>
 </div>
@@ -272,7 +274,7 @@
     </ul>
     <div class="cart-con-tit">
         <p class="p1">
-            <input type="checkbox" value="" name="hobby"></input>
+            <input type="checkbox" value="" name="hobby" ></input>
             <span>全选</span>
         </p>
         <p class="p2">商品信息</p>
@@ -361,8 +363,8 @@
     <div class="cart-con-footer">
 
         <div class="quanxuan f-l">
-            <input type="checkbox" value="" name="hobby"></input>
-            <span>全选</span>
+            <input type="checkbox" value="" onclick="allCheck()"></input>
+            <span >全选</span>
             <a href="#" onclick="clearcart()">清空购物车</a>
            <%-- <a href="#">加入收藏夹</a>--%>
 
@@ -374,7 +376,9 @@
                     ￥：<span id="subtotal">${cart.subTotal}</span>
                 </p>
             </div>
-            <a href="JavaScript:;" class="js-a1 f-l">结算</a>
+            <c:if test="${cart.subTotal>0}" >
+            <a href="${pageContext.request.contextPath}/order/getOder.do?uid=${su.uid}" class="js-a1 f-l">结算</a>
+            </c:if>
             <div style="clear:both;"></div>
         </div>
         <div style="clear:both;"></div>
