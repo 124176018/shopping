@@ -38,9 +38,7 @@ public class OrdersController {
     @RequestMapping(value="/getOder1.do",produces = {"text/html;charset=utf-8"})
     @ResponseBody
     public String getOder1(Integer parent_area_code) {
-
         List<Cities> userCity = ordersMapper.findUserCity(parent_area_code);
-
     return JSONArray.fromObject(userCity).toString();
     }
 }

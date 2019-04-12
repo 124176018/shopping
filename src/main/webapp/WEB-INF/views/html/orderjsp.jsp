@@ -35,7 +35,6 @@
                      city.html("");
                     $.each(dataobj,function (key,val) {
                         var area_name= val.area_name;
-                        alert(area_name);
                         $("#city").append("<option value='"+area_name+"'>"+area_name+"</option>");
 
                     })
@@ -363,11 +362,6 @@
             <li class="tc-li1">
                 <p class="l-p">详细地址<span>*</span></p>
                 <textarea class="textarea1" placeholder="请如实填写您的详细信息，如街道名称、门牌号、楼层号和房间号。"></textarea>
-                <div style="clear:both;"></div>
-            </li>
-            <li class="tc-li1">
-                <p class="l-p">邮政编码<span></span></p>
-                <input type="text" />
                 <div style="clear:both;"></div>
             </li>
             <li class="tc-li1">
