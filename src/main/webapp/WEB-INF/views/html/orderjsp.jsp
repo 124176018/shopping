@@ -19,6 +19,7 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhonglin.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhongling2.js"></script>
  <script type="text/javascript">
+
         $(function () {
             var parent_area_code = $("#parent_area_code");
             var city = $("#city");
@@ -42,6 +43,48 @@
                 })
             })
         })
+    </script>
+    <script type="text/javascript">
+        function updateAddr(uid) {
+
+            var phone = $("#phone");
+            var name = $("#name");
+            var code = $("#code");
+            var add1=$("#parent_area_code option:selected").html();
+            var add2=$("#city option:selected");
+            var add3=$("#town");
+            $.ajax({
+                url:"${pageContext.request.contextPath}/order/getNewAddr.do?uid="+uid,
+                type:"get",
+                datatype:"json",
+                data:{
+                    phone:phone.val(),
+                    name:name.val(),
+                    code:code.val(),
+                    add1:add1,
+                    add2:add2.val(),
+                    add3:add3.val(),
+                },
+                success:function (data) {
+                    var dataobj = eval(data);
+                    $.each(dataobj,function (key,val) {
+                        var phone = val.phone;
+                        var name = val.name;
+                        var addr = val.addr.split("-");
+                        var add1=addr[0];
+                        var add2=addr[1];
+                        var add3=addr[2];
+                        $("#sname").html(name);
+                        $("#sphone").html(phone);
+                        $("#p").html(add1);
+                        $("#p1").html(add2);
+                        $("#c").html(add3);
+                    })
+                    $("#hidd").hide();
+                }
+            })
+
+        }
     </script>
 </head>
 
@@ -145,19 +188,20 @@
 
 
 <!--内容开始-->
-<div class="payment-interface w1200">
+<div class="payment-interface w1200" >
     <div class="pay-info">
         <div class="info-tit">
             <h3>选择收货地址</h3>
         </div>
         <ul class="pay-dz">
             <li class="current">
-                <h4><span class="sp1">${sessionScope.a}${sessionScope.b}</span>
-                    <span class="sp2">${sessionScope.c}</span>
-                    （<span class="sp3">${su.username}</span> 收）
+                <h4><span class="sp1" id="p">${sessionScope.a}</span>
+                    <span class="sp1" id="p1">${sessionScope.b}</span>
+                    <span class="sp2" id="c">${sessionScope.c}</span>
+                    （<span class="sp3" id="sname">${su.name}</span> 收）
                 </h4>
                 <p><span class="sp1"></span>
-                    <span class="sp2">电话：${su.phone}</span>
+                    <span class="sp2" id="sphone">电话：${su.phone}</span>
                 </p>
             </li>
 
@@ -326,7 +370,7 @@
 </div>
 
 <!--确认订单（修改地址）-->
-<div class="confirmation-tanchuang" xgdz1="">
+<div class="confirmation-tanchuang" xgdz1="" id="hidd">
     <div class="tanchuang-bg"></div>
     <div class="tanchuang-con">
         <div class="tc-title">
@@ -339,21 +383,18 @@
                 <p class="l-p">所在地区<span>*</span></p>
                 <div class="xl-dz">
                     <div class="dz-left f-l">
-                        <select id="parent_area_code" >      
-                                <option value="--" selected="selected">--请选择--</option>
+                        <select id="parent_area_code"  >      
+                                <option value="--" selected="selected">--请选择地区--</option>
                             <c:forEach items="${userAddr}" var="ss"> 
-                                <option value="${ss.area_code}">${ss.area_name}</option>
+                                    <option  value="${ss.area_code}"><span >${ss.area_name}</span></option>
                             </c:forEach>
                         </select>
                         <select id="city" >      
-                                <option value="--" selected="selected">--请选择--</option>
+                                <option value="--" selected="selected" >--请选择城市--</option>
                         </select>
 
                     </div>
                     <div class="dz-right f-l">
-                       <%-- <select id="city" >      
-                                <option value="--" selected="selected">--请选择--</option>
-                        </select>--%>
                     </div>
                     <div style="clear:both;"></div>
                 </div>
@@ -361,100 +402,29 @@
             </li>
             <li class="tc-li1">
                 <p class="l-p">详细地址<span>*</span></p>
-                <textarea class="textarea1" placeholder="请如实填写您的详细信息，如街道名称、门牌号、楼层号和房间号。"></textarea>
+                <textarea class="textarea1" placeholder="" id="town">${sessionScope.c}</textarea>
                 <div style="clear:both;"></div>
+            <li class="tc-li1">
+                <p class="l-p">邮政编码<span>*</span></p>
+                <input type="text" value="${su.code}" id="code" name="code" placeholder="请填写邮政编码"/>
+                <div style="clear:both;"></div>
+                </li>
+
             </li>
             <li class="tc-li1">
                 <p class="l-p">收货人姓名<span>*</span></p>
-                <input type="text" />
+                <input type="text" id="name" name="name" value="${su.name}"placeholder="请填写收货人名字"/>
                 <div style="clear:both;"></div>
             </li>
             <li class="tc-li1">
                 <p class="l-p">联系电话<span>*</span></p>
-                <input type="text" />
+                <input type="text" id="phone" name="phone" value="${su.phone}" placeholder="请填写收货人电话"/>
                 <div style="clear:both;"></div>
             </li>
         </ul>
-        <button class="btn-pst2">保存</button>
+        <button class="btn-pst2" onclick="updateAddr(${su.uid})" type="submit">保存</button>
     </div>
 </div>
-
-<!--修改地址-->
-<%--<div class="confirmation-tanchuang" xgdz2="">
-    <div class="tanchuang-bg"></div>
-    <div class="tanchuang-con">
-        <div class="tc-title">
-            <h3>新增地址</h3>
-            <a href="JavaScript:;" dz-guan=""><img src="${pageContext.request.contextPath}/images/close-select-city.gif" /></a>
-            <div style="clear:both;"></div>
-        </div>
-        <ul class="tc-con2">
-            <li class="tc-li1">
-                <p class="l-p">所在地区<span>*</span></p>
-                <div class="xl-dz">
-                    <div class="dz-left f-l">
-                        <p>北京</p>
-                        <ul>
-                            <li class="current"><a href="#">新疆</a></li>
-                            <li><a href="#">甘肃</a></li>
-                            <li><a href="#">宁夏</a></li>
-                            <li><a href="#">青海</a></li>
-                            <li><a href="#">重庆</a></li>
-                            <li><a href="#">长寿</a></li>
-                        </ul>
-                    </div>
-                    <div class="dz-right f-l">
-                        <p>天安门</p>
-                        <ul>
-                            <li class="current"><a href="#">乌鲁木齐</a></li>
-                            <li><a href="#">昌吉</a></li>
-                            <li><a href="#">巴音</a></li>
-                            <li><a href="#">郭楞</a></li>
-                            <li><a href="#">伊犁</a></li>
-                            <li><a href="#">阿克苏</a></li>
-                            <li><a href="#">喀什</a></li>
-                            <li><a href="#">哈密</a></li>
-                            <li><a href="#">克拉玛依</a></li>
-                            <li><a href="#">博尔塔拉</a></li>
-                            <li><a href="#">吐鲁番</a></li>
-                            <li><a href="#">和田</a></li>
-                            <li><a href="#">石河子</a></li>
-                            <li><a href="#">克孜勒苏</a></li>
-                            <li><a href="#">阿拉尔</a></li>
-                            <li><a href="#">五家渠</a></li>
-                            <li><a href="#">图木舒克</a></li>
-                            <li><a href="#">库尔勒</a></li>
-                            <div style="clear:both;"></div>
-                        </ul>
-                    </div>
-                    <div style="clear:both;"></div>
-                </div>
-                <div style="clear:both;"></div>
-            </li>
-            <li class="tc-li1">
-                <p class="l-p">详细地址<span>*</span></p>
-                <textarea class="textarea1" placeholder="请如实填写您的详细信息，如街道名称、门牌号、楼层号和房间号。"></textarea>
-                <div style="clear:both;"></div>
-            </li>
-            <li class="tc-li1">
-                <p class="l-p">邮政编码<span></span></p>
-                <input type="text" />
-                <div style="clear:both;"></div>
-            </li>
-            <li class="tc-li1">
-                <p class="l-p">收货人姓名<span>*</span></p>
-                <input type="text" class="shxm" />
-                <div style="clear:both;"></div>
-            </li>
-            <li class="tc-li1">
-                <p class="l-p">联系电话<span>*</span></p>
-                <input type="text" class="lxdh" />
-                <div style="clear:both;"></div>
-            </li>
-        </ul>
-        <button class="btn-pst2">保存</button>
-    </div>
-</div>--%>
 </body>
 </html>
 

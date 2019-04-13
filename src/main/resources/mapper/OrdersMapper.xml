@@ -10,4 +10,10 @@
     <select id="findUserCity" parameterType="Integer" resultType="cities">
  select * from cities where parent_area_code=#{parent_area_code}
 </select>
+    <update id="updateAddr" parameterType="User" >
+update user set addr=#{addr}, name=#{name},phone=#{phone}, code=#{code} where uid=#{uid}
+    </update>
+    <select id="findUserByUid" parameterType="Integer" resultType="User">
+select * from user where uid=#{uid}
+    </select>
 </mapper>
