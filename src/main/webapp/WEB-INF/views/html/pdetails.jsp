@@ -27,11 +27,11 @@
 <div class="zl-header">
     <div class="zl-hd w1200">
         <p class="hd-p1 f-l">
-            Hi!您好，欢迎来到宅客微购，请登录  <a href="${pageContext.request.contextPath}/注册.html">【免费注册】</a>
+            Hi!您好，欢迎来到宅客微购<a href="${pageContext.request.contextPath}/注册.html">【${su.username}】</a>
         </p>
         <p class="hd-p2 f-r">
             <a href="${pageContext.request.contextPath}/index.html">返回首页 (个人中心)</a><span>|</span>
-            <a href="${pageContext.request.contextPath}/购物车.html">我的购物车</a><span>|</span>
+            <a href="${pageContext.request.contextPath}/cart/getCart.do">我的购物车</a><span>|</span>
             <a href="${pageContext.request.contextPath}/我的订单.html">我的订单</a>
         </p>
         <div style="clear:both;"></div>

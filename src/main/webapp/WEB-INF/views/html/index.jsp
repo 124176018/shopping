@@ -20,12 +20,20 @@
 <!--header-->
 <div class="zl-header">
     <div class="zl-hd w1200">
+        <c:if test="${su!=null}" >
         <p class="hd-p1 f-l">
-            Hi!您好，欢迎来到宅客微购，请登录  <a href="${pageContext.request.contextPath}/注册.html">【免费注册】</a>
+            Hi!您好，欢迎来到宅客微购  <a href="${pageContext.request.contextPath}/注册.html">【${su.username}】</a>
         </p>
+        </c:if>
+        <c:if test="${su==null}">
+        <p class="hd-p1 f-l">
+            Hi!您好，欢迎来到宅客微购<a href="${pageContext.request.contextPath}/注册.html">【${su.username}】</a>
+        </p>
+        </c:if>
         <p class="hd-p2 f-r">
-            <a href="${pageContext.request.contextPath}/index.html">返回首页 (个人中心)</a><span>|</span>
-            <a href="${pageContext.request.contextPath}/购物车.html">我的购物车</a><span>|</span>
+            <a href="${pageContext.request.contextPath}/cate/selectCateName.do">返回首页</a><span>|</span>
+            <a href="index.html"> 个人中心</a><span>|</span>
+            <a href="${pageContext.request.contextPath}/cart/getCart.do">我的购物车</a><span>|</span>
             <a href="${pageContext.request.contextPath}/我的订单.html">我的订单</a>
         </p>
         <div style="clear:both;"></div>
@@ -255,7 +263,7 @@
             </p>
             <ul class="zl-lhover" style=" background:#FF9A02;">
                 <c:forEach items="${louceng.categorysSeconds}" var="louceng1">
-                    <li><a href="${pageContext.request.contextPath}/JavaScript:;">${louceng1.csname}</a></li>
+                    <li><a href="${pageContext.request.contextPath}//cate/doproducts.do?csid=${louceng1.csid}">${louceng1.csname}</a></li>
                 </c:forEach>
                 <div style="clear:both;"></div>
             </ul>
@@ -265,10 +273,10 @@
     <c:forEach items="${louceng.categorysSeconds}" var="louceng2">
                 <li>
                     <div class="sy-tu1">
-                        <a href="#"><img src="${pageContext.request.contextPath}/images/zl2-84.png" /></a>
+                        <a href="${pageContext.request.contextPath}/cate/doproducts.do?csid=${louceng2.csid}"><img src="${pageContext.request.contextPath}/images/zl2-84.png" /></a>
                     </div>
                     <div class="sy-tit1">
-                        <a href="#">${louceng2.csname}</a>
+                        <a href="${pageContext.request.contextPath}">${louceng2.csname}</a>
                     </div>
                     <div class="sy-tit2">
                         <p><a href="#">都市新大新特色豆米锅</a></p>

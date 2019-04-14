@@ -23,11 +23,12 @@ import java.util.List;
 public class OrdersController {
     @Resource
     private OrdersMapper ordersMapper;
+    @Resource
+    private HttpSession session;
     /*查询user表切割Addr地址
     * 查询省市表查询出所有的省*/
     @RequestMapping("getOder.do")
-    public String getOder(HttpServletRequest request,Integer parent_area_code, Model model ) {
-        HttpSession session = request.getSession();
+    public String getOder(Integer parent_area_code) {
         User  useraddr = (User) session.getAttribute("su");
         if(useraddr!=null){
             String[] addrsplit = useraddr.getAddr().split("-");
@@ -35,7 +36,7 @@ public class OrdersController {
             session.setAttribute("b",addrsplit[1]);
             session.setAttribute("c",addrsplit[2]);
             List<Cities> userAddr = ordersMapper.findUserAddr(1);
-            model.addAttribute("userAddr",userAddr);
+            session.setAttribute("userAddr",userAddr);
         }
         return "orderjsp";
     }
