@@ -19,7 +19,7 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhonglin.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhongling2.js"></script>
  <script type="text/javascript">
-
+/*省市联动*/
         $(function () {
             var parent_area_code = $("#parent_area_code");
             var city = $("#city");
@@ -45,6 +45,7 @@
         })
     </script>
     <script type="text/javascript">
+        /*更改用户收货地址*/
         function updateAddr(uid) {
 
             var phone = $("#phone");

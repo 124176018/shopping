@@ -21,7 +21,7 @@ public class Cart {
     public void setSubTotal(double subTotal) {
         this.subTotal = subTotal;
     }
-
+/*添加购物车*/
     public void addCartItem(CartItem cartItem){
         Integer pid = cartItem.getProduct().getPid();
         if (cartItems.containsKey(pid)){

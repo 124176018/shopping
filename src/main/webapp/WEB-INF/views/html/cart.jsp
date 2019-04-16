@@ -17,9 +17,11 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/shopping-mall-index.css" />
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jQuery.js"></script>
+    <script type="text/javascript" src="http://www.aniu.tv/Public/Common/js/jquery.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhonglin.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhongling2.js"></script>
     <script type="text/javascript">
+        /*删除购物项*/
         function delcate(pid){
             if(!confirm("是否删除？删除请点击“确定”")){
                 return false;
@@ -37,15 +39,12 @@
                             window.location.reload();
                             return true;
                             alert("删除成功");
-
                         }
                     }
                 });
             }
-
-
         }
-
+/*清空购物车*/
         function clearcart() {
             if(!confirm("是否清空？删除请点击“确定”")){
                 return false;
@@ -62,37 +61,69 @@
                             $("#re").remove();
                             window.location.reload();
                             return true;
-
                         }
                     }
                 });
             }
-
-
         }
+        /*增加商品的数量从而改变商品的小计*/
        function addnumber(pid) {
-           var subtotal = Number($("#subtotal").html()) + Number($("#shopprice"+pid).html());
+           if ($("#check"+pid).prop("checked")) {
+               var subtotal = Number($("#subtotal").html()) + Number($("#shopprice"+pid).html());
+           }
            $("#subtotal").html(subtotal);
-
        }
+        /*减少商品的数量从而改变商品的小计*/
         function subnumber(pid) {
             var proCount=$("#proCount"+pid).val();
-
             if (proCount>1){
-                var subtotal = Number($("#subtotal").html()) - Number($("#shopprice"+pid).html());
+                if ($("#check"+pid).prop("checked")){
+                    var subtotal = Number($("#subtotal").html()) - Number($("#xiaoji"+pid).html());
+                }
+            }
                 $("#subtotal").html(subtotal);
+        }
+        function subzongjia(pid){
+            if ($("#check"+pid).prop("checked")){
+                var subtotal = Number($("#subtotal").html()) + Number($("#xiaoji"+pid).html())
+                $("#subtotal").html(subtotal);
+
+            }else {
+                var subtotal = Number($("#subtotal").html()) - Number($("#xiaoji"+pid).html())
+                $("#subtotal").html(subtotal);
+
+
             }
         }
-        //全选框
-        function allCheck(){
-
-            $("input[name='hobby']").each(function() {
-                if($("#checkAll").attr("checked", true)){
-                    $(this).attr("checked", true)
+/*选择全部商品和单选某个订单项的商品*/
+        $(function(){
+            $("#all").click(function(){
+                var pid  =$("#pid").val();
+                if($("#all").is(':checked')){
+                    $("[name='hobby']").prop('checked',true);
+                    var subtotal = Number($("#sbt").val()) + Number($("#xiaoji"+pid).html())-Number($("#shopprice"+pid).html());
+                    $("#subtotal").html(subtotal);
+                }else{
+                    $("[name='hobby']").prop('checked',false);
+                    $("#subtotal").html("0");
                 }
             });
+            $("[name='hobby']").click(function(){
+                var i = 0;
+                var arr = $("[name='hobby']").length;
+                $("[name='hobby']").each(function(){
+                    if($(this).is(':checked')){
+                        i++;
+                    }
+                });
+                if(i == arr){
+                    $("#all").prop('checked',true);
 
-        }
+                }else{
+                    $("#all").prop('checked',false);
+                }
+            });
+        });
 
 
 
@@ -140,33 +171,6 @@
                         <dt>重庆市</dt>
                         <dd>
                             <a href="JavaScript:;">长寿区</a>
-                            <a href="JavaScript:;">巴南区</a>
-                            <a href="JavaScript:;">南岸区</a>
-                            <a href="JavaScript:;">九龙坡区</a>
-                            <a href="JavaScript:;">沙坪坝区</a>
-                            <a href="JavaScript:;">北碚</a>
-                            <a href="JavaScript:;">江北区</a>
-                            <a href="JavaScript:;">渝北区</a>
-                            <a href="JavaScript:;">大渡口区</a>
-                            <a href="JavaScript:;">渝中区</a>
-                            <a href="JavaScript:;">万州</a>
-                            <a href="JavaScript:;">武隆</a>
-                            <a href="JavaScript:;">晏家</a>
-                            <a href="JavaScript:;">长寿湖</a>
-                            <a href="JavaScript:;">云集</a>
-                            <a href="JavaScript:;">华中</a>
-                            <a href="JavaScript:;">林封</a>
-                            <a href="JavaScript:;">双龙</a>
-                            <a href="JavaScript:;">石回</a>
-                            <a href="JavaScript:;">龙凤呈祥</a>
-                            <a href="JavaScript:;">朝天门</a>
-                            <a href="JavaScript:;">中华</a>
-                            <a href="JavaScript:;">玉溪</a>
-                            <a href="JavaScript:;">云烟</a>
-                            <a href="JavaScript:;">红塔山</a>
-                            <a href="JavaScript:;">真龙</a>
-                            <a href="JavaScript:;">天子</a>
-                            <a href="JavaScript:;">娇子</a>
                         </dd>
                         <div style="clear:both;"></div>
                     </dl>
@@ -174,23 +178,6 @@
                         <dt>新疆</dt>
                         <dd>
                             <a href="JavaScript:;">齐乌鲁木</a>
-                            <a href="JavaScript:;">昌吉</a>
-                            <a href="JavaScript:;">巴音</a>
-                            <a href="JavaScript:;">郭楞</a>
-                            <a href="JavaScript:;">伊犁</a>
-                            <a href="JavaScript:;">阿克苏</a>
-                            <a href="JavaScript:;">喀什</a>
-                            <a href="JavaScript:;">哈密</a>
-                            <a href="JavaScript:;">克拉玛依</a>
-                            <a href="JavaScript:;">博尔塔拉</a>
-                            <a href="JavaScript:;">吐鲁番</a>
-                            <a href="JavaScript:;">和田</a>
-                            <a href="JavaScript:;">石河子</a>
-                            <a href="JavaScript:;">克孜勒苏</a>
-                            <a href="JavaScript:;">阿拉尔</a>
-                            <a href="JavaScript:;">五家渠</a>
-                            <a href="JavaScript:;">图木舒克</a>
-                            <a href="JavaScript:;">库尔勒</a>
                         </dd>
                         <div style="clear:both;"></div>
                     </dl>
@@ -198,20 +185,6 @@
                         <dt>甘肃</dt>
                         <dd>
                             <a href="JavaScript:;">兰州</a>
-                            <a href="JavaScript:;">天水</a>
-                            <a href="JavaScript:;">巴音</a>
-                            <a href="JavaScript:;">白银</a>
-                            <a href="JavaScript:;">庆阳</a>
-                            <a href="JavaScript:;">平凉</a>
-                            <a href="JavaScript:;">酒泉</a>
-                            <a href="JavaScript:;">张掖</a>
-                            <a href="JavaScript:;">武威</a>
-                            <a href="JavaScript:;">定西</a>
-                            <a href="JavaScript:;">金昌</a>
-                            <a href="JavaScript:;">陇南</a>
-                            <a href="JavaScript:;">临夏</a>
-                            <a href="JavaScript:;">嘉峪关</a>
-                            <a href="JavaScript:;">甘南</a>
                         </dd>
                         <div style="clear:both;"></div>
                     </dl>
@@ -219,10 +192,6 @@
                         <dt>宁夏</dt>
                         <dd>
                             <a href="JavaScript:;">银川</a>
-                            <a href="JavaScript:;">吴忠</a>
-                            <a href="JavaScript:;">石嘴山</a>
-                            <a href="JavaScript:;">中卫</a>
-                            <a href="JavaScript:;">固原</a>
                         </dd>
                         <div style="clear:both;"></div>
                     </dl>
@@ -230,13 +199,6 @@
                         <dt>青海</dt>
                         <dd>
                             <a href="JavaScript:;">西宁</a>
-                            <a href="JavaScript:;">海西</a>
-                            <a href="JavaScript:;">海北</a>
-                            <a href="JavaScript:;">果洛</a>
-                            <a href="JavaScript:;">海东</a>
-                            <a href="JavaScript:;">黄南</a>
-                            <a href="JavaScript:;">玉树</a>
-                            <a href="JavaScript:;">海南</a>
                         </dd>
                         <div style="clear:both;"></div>
                     </dl>
@@ -269,14 +231,11 @@
 <div class="cart-content w1200">
     <ul class="cart-tit-nav">
         <li class="current"><a href="#">全部商品</a></li>
-        <%--<li><a href="#">降价商品   1</a></li>
-        <li><a href="#">进口商品   1</a></li>--%>
         <div style="clear:both;"></div>
     </ul>
     <div class="cart-con-tit">
         <p class="p1">
-            <input type="checkbox" value="" name="hobby" ></input>
-            <span>全选</span>
+
         </p>
         <p class="p2">商品信息</p>
         <p class="p3">规格</p>
@@ -290,13 +249,12 @@
 
     <div class="cart-con-info" id="re">
       <c:forEach items="${cart.cartItems}" var="gw">
-        <%--<div class="info-top">
-            <input type="checkbox" value="" name="hobby"></input>
-            <span>商家：微购直卖店</span>
-        </div>--%>
+        <div class="info-top">
+
+        </div>
         <div class="info-mid">
 
-            <input type="checkbox" value="" name="hobby" class="mid-ipt f-l"></input>
+            <input type="checkbox" id="check${gw.product.pid}"  name="hobby" class="mid-ipt f-l" onclick="subzongjia(${gw.product.pid})"></input>
             <div class="mid-tu f-l">
 
                 <a href="#"><img src="${pageContext.request.contextPath}/${gw.product.pimage}"width="100" height="100" /></a>
@@ -344,6 +302,7 @@
             <div class="mid-sl f-l">
                 <a href="JavaScript:;" class="sl-left" onclick="subnumber(${gw.product.pid})" id="subsbb" >-</a>
                 <input type="number" value="${gw.proCount}" min="1" maxlength="2" id="proCount${gw.product.pid}"/>
+                <input type="hidden" value="${gw.product.pid}" id="pid"/>
                 <a href="JavaScript:;" class="sl-right" onclick="addnumber(${gw.product.pid})"  >+</a>
             </div>
 
@@ -351,7 +310,7 @@
             <p class="mid-je f-l" >¥ <span id="xiaoji${gw.product.pid}">${gw.total}</span></p>
 
             <div class="mid-chaozuo f-l">
-               <%-- <a href="#">移入收藏夹</a>--%>
+
                 <a href="#" onclick="delcate(${gw.product.pid})">删除</a>
             </div>
             <div style="clear:both;"></div>
@@ -364,18 +323,21 @@
     <div class="cart-con-footer">
 
         <div class="quanxuan f-l">
-            <input type="checkbox" value="" onclick="allCheck()"></input>
+            <input type="checkbox" id="all"  name="hobbys"></input>
             <span >全选</span>
             <a href="#" onclick="clearcart()">清空购物车</a>
-           <%-- <a href="#">加入收藏夹</a>--%>
+
 
         </div>
         <div class="jiesuan f-r">
             <div class="jshj f-l">
                 <p>合计（不含运费）</p>
+
                 <p class="jshj-p2" id="zonge" >
-                    ￥：<span id="subtotal">${cart.subTotal}</span>
+                    ￥：<span id="subtotal">0</span>
+                    <input type="hidden" id="sbt" value="${cart.subTotal}">
                 </p>
+
             </div>
             <c:if test="${cart.subTotal>0}" >
             <a href="${pageContext.request.contextPath}/order/getOder.do?uid=${su.uid}" class="js-a1 f-l">结算</a>
