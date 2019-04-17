@@ -219,10 +219,9 @@
     <div class="cart-con-info">
         <div class="cart-con-tit" style="margin:20px 0 5px;">
             <p class="p1" style="width:400px;">
-                <input type="checkbox" value="" name="hobby"></input>
-                <span>商家：向东服饰专卖店</span>
+                <span></span>
             </p>
-            <p class="p3" style="width:145px;">规格</p>
+            <p class="p3" style="width:145px;"></p>
             <p class="p4" style="width:130px;">数量</p>
             <p class="p8" style="width:75px;">运费</p>
             <p class="p5">单价（元）</p>
@@ -237,8 +236,8 @@
                 <a href="#">登高阁紫菜肉松鸡蛋卷 海苔蛋卷 糕点<br />江西特产小吃 休闲办公零食</a>
             </div>
             <div class="mid-guige1 f-l" style="margin-right:40px;">
-                <p>颜色：蓝色</p>
-                <p>尺码：XL</p>
+                <p></p>
+                <p></p>
             </div>
             <div class="mid-sl f-l" style="margin:10px 54px 0px 0px;">
                 <a href="JavaScript:;" class="sl-left">-</a>

@@ -17,10 +17,18 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/shopping-mall-index.css" />
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jQuery.js"></script>
-    <script type="text/javascript" src="http://www.aniu.tv/Public/Common/js/jquery.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhonglin.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhongling2.js"></script>
     <script type="text/javascript">
+        function jiesuan(){
+            if($("[name='hobby']").is(':checked')){
+                $("[name='hobby']").prop('checked',true);
+            }
+            else{
+                alert("请至少选择一件商品结算");
+                return false;
+            }
+        }
         /*删除购物项*/
         function delcate(pid){
             if(!confirm("是否删除？删除请点击“确定”")){
@@ -66,14 +74,71 @@
                 });
             }
         }
-        /*增加商品的数量从而改变商品的小计*/
+
+      function addnumber(pid){
+            var proCount=$("#proCount"+pid).val();
+            var sbt = Number($("#sbt").val());
+                $.ajax({
+                    url:"${pageContext.request.contextPath}/cart/upCartItemadd.do?pid="+pid,
+                    type:"get",
+                    data:{
+                        proCount:proCount
+                    },
+                    dateType:"text",
+                    success:function (data) {
+                        $(function(){
+                            $("#all").click(function(){
+                                var pid  =$("#pid").val();
+                                if($("#all").is(':checked')){
+                                    $("[name='hobby']").prop('checked',true);
+                                    $("#subtotal").html(data);
+                                }else{
+                                    $("[name='hobby']").prop('checked',false);
+                                    $("#subtotal").html("0");
+                                }
+                            });
+                        });
+
+                    }
+                });
+
+        }
+
+        function subnumber(pid){
+            var proCount=$("#proCount"+pid).val();
+            $.ajax({
+                url:"${pageContext.request.contextPath}/cart/upCartItemsub.do?pid="+pid,
+                type:"get",
+                data:{
+                    proCount:proCount
+                },
+                dateType:"text",
+                success:function (data) {
+                    $(function(){
+                        $("#all").click(function(){
+                            var pid  =$("#pid").val();
+                            if($("#all").is(':checked')){
+                                $("[name='hobby']").prop('checked',true);
+                                $("#subtotal").html(data);
+                            }else{
+                                $("[name='hobby']").prop('checked',false);
+                                $("#subtotal").html("0");
+                            }
+                        });
+                    });
+
+                }
+            });
+
+        }
+     /*  增加商品的数量从而改变商品的小计
        function addnumber(pid) {
            if ($("#check"+pid).prop("checked")) {
                var subtotal = Number($("#subtotal").html()) + Number($("#shopprice"+pid).html());
            }
            $("#subtotal").html(subtotal);
        }
-        /*减少商品的数量从而改变商品的小计*/
+        减少商品的数量从而改变商品的小计
         function subnumber(pid) {
             var proCount=$("#proCount"+pid).val();
             if (proCount>1){
@@ -82,9 +147,10 @@
                 }
             }
                 $("#subtotal").html(subtotal);
-        }
+        }*/
         function subzongjia(pid){
             if ($("#check"+pid).prop("checked")){
+
                 var subtotal = Number($("#subtotal").html()) + Number($("#xiaoji"+pid).html())
                 $("#subtotal").html(subtotal);
 
@@ -101,7 +167,7 @@
                 var pid  =$("#pid").val();
                 if($("#all").is(':checked')){
                     $("[name='hobby']").prop('checked',true);
-                    var subtotal = Number($("#sbt").val()) + Number($("#xiaoji"+pid).html())-Number($("#shopprice"+pid).html());
+                    var subtotal = Number($("#sbt").val());
                     $("#subtotal").html(subtotal);
                 }else{
                     $("[name='hobby']").prop('checked',false);
@@ -118,16 +184,11 @@
                 });
                 if(i == arr){
                     $("#all").prop('checked',true);
-
                 }else{
                     $("#all").prop('checked',false);
                 }
             });
         });
-
-
-
-
     </script>
 </head>
 
@@ -238,7 +299,7 @@
 
         </p>
         <p class="p2">商品信息</p>
-        <p class="p3">规格</p>
+        <p class="p3"></p>
         <p class="p4">数量</p>
         <p class="p5">单价（元）</p>
         <p class="p6">金额（元）</p>
@@ -248,17 +309,15 @@
 
 
     <div class="cart-con-info" id="re">
-      <c:forEach items="${cart.cartItems}" var="gw">
+        <form action="${pageContext.request.contextPath}/order/getOder.do" method="post" id="biaodan" onsubmit="return jiesuan()">
+          <c:forEach items="${cart.cartItems}" var="gw">
         <div class="info-top">
 
         </div>
         <div class="info-mid">
-
-            <input type="checkbox" id="check${gw.product.pid}"  name="hobby" class="mid-ipt f-l" onclick="subzongjia(${gw.product.pid})"></input>
+            <input type="checkbox" id="check${gw.product.pid}"  name="hobby" class="mid-ipt f-l" onclick="subzongjia(${gw.product.pid})" value="${gw.product.pid}"/>
             <div class="mid-tu f-l">
-
                 <a href="#"><img src="${pageContext.request.contextPath}/${gw.product.pimage}"width="100" height="100" /></a>
-
             </div>
 
             <div class="mid-font f-l">
@@ -267,40 +326,8 @@
                 <span>满赠</span>
 
             </div>
-            <div class="mid-guige f-l">
-                <p>颜色：蓝色</p>
-                <p>尺码：XL</p>
-                <a href="JavaScript:;" class="xg" xg="xg1">修改</a>
-                <div class="guige-xiugai" xg-g="xg1">
-                    <div class="xg-left f-l">
-                        <dl>
-                            <dt>颜  色</dt>
-                            <dd>
-                                <a href="JavaScript:;" class="current">黑色</a>
-                                <a href="JavaScript:;">白色</a>
-                            </dd>
-                            <div style="clear:both;"></div>
-                        </dl>
-                        <dl>
-                            <dt>尺  码</dt>
-                            <dd>
-                                <a href="JavaScript:;" class="current">M</a>
-                                <a href="JavaScript:;">L</a>
-                                <a href="JavaScript:;">XL</a>
-                            </dd>
-                            <div style="clear:both;"></div>
-                        </dl>
-                        <a href="JavaScript:;" class="qd">确定</a>
-                        <a href="JavaScript:;" class="qx" qx="xg1">取消</a>
-                    </div>
-                    <div class="xg-right f-l">
-                        <a href="#"><img src="${pageContext.request.contextPath}/images/dai2.gif" /></a>
-                    </div>
-                    <div style="clear:both;"></div>
-                </div>
-            </div>
             <div class="mid-sl f-l">
-                <a href="JavaScript:;" class="sl-left" onclick="subnumber(${gw.product.pid})" id="subsbb" >-</a>
+                <a href="JavaScript:;" class="sl-left" onclick="subnumber(${gw.product.pid})" >-</a>
                 <input type="number" value="${gw.proCount}" min="1" maxlength="2" id="proCount${gw.product.pid}"/>
                 <input type="hidden" value="${gw.product.pid}" id="pid"/>
                 <a href="JavaScript:;" class="sl-right" onclick="addnumber(${gw.product.pid})"  >+</a>
@@ -316,6 +343,8 @@
             <div style="clear:both;"></div>
         </div>
       </c:forEach>
+
+
     </div>
 
 
@@ -339,14 +368,14 @@
                 </p>
 
             </div>
-            <c:if test="${cart.subTotal>0}" >
-            <a href="${pageContext.request.contextPath}/order/getOder.do?uid=${su.uid}" class="js-a1 f-l">结算</a>
-            </c:if>
+
+            <button class="js-a1 f-l" onclick="jiesuan()"  >结算</button>
+            </form>
             <div style="clear:both;"></div>
         </div>
         <div style="clear:both;"></div>
-
     </div>
+
 </div>
 
 

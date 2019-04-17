@@ -24,7 +24,6 @@
 
            function addCart(pid){
                var proCount =$("#proCount"+pid);
-
                 $.ajax({
                     url:"${pageContext.request.contextPath}/cart/addCartItem.do?pid="+pid,
                     type:"get",
@@ -243,54 +242,6 @@
     </div>
 </div>
 
-<!--广告栏-->
-<%--<div class="advertisement w1200">
-    <p style="text-align:center;font-size:15px;color:#000;line-height:74px;">广告栏</p>
-</div>--%>
-
-<!--公司logo栏-->
-<%--<div class="beaut-lg w1200">
-    <ul>
-        <li><a href="#"><img src="images/beaut-lg-tu1.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu1.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu3.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu3.gif" /></a></li>
-        <li style="width:155px; border-right:0;"><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu1.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu3.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu1.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-        <li style="width:155px; border-right:0;"><a href="#"><img src="images/beaut-lg-tu3.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu1.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu3.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu1.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu3.gif" /></a></li>
-        <li style="width:155px; border-right:0;"><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu1.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu3.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu1.gif" /></a></li>
-        <li><a href="#"><img src="images/beaut-lg-tu2.gif" /></a></li>
-        <li style="width:155px; border-right:0;"><a href="#"><img src="images/beaut-lg-tu3.gif" /></a></li>
-        <div style="clear:both;"></div>
-    </ul>
-</div>--%>
-
-<!--广告栏-->
-<%--<div class="advertisement w1200">
-    <p style="text-align:center;font-size:15px;color:#000;line-height:74px;">广告栏</p>
-</div>--%>
 
 <!--内容页面-->
 <div class="shopping-content w1200">
