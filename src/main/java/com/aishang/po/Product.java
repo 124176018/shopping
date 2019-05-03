@@ -8,7 +8,7 @@ public class Product {
     private Double market_price;
     private Double shop_price;
     private String pdesc;
-    private Date pdate;
+    private String pdate;
     private Integer csid;
     private Integer pstate;
     private String pimage;
@@ -61,11 +61,11 @@ public class Product {
         this.pdesc = pdesc;
     }
 
-    public Date getPdate() {
+    public String getPdate() {
         return pdate;
     }
 
-    public void setPdate(Date pdate) {
+    public void setPdate(String pdate) {
         this.pdate = pdate;
     }
 

@@ -30,7 +30,6 @@ public class ProductController {
     @RequestMapping("pdproducts.do")
     public String pdproducts(Model model,PageBenForCate pageBenForCate,Integer pid){
         productService.findAllProduct(pageBenForCate);
-
         List<CategoryExt> allCateName = categoryService.findAllCateName();
         model.addAttribute("allCateName",allCateName);
         model.addAttribute("allProduct", pageBenForCate);
@@ -39,6 +38,5 @@ public class ProductController {
         model.addAttribute("dproduct",dproduct);
         return "pdetails";
     }
-
 
 }

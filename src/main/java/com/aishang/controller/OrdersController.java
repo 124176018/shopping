@@ -1,7 +1,9 @@
 package com.aishang.controller;
 
 import com.aishang.dao.OrdersMapper;
+import com.aishang.po.CartItem;
 import com.aishang.po.Cities;
+import com.aishang.po.Product;
 import com.aishang.po.User;
 
 import net.sf.json.JSONArray;
@@ -29,11 +31,12 @@ public class OrdersController {
     /*查询user表切割Addr地址
     * 查询省市表查询出所有的省*/
     @RequestMapping("getOder.do")
-    public String getOder(Integer parent_area_code,String[] hobby) {
+    public String getOder(Integer parent_area_code, String[] hobby, CartItem cartItem) {
         if(session.getAttribute("su")==null){
-            return "login";
+            return "redirect:/user/getlogin.do";
         }else{
-            for (int i=0 ;i<hobby.length;i++){
+            for (String hh:hobby) {
+
 
             }
             User  useraddr = (User) session.getAttribute("su");

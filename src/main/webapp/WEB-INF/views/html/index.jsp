@@ -263,7 +263,7 @@
             </p>
             <ul class="zl-lhover" style=" background:#FF9A02;">
                 <c:forEach items="${louceng.categorysSeconds}" var="louceng1">
-                    <li><a href="${pageContext.request.contextPath}//cate/doproducts.do?csid=${louceng1.csid}">${louceng1.csname}</a></li>
+                    <li><a href="${pageContext.request.contextPath}/cate/doproducts.do?csid=${louceng1.csid}">${louceng1.csname}</a></li>
                 </c:forEach>
                 <div style="clear:both;"></div>
             </ul>

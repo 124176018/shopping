@@ -221,32 +221,28 @@
             <p class="p1" style="width:400px;">
                 <span></span>
             </p>
-            <p class="p3" style="width:145px;"></p>
-            <p class="p4" style="width:130px;">数量</p>
-            <p class="p8" style="width:75px;">运费</p>
+            <p class="p3" style="width:45px;"></p>
+            <p class="p4" style="width:120px;">数量</p>
+            <p class="p8" style="width:100px;">运费</p>
             <p class="p5">单价（元）</p>
             <p class="p6" style="width:173px;">金额（元）</p>
             <p class="p7">配送方式</p>
         </div>
+
+        <c:forEach items="${sessionScope.cart.cartItems}" var="cartItem" >
         <div class="info-mid">
             <div class="mid-tu f-l">
-                <a href="#"><img src="${pageContext.request.contextPath}/images/dai1.gif" /></a>
+                <a href="#"><img src="${pageContext.request.contextPath}/${cartItem.product.pimage}" width="80px" height="80px"/></a>
             </div>
-            <div class="mid-font f-l" style="margin-right:40px;">
-                <a href="#">登高阁紫菜肉松鸡蛋卷 海苔蛋卷 糕点<br />江西特产小吃 休闲办公零食</a>
+            <div class="mid-font f-l" style="margin-right:300px;">
+                <a href="#">${cartItem.product.pname}</a>
             </div>
-            <div class="mid-guige1 f-l" style="margin-right:40px;">
-                <p></p>
-                <p></p>
+            <div class="mid-sl f-l" style="margin: 10px 54px 0px 0px">
+                <span  style="margin-right:30px;">${cartItem.proCount}</span>
             </div>
-            <div class="mid-sl f-l" style="margin:10px 54px 0px 0px;">
-                <a href="JavaScript:;" class="sl-left">-</a>
-                <input type="text" value="1" />
-                <a href="JavaScript:;" class="sl-right">+</a>
-            </div>
-            <p class="mid-yunfei f-l">¥ 0.00</p>
-            <p class="mid-dj f-l">¥ 66.00</p>
-            <p class="mid-je f-l" style="margin:10px 120px 0px 0px;">¥ 66.00</p>
+            <p class="mid-dj f-l">￥:0.00</p>
+            <p class="mid-yunfei f-l">¥:${cartItem.product.shop_price}</p>
+            <p class="mid-je f-l"  style="margin-right:50px;">￥:${cartItem.total}</p>
             <div class="mid-chaozuo f-l">
                 <select>
                     <option>送货上门</option>
@@ -255,12 +251,10 @@
             </div>
             <div style="clear:both;"></div>
         </div>
-        <div class="info-heji">
-            <p class="f-r">店铺合计(含运费)：<span>¥46.60</span></p>
-            <h3 class="f-r">订单号：2015122332124565</h3>
-        </div>
+        </c:forEach>
+
         <div class="info-tijiao">
-            <p class="p1">实付款：<span>¥46.60</span></p>
+            <p class="p1">实付款：<span>¥${cart.subTotal}</span></p>
             <button class="btn">提交订单</button>
         </div>
     </div>

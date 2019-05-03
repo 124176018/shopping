@@ -369,7 +369,7 @@
 
             </div>
 
-            <button class="js-a1 f-l" onclick="jiesuan()"  >结算</button>
+            <button class="js-a1 f-l" onclick="jiesuan()"  >确认下单</button>
             </form>
             <div style="clear:both;"></div>
         </div>
