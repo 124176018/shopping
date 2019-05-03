@@ -223,9 +223,9 @@
             </p>
             <p class="p3" style="width:45px;"></p>
             <p class="p4" style="width:120px;">数量</p>
-            <p class="p8" style="width:100px;">运费</p>
+            <p class="p8" style="width:135px;">运费</p>
             <p class="p5">单价（元）</p>
-            <p class="p6" style="width:173px;">金额（元）</p>
+            <p class="p6" style="width:178px;">金额（元）</p>
             <p class="p7">配送方式</p>
         </div>
 
@@ -241,7 +241,7 @@
                 <span  style="margin-right:30px;">${cartItem.proCount}</span>
             </div>
             <p class="mid-dj f-l">￥:0.00</p>
-            <p class="mid-yunfei f-l">¥:${cartItem.product.shop_price}</p>
+            <p class="mid-yunfei f-l"  style="margin-right:105px;">¥:${cartItem.product.shop_price}</p>
             <p class="mid-je f-l"  style="margin-right:50px;">￥:${cartItem.total}</p>
             <div class="mid-chaozuo f-l">
                 <select>
