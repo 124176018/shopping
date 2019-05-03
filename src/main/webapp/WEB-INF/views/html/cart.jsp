@@ -320,7 +320,7 @@
                 <a href="#"><img src="${pageContext.request.contextPath}/${gw.product.pimage}"width="100" height="100" /></a>
             </div>
 
-            <div class="mid-font f-l">
+            <div class="mid-font f-l"  style="margin-right:350px;">
 
                 <a href="#">${gw.product.pname}</a>
                 <span>满赠</span>
