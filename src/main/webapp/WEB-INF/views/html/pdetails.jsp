@@ -226,7 +226,7 @@
                 <ul qie-da="">
 
                         <c:forEach items="${dproduct.productImage}" var="immi">
-                        <li><a href="#"><img src="${pageContext.request.contextPath}/${immi.image}"width="359" height="360"></a></li>
+                        <li><a href="#"><img src="http://localhost:80/manager/${immi.thumbnail}"width="359" height="360"></a></li>
                         </c:forEach>
 
                     <div style="clear:both;"></div>
@@ -240,7 +240,7 @@
                 <div class="dt-qie-con f-l">
                     <ul qie-xiao="">
                         <c:forEach items="${dproduct.productImage}" var="ioo">
-                        <li class="current"><a href="#"><img src="${pageContext.request.contextPath}/${ioo.image}" width="60" height="60"/></a></li>
+                        <li class="current"><a href="#"><img src="${pageContext.request.contextPath}/${ioo.thumbnail}" width="60" height="60"/></a></li>
                     </c:forEach>
 
                         <div style="clear:both;"></div>

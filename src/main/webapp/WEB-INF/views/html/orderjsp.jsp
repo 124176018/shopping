@@ -8,10 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset=utf-8" />
     <title>确认订单</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/shopping-mall-index.css" />
@@ -191,6 +191,8 @@
 
 <!--内容开始-->
 <div class="payment-interface w1200" >
+    <form action="${pageContext.request.contextPath}/order/creatOrder.do" method="post">
+        <input type="hidden" name="uid" value="${su.uid}">
     <div class="pay-info">
         <div class="info-tit">
             <h3>选择收货地址</h3>
@@ -212,10 +214,14 @@
         <button class="pay-xdz-btn">修改地址</button>
     </div>
     <div class="pay-info">
+
+
+
         <div class="info-tit" style="border-bottom:0;">
             <h3>订单信息</h3>
         </div>
     </div>
+
     <div class="cart-con-info">
         <div class="cart-con-tit" style="margin:20px 0 5px;">
             <p class="p1" style="width:400px;">
@@ -232,7 +238,7 @@
         <c:forEach items="${sessionScope.cart.cartItems}" var="cartItem" >
         <div class="info-mid">
             <div class="mid-tu f-l">
-                <a href="#"><img src="${pageContext.request.contextPath}/${cartItem.product.pimage}" width="80px" height="80px"/></a>
+                <a href="#"><img src="http://localhost:80/manager/${cartItem.product.pimage}" width="80px" height="80px"/></a>
             </div>
             <div class="mid-font f-l" style="margin-right:300px;">
                 <a href="#">${cartItem.product.pname}</a>
@@ -255,9 +261,12 @@
 
         <div class="info-tijiao">
             <p class="p1">实付款：<span>¥${cart.subTotal}</span></p>
-            <button class="btn">提交订单</button>
+            <input type="hidden" name="total" value="${cart.subTotal}">
+            <button type="submit" class="btn">提交订单</button>
         </div>
+
     </div>
+    </form>
 </div>
 
 <!--底部一块-->

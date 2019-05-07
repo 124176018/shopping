@@ -254,7 +254,7 @@
             <c:forEach items="${allProduct.list}" var="ld">
             <li style="border-bottom:0; border-right:0;">
                 <div class="li-top">
-                    <a href="${pageContext.request.contextPath}/cate/pdproducts.do?pid=${ld.pid}"class="li-top-tu" ><img src="${pageContext.request.contextPath}/${ld.pimage}" width="200" height="200"/></a>
+                    <a href="${pageContext.request.contextPath}/cate/pdproducts.do?pid=${ld.pid}"class="li-top-tu" ><img src="http://localhost:80/manager/${ld.pimage}" width="200" height="200"/></a>
                     <p class="jiage"><span class="sp1">￥${ld.market_price}</span></p>
 
                 </div>

@@ -16,4 +16,18 @@ update user set addr=#{addr}, name=#{name},phone=#{phone}, code=#{code} where ui
     <select id="findUserByUid" parameterType="Integer" resultType="User">
 select * from user where uid=#{uid}
     </select>
+    <!-- 创建订单-->
+    <insert id="newOrder" parameterType="orders">
+        insert into orders(total,ordertime,state,name,phone,addr,uid)
+        values (#{total},#{ordertime},#{state},#{name},#{phone},#{addr},#{uid});
+        <selectKey keyProperty="oid" resultType="int" order="AFTER">
+            select LAST_INSERT_ID();
+        </selectKey>
+    </insert>
+    <!--创建订单项-->
+    <insert id="newOrderitem" parameterType="orderitem">
+        insert into orderitem(count,subtotal,pid,oid)
+        values (#{count},#{subtotal},#{pid},#{oid});
+    </insert>
+
 </mapper>

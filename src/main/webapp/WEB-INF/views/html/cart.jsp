@@ -20,15 +20,20 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhonglin.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhongling2.js"></script>
     <script type="text/javascript">
-        function jiesuan(){
-            if($("[name='hobby']").is(':checked')){
-                $("[name='hobby']").prop('checked',true);
-            }
-            else{
-                alert("请至少选择一件商品结算");
+           function jiesuan1(){
+            if($("#sbt").val()==0){
+                alert("请添加商品到购物车");
                 return false;
             }
+                return true;
         }
+     /*   function jiesuan1(){
+            if($("[name='hobby']").is(':checked')){
+                 return true;
+            }
+                alert("至少选择一件商品进行结算");
+                return false;
+        }*/
         /*删除购物项*/
         function delcate(pid){
             if(!confirm("是否删除？删除请点击“确定”")){
@@ -86,7 +91,8 @@
                     },
                     dateType:"text",
                     success:function (data) {
-                        $(function(){
+                        $("#subtotal").html(data);
+                       /* $(function(){
                             $("#all").click(function(){
                                 var pid  =$("#pid").val();
                                 if($("#all").is(':checked')){
@@ -97,7 +103,7 @@
                                     $("#subtotal").html("0");
                                 }
                             });
-                        });
+                        });*/
 
                     }
                 });
@@ -114,7 +120,8 @@
                 },
                 dateType:"text",
                 success:function (data) {
-                    $(function(){
+                    $("#subtotal").html(data);
+                  /*  $(function(){
                         $("#all").click(function(){
                             var pid  =$("#pid").val();
                             if($("#all").is(':checked')){
@@ -125,11 +132,10 @@
                                 $("#subtotal").html("0");
                             }
                         });
-                    });
+                    });*/
 
                 }
             });
-
         }
      /*  增加商品的数量从而改变商品的小计
        function addnumber(pid) {
@@ -148,7 +154,7 @@
             }
                 $("#subtotal").html(subtotal);
         }*/
-        function subzongjia(pid){
+       /* function subzongjia(pid){
             if ($("#check"+pid).prop("checked")){
 
                 var subtotal = Number($("#subtotal").html()) + Number($("#xiaoji"+pid).html())
@@ -160,9 +166,9 @@
 
 
             }
-        }
+        }*/
 /*选择全部商品和单选某个订单项的商品*/
-        $(function(){
+       /* $(function(){
             $("#all").click(function(){
                 var pid  =$("#pid").val();
                 if($("#all").is(':checked')){
@@ -188,7 +194,8 @@
                     $("#all").prop('checked',false);
                 }
             });
-        });
+
+        });*/
     </script>
 </head>
 
@@ -309,13 +316,13 @@
 
 
     <div class="cart-con-info" id="re">
-        <form action="${pageContext.request.contextPath}/order/getOder.do" method="post" id="biaodan" onsubmit="return jiesuan()">
+        <form action="${pageContext.request.contextPath}/order/getOder.do" method="post" id="biaodan" onsubmit="return jiesuan1()">
           <c:forEach items="${cart.cartItems}" var="gw">
         <div class="info-top">
 
         </div>
         <div class="info-mid">
-            <input type="checkbox" id="check${gw.product.pid}"  name="hobby" class="mid-ipt f-l" onclick="subzongjia(${gw.product.pid})" value="${gw.product.pid}"/>
+            <%--<input type="checkbox" id="check${gw.product.pid}"  name="hobby" class="mid-ipt f-l" onclick="subzongjia(${gw.product.pid})" value="${gw.product.pid}"/>--%>
             <div class="mid-tu f-l">
                 <a href="#"><img src="${pageContext.request.contextPath}/${gw.product.pimage}"width="100" height="100" /></a>
             </div>
@@ -328,7 +335,7 @@
             </div>
             <div class="mid-sl f-l">
                 <a href="JavaScript:;" class="sl-left" onclick="subnumber(${gw.product.pid})" >-</a>
-                <input type="number" value="${gw.proCount}" min="1" maxlength="2" id="proCount${gw.product.pid}"/>
+                <input type="number" value="${gw.proCount}" min="1" maxlength="2" id="proCount${gw.product.pid}" />
                 <input type="hidden" value="${gw.product.pid}" id="pid"/>
                 <a href="JavaScript:;" class="sl-right" onclick="addnumber(${gw.product.pid})"  >+</a>
             </div>
@@ -352,8 +359,8 @@
     <div class="cart-con-footer">
 
         <div class="quanxuan f-l">
-            <input type="checkbox" id="all"  name="hobbys"></input>
-            <span >全选</span>
+            <%--<input type="checkbox" id="all"  name="hobbys"></input>
+            <span >全选</span>--%>
             <a href="#" onclick="clearcart()">清空购物车</a>
 
 
@@ -363,13 +370,13 @@
                 <p>合计（不含运费）</p>
 
                 <p class="jshj-p2" id="zonge" >
-                    ￥：<span id="subtotal">0</span>
+                    ￥：<span id="subtotal">${cart.subTotal}</span>
                     <input type="hidden" id="sbt" value="${cart.subTotal}">
                 </p>
 
             </div>
 
-            <button class="js-a1 f-l" onclick="jiesuan()"  >确认下单</button>
+            <button class="js-a1 f-l" onclick="jiesuan1()"  >确认下单</button>
             </form>
             <div style="clear:both;"></div>
         </div>

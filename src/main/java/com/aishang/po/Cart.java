@@ -33,7 +33,6 @@ public class Cart {
             subTotal= (subTotal-oldproCount*cartItem.getProduct().getMarket_price()) + cartItem.getTotal();
         }else {
             cartItems.put(pid,cartItem);
-
             subTotal= subTotal + cartItem.getTotal();
         }
 
@@ -53,7 +52,7 @@ public class Cart {
         subTotal=subTotal-cartItems.get(pid).getTotal();
        cartItems.remove(pid);
     }
-/*清空购物车里所有的购物信息*/
+    /*清空购物车里所有的购物信息*/
     public void clearItem(){
         subTotal=0;
         cartItems.clear();
