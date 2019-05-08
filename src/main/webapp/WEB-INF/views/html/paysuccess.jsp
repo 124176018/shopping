@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>支付界面</title>
+<title>支付成功</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/shopping-mall-index.css" />
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jQuery.js"></script>
@@ -19,7 +19,7 @@
     <div class="zl-header">
     	<div class="zl-hd w1200">
         	<p class="hd-p1 f-l">
-            	Hi!您好，欢迎来到宅客微购，请登录  <a href="注册.html">【免费注册】</a>
+            	Hi!您好，欢迎来到宅客微购，请登录  <a href="${pageContext.request.contextPath}/注册.html">【免费注册】</a>
             </p>
         	<p class="hd-p2 f-r">
             	<a href="${pageContext.request.contextPath}/index.html">返回首页 (个人中心)</a><span>|</span>
@@ -37,9 +37,9 @@
             	<a href="${pageContext.request.contextPath}/index.html" title="中林logo"><img src="${pageContext.request.contextPath}/images/zl2-01.gif" /></a>
             </div>
         	<div class="shangjia f-l">
-            	<a href="${pageContext.request.contextPath}/JavaScript:;" class="shangjia-a1">[ 切换城市 ]</a>
+            	<%--<a href="${pageContext.request.contextPath}/JavaScript:;" class="shangjia-a1">[ 切换城市 ]</a>--%>
             	<a href="${pageContext.request.contextPath}/JavaScript:;" class="shangjia-a2">商家入口</a>
-                <div class="select-city">
+               <%-- <div class="select-city">
         	<div class="sl-city-top">
             	<p class="f-l">切换城市</p>
                 <a class="close-select-city f-r" href="${pageContext.request.contextPath}/JavaScript:;">
@@ -58,7 +58,7 @@
                 <dl>
                 	<dt>新疆</dt>
                     <dd>
-                    	<a href="${pageContext.request.contextPath}/JavaScript:;">齐乌鲁木</a>
+                    	<a href=${pageContext.request.contextPath}/"JavaScript:;">齐乌鲁木</a>
                     </dd>
                     <div style="clear:both;"></div>
                 </dl>
@@ -84,7 +84,7 @@
                     <div style="clear:both;"></div>
                 </dl>
             </div>
-        </div>
+        </div>--%>
             </div>
             <div style="clear:both;"></div>
         </div>
@@ -105,97 +105,32 @@
     </div>
     
     <!--内容开始-->
-    <div class="payment-interface w1200">
-    	<div class="pay-info">
-        	<div class="info-tit">
-            	<h3>选择银行</h3>
-            </div>
-            <ul class="pay-yh">
-            	<li>
-                	<input type="checkbox" value="" name="hobby"></input>
-                    <img src="${pageContext.request.contextPath}/images/jiangheng.gif" />
-                	<div style="clear:both;"></div>
-                </li>
-                <li>
-                	<input type="checkbox" value="" name="hobby"></input>
-                    <img src="${pageContext.request.contextPath}/images/jiangheng.gif" />
-                	<div style="clear:both;"></div>
-                </li>
-                <li>
-                	<input type="checkbox" value="" name="hobby"></input>
-                    <img src="${pageContext.request.contextPath}/images/jiangheng.gif" />
-                	<div style="clear:both;"></div>
-                </li>
-                <li style="border-right:0; width:298px;">
-                	<input type="checkbox" value="" name="hobby"></input>
-                    <img src="${pageContext.request.contextPath}/images/jiangheng.gif" />
-                	<div style="clear:both;"></div>
-                </li>
-            	<li>
-                	<input type="checkbox" value="" name="hobby"></input>
-                    <img src="${pageContext.request.contextPath}/images/jiangheng.gif" />
-                	<div style="clear:both;"></div>
-                </li>
-                <li>
-                	<input type="checkbox" value="" name="hobby"></input>
-                    <img src="${pageContext.request.contextPath}/images/jiangheng.gif" />
-                	<div style="clear:both;"></div>
-                </li>
-                <li>
-                	<input type="checkbox" value="" name="hobby"></input>
-                    <img src="${pageContext.request.contextPath}/images/jiangheng.gif" />
-                	<div style="clear:both;"></div>
-                </li>
-                <li style="border-right:0; width:298px;">
-                	<input type="checkbox" value="" name="hobby"></input>
-                    <img src="${pageContext.request.contextPath}/images/jiangheng.gif" />
-                	<div style="clear:both;"></div>
-                </li>
-            	<li style="border-bottom:0;">
-                	<input type="checkbox" value="" name="hobby"></input>
-                    <img src="${pageContext.request.contextPath}/images/jiangheng.gif" />
-                	<div style="clear:both;"></div>
-                </li>
-                <li style="border-bottom:0;">
-                	<input type="checkbox" value="" name="hobby"></input>
-                    <img src="${pageContext.request.contextPath}/images/jiangheng.gif" />
-                	<div style="clear:both;"></div>
-                </li>
-                <li style="border-bottom:0;">
-                	<input type="checkbox" value="" name="hobby"></input>
-                    <img src="${pageContext.request.contextPath}/images/jiangheng.gif" />
-                	<div style="clear:both;"></div>
-                </li>
-                <li style="border-right:0;border-bottom:0; width:298px;">
-                	<input type="checkbox" value="" name="hobby"></input>
-                    <img src="${pageContext.request.contextPath}/images/jiangheng.gif" />
-                	<div style="clear:both;"></div>
-                </li>
+    <div class="payment w1200">
+    	<div class="payment-hd">
+        	<h3 class="success">支付成功</h3>
+        </div>
+
+        <c:forEach items="${ordersExt.orderitemExtList}" var="orderitem">
+        <div class="payment-bd">
+        	<dl class="dl-hd">
+            	<dt><img src="${pageContext.request.contextPath}/${orderitem.product.pimage}" width="123" height="122" /></dt>
+                <dd>
+                	<h3>${orderitem.product.pname}</h3>
+                    <P>${orderitem.product.pdesc}</P>
+                </dd>
                 <div style="clear:both;"></div>
+            </dl>
+            <ul class="ul-bd">
+            	<li><span>包邮</span><p></p></li>
+            	<li><span>价格</span><p><i>¥${orderitem.subtotal}</i></p></li>
+            	<li><span>收货信息</span><p>${ordersExt.addr}-${ordersExt.name}-${ordersExt.phone}</p></li>
+            	<li><span>成交时间</span><p>${ordersExt.ordertime}</p></li>
+            	<li><span>订单号</span><p>${ordersExt.oid}</p></li>
             </ul>
         </div>
-    	<div class="pay-info">
-        	<div class="info-tit">
-            	<h3>输入卡号</h3>
-            </div>
-            <div class="pay-kahao">
-            	<input type="text" placeholder="请输入银行卡号或支付宝账号"/>
-                <p>输入正确</p>
-            </div>
-        </div>
-    	<div class="pay-info">
-        	<div class="info-tit">
-            	<h3>输入密码</h3>
-            </div>
-            <div class="pay-mima">
-            	<p class="mima-p1">你在安全的环境中，请放心使用！</p>
-                <div class="mima-ipt">
-                	<p>支付宝或银行卡密码：</p>
-                    <input type="text" style="border-left:1px solid #E5E5E5;" /><input type="text" /><input type="text" /><input type="text" /><input type="text" /><input type="text" />
-                    <span>请输入6位数字支付密码</span>
-                </div>
-                <a href="${pageContext.request.contextPath}/order/payNow.do?oid=${oid}"><button class="mima-btn">立即支付</button></a>
-            </div>
+        </c:forEach>
+        <div class="payment-ft">
+        	<button class="btn2">我的订单</button>
         </div>
     </div>
     
@@ -218,7 +153,7 @@
             </li>
         	<li>
             	<div class="ft-tu1">
-                	<a href="JavaScript:;"><img src="${pageContext.request.contextPath}/images/zl2-88.gif" /></a>
+                	<a href="${pageContext.request.contextPath}/JavaScript:;"><img src="${pageContext.request.contextPath}/images/zl2-88.gif" /></a>
                 </div>
                 <h3><a href="${pageContext.request.contextPath}/JavaScript:;">专业专攻</a></h3>
                 <P>我们只专注于建筑行业的信息服务</P>
@@ -227,7 +162,7 @@
             	<div class="ft-tu1">
                 	<a href="${pageContext.request.contextPath}/JavaScript:;"><img src="${pageContext.request.contextPath}/images/zl2-89.gif" /></a>
                 </div>
-                <h3><a href="${pageContext.request.contextPath}/JavaScript:;">注册有礼</a></h3>
+                <h3><a href="JavaScript:;">注册有礼</a></h3>
                 <P>随时随地注册有大礼包</P>
             </li>
         	<li>
@@ -246,7 +181,7 @@
                     <dd>
                     	<a href="${pageContext.request.contextPath}/6-1服务协议.html">购物流程</a>
                     	<a href="${pageContext.request.contextPath}/6-1服务协议.html">在线支付</a>
-                    	<a href=${pageContext.request.contextPath}/"6-1服务协议.html">投诉与建议</a>
+                    	<a href="${pageContext.request.contextPath}/6-1服务协议.html">投诉与建议</a>
                     </dd>
                 </dl>
             	<dl>

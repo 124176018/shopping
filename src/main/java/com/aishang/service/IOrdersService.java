@@ -1,8 +1,5 @@
 package com.aishang.service;
-import com.aishang.po.Cities;
-import com.aishang.po.OrderItem;
-import com.aishang.po.Orders;
-import com.aishang.po.User;
+import com.aishang.po.*;
 
 import java.util.List;
 
@@ -16,7 +13,10 @@ public interface IOrdersService {
     public int updateAddr(User user);
     /*查询更改后的用户信息*/
     public User findUserByUid(Integer uid);
-
+/*创建订单*/
     void creatOrder(Orders orders,List<OrderItem> orderItems);
 
+   OrdersExt findOrderByOid(Integer oid);
+
+    void changeState(OrdersExt ordersExt);
 }

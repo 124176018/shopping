@@ -1,9 +1,6 @@
 package com.aishang.dao;
 
-import com.aishang.po.Cities;
-import com.aishang.po.OrderItem;
-import com.aishang.po.Orders;
-import com.aishang.po.User;
+import com.aishang.po.*;
 
 import java.util.List;
 
@@ -14,5 +11,9 @@ public interface OrdersMapper {
     public User findUserByUid(Integer uid);
     void newOrder(Orders orders);
     void newOrderitem(OrderItem orderItem);
+    /*根据订单ID查询订单详情*/
+    OrdersExt findOrderByOid(Integer oid);
+    /*根据订单ID修改订单状态*/
+    void changeState(OrdersExt ordersExt);
 
 }

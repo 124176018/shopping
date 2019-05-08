@@ -1,6 +1,6 @@
 package com.aishang.dao;
 
-import com.aishang.po.Category;
+
 import com.aishang.po.CategoryExt;
 
 

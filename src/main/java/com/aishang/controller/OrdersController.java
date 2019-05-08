@@ -68,7 +68,7 @@ public class OrdersController {
     }
 
     @RequestMapping("creatOrder.do")
-    public String creatOrder(Orders orders,User user){
+    public String creatOrder(Orders orders,User user,Model model){
         /*添加邮寄地址用户信息到Orders表里*/
         User userByUid = ordersService.findUserByUid(user.getUid());
         orders.setName( userByUid.getName());
@@ -79,8 +79,6 @@ public class OrdersController {
         orders.setOrdertime(date);
         /*设置订单状态0---未付款*/
         orders.setState(0);
-
-
         Cart cart = (Cart) session.getAttribute("cart");
         /*封装OrderItem信息*/
         List<OrderItem> orderItemList = new ArrayList<>();
@@ -93,11 +91,21 @@ public class OrdersController {
         }
         /*调用Service,创建订单*/
         ordersService.creatOrder(orders,orderItemList);
+        model.addAttribute("oid",orders.getOid());
         /*清除购物车*/
         session.removeAttribute("cart");
         return "pay";
     }
-
+@RequestMapping("payNow.do")
+    public String payNow(Integer oid,Model model){
+        /*根据OID查询订单*/
+    OrdersExt ordersExt = ordersService.findOrderByOid(oid);
+      /*修改订单状态*/
+    ordersExt.setState(1);
+    ordersService.changeState(ordersExt);
+    model.addAttribute("ordersExt",ordersExt);
+    return "paysuccess";
+}
 
 
 }

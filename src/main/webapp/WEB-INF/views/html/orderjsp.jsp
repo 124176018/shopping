@@ -191,8 +191,8 @@
 
 <!--内容开始-->
 <div class="payment-interface w1200" >
-    <form action="${pageContext.request.contextPath}/order/creatOrder.do" method="post">
-        <input type="hidden" name="uid" value="${su.uid}">
+
+
     <div class="pay-info">
         <div class="info-tit">
             <h3>选择收货地址</h3>
@@ -234,7 +234,8 @@
             <p class="p6" style="width:178px;">金额（元）</p>
             <p class="p7">配送方式</p>
         </div>
-
+        <form action="${pageContext.request.contextPath}/order/creatOrder.do" method="post">
+            <input type="hidden" name="uid" value="${su.uid}">
         <c:forEach items="${sessionScope.cart.cartItems}" var="cartItem" >
         <div class="info-mid">
             <div class="mid-tu f-l">
@@ -264,9 +265,9 @@
             <input type="hidden" name="total" value="${cart.subTotal}">
             <button type="submit" class="btn">提交订单</button>
         </div>
-
+        </form>
     </div>
-    </form>
+
 </div>
 
 <!--底部一块-->

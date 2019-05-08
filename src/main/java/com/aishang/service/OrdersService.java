@@ -1,10 +1,7 @@
 package com.aishang.service;
 
 import com.aishang.dao.OrdersMapper;
-import com.aishang.po.Cities;
-import com.aishang.po.OrderItem;
-import com.aishang.po.Orders;
-import com.aishang.po.User;
+import com.aishang.po.*;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -45,4 +42,14 @@ public class OrdersService implements IOrdersService {
         }
     }
 
+    @Override
+    public OrdersExt findOrderByOid(Integer oid){
+        return ordersMapper.findOrderByOid(oid);
+    }
+
+    @Override
+    public void changeState(OrdersExt ordersExt){
+        ordersMapper.changeState(ordersExt);
+    }
 }
+

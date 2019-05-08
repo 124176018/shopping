@@ -1,6 +1,5 @@
 package com.aishang.dao;
 import com.aishang.po.User;
-import org.apache.ibatis.annotations.Param;
 
 public interface UserMapper {
     /*往user表里添加用户信息的方法*/
