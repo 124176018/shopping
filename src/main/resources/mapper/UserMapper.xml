@@ -15,4 +15,7 @@
     <select id="findUser" parameterType="User" resultType="User">
         SELECT * FROM user WHERE username= #{username} and password=#{password}
     </select>
+    <update id="changeperson" parameterType="User">
+         update user set name = #{name},email=#{email},phone =#{phone},password=#{password} where uid = #{uid}
+    </update>
 </mapper>

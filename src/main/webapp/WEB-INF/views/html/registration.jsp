@@ -147,13 +147,22 @@
 <div class="zl-header">
     <div class="zl-hd w1200">
         <p class="hd-p1 f-l">
-
-           Hi!您好，欢迎来到宅客微购，请登录 <a href="${pageContext.request.contextPath}/注册.html">【免费注册】</a>
+            <c:if test="${su!=null}" >
+        <p class="hd-p1 f-l">
+            Hi!您好，欢迎来到宅客微购  <a href="JavaScript:">【${su.username}】</a>
+        </p>
+        </c:if>
+        <c:if test="${su==null}">
+            <p class="hd-p1 f-l">
+                Hi!您好，欢迎来到宅客微购<a href="${pageContext.request.contextPath}/user/getRegistration.do">【注册】</a>
+            </p>
+        </c:if>
         </p>
         <p class="hd-p2 f-r">
-            <a href="${pageContext.request.contextPath}/index.html">返回首页 (个人中心)</a><span>|</span>
-            <a href="${pageContext.request.contextPath}/购物车.html">我的购物车</a><span>|</span>
-            <a href="${pageContext.request.contextPath}/我的订单.html">我的订单</a>
+            <a href="${pageContext.request.contextPath}/cate/selectCateName.do">返回首页</a><span>|</span>
+            <a href="${pageContext.request.contextPath}/user/personaldata.do"> 个人中心</a><span>|</span>
+            <a href="${pageContext.request.contextPath}/cart/getCart.do"></a><span>|</span>
+            <a href="${pageContext.request.contextPath}/order/myOrders.do?pageNow=${allProduct.pageNow}&uid=${su.uid}">我的订单</a>
         </p>
         <div style="clear:both;"></div>
     </div>
@@ -166,73 +175,11 @@
             <a href="${pageContext.request.contextPath}/index.html" title="中林logo"><img
                     src="${pageContext.request.contextPath}/images/zl2-01.gif"/></a>
         </div>
-        <div class="shangjia f-l">
-            <a href="${pageContext.request.contextPath}/JavaScript:;" class="shangjia-a1">[ 切换城市 ]</a>
-            <a href="${pageContext.request.contextPath}/JavaScript:;" class="shangjia-a2">商家入口</a>
-            <div class="select-city">
-                <div class="sl-city-top">
-                    <p class="f-l">切换城市</p>
-                    <a class="close-select-city f-r" href="${pageContext.request.contextPath}/JavaScript:;">
-                        <img src="${pageContext.request.contextPath}/images/close-select-city.gif"/>
-                    </a>
-                </div>
-                <div class="sl-city-con">
-                    <p>西北</p>
-                    <dl>
-                        <dt>重庆市</dt>
-                        <dd>
-
-                            <a href="${pageContext.request.contextPath}/JavaScript:;">娇子</a>
-                        </dd>
-                        <div style="clear:both;"></div>
-                    </dl>
-                    <dl>
-                        <dt>新疆</dt>
-                        <dd>
-                            <a href="${pageContext.request.contextPath}/JavaScript:;">齐乌鲁木</a>
-                        </dd>
-                        <div style="clear:both;"></div>
-                    </dl>
-                    <dl>
-                        <dt>甘肃</dt>
-                        <dd>
-                            <a href="${pageContext.request.contextPath}/JavaScript:;">兰州</a>
-                        </dd>
-                        <div style="clear:both;"></div>
-                    </dl>
-                    <dl>
-                        <dt>宁夏</dt>
-                        <dd>
-                            <a href="${pageContext.request.contextPath}/JavaScript:;">银川</a>
-                        </dd>
-                        <div style="clear:both;"></div>
-                    </dl>
-                    <dl>
-                        <dt>青海</dt>
-                        <dd>
-                            <a href="${pageContext.request.contextPath}/JavaScript:;">西宁</a>
-                        </dd>
-                        <div style="clear:both;"></div>
-                    </dl>
-                </div>
-            </div>
-        </div>
         <div style="clear:both;"></div>
     </div>
     <div class="erweima f-r">
         <a href="${pageContext.request.contextPath}/JavaScript:;"><img
                 src="${pageContext.request.contextPath}/images/zl2-04.gif"/></a>
-    </div>
-    <div class="search f-r">
-        <div class="search-info">
-            <input type="text" placeholder="请输入商品名称"/>
-            <button>搜索</button>
-            <div style="clear:both;"></div>
-        </div>
-        <ul class="search-ul">
-            <li><a href="${pageContext.request.contextPath}/JavaScript:;">绿豆</a></li>
-            <div style="clear:both;"></div>
-        </ul>
     </div>
     <div style="clear:both;"></div>
 </div>

@@ -95,13 +95,22 @@
 <div class="zl-header">
     <div class="zl-hd w1200">
         <p class="hd-p1 f-l">
-            Hi!您好，欢迎来到宅客微购<a href="注册.html">【${su.username}】</a>
+            <c:if test="${su!=null}" >
+        <p class="hd-p1 f-l">
+            Hi!您好，欢迎来到宅客微购  <a href="${pageContext.request.contextPath}/注册.html">【${su.username}】</a>
+        </p>
+        </c:if>
+        <c:if test="${su==null}">
+            <p class="hd-p1 f-l">
+                Hi!您好，欢迎来到宅客微购<a href="${pageContext.request.contextPath}/注册.html">【${su.username}】</a>
+            </p>
+        </c:if>
         </p>
         <p class="hd-p2 f-r">
             <a href="${pageContext.request.contextPath}/cate/selectCateName.do">返回首页</a><span>|</span>
-            <a href="index.html"> 个人中心</a><span>|</span>
+            <a href="${pageContext.request.contextPath}/user/personaldata.do"> 个人中心</a><span>|</span>
             <a href="${pageContext.request.contextPath}/cart/getCart.do">我的购物车</a><span>|</span>
-            <a href="我的订单.html">我的订单</a>
+            <a href="${pageContext.request.contextPath}/order/myOrders.do?pageNow=${allProduct.pageNow}&uid=${su.uid}">我的订单</a>
         </p>
         <div style="clear:both;"></div>
     </div>
@@ -112,60 +121,6 @@
     <div class="logo-box f-l">
         <div class="logo f-l">
             <a href="index.html" title="中林logo"><img src="${pageContext.request.contextPath}/images/zl2-01.gif" /></a>
-        </div>
-        <div class="shangjia f-l">
-            <a href="JavaScript:;" class="shangjia-a1">[ 切换城市 ]</a>
-            <a href="JavaScript:;" class="shangjia-a2">商家入口</a>
-            <div class="select-city">
-                <div class="sl-city-top">
-                    <p class="f-l">切换城市</p>
-                    <a class="close-select-city f-r" href="JavaScript:;">
-                        <img src="${pageContext.request.contextPath}/images/close-select-city.gif" />
-                    </a>
-                </div>
-                <div class="sl-city-con">
-                    <p>西北</p>
-                    <dl>
-                        <dt>重庆市</dt>
-                        <dd>
-                            <a href="JavaScript:;">长寿区</a>
-                            <a href="JavaScript:;">娇子</a>
-                        </dd>
-                        <div style="clear:both;"></div>
-                    </dl>
-                    <dl>
-                        <dt>新疆</dt>
-                        <dd>
-                            <a href="JavaScript:;">齐乌鲁木</a>
-                        </dd>
-                        <div style="clear:both;"></div>
-                    </dl>
-                    <dl>
-                        <dt>甘肃</dt>
-                        <dd>
-                            <a href="JavaScript:;">兰州</a>
-                            <a href="JavaScript:;">甘南</a>
-                        </dd>
-                        <div style="clear:both;"></div>
-                    </dl>
-                    <dl>
-                        <dt>宁夏</dt>
-                        <dd>
-                            <a href="JavaScript:;">银川</a>
-                            <a href="JavaScript:;">固原</a>
-                        </dd>
-                        <div style="clear:both;"></div>
-                    </dl>
-                    <dl>
-                        <dt>青海</dt>
-                        <dd>
-                            <a href="JavaScript:;">西宁</a>
-                            <a href="JavaScript:;">海南</a>
-                        </dd>
-                        <div style="clear:both;"></div>
-                    </dl>
-                </div>
-            </div>
         </div>
         <div style="clear:both;"></div>
     </div>
@@ -180,7 +135,7 @@
             <div style="clear:both;"></div>
         </div>
         <ul class="search-ul">
-            <li><a href="JavaScript:;">绿豆</a></li>
+            <li></li>
             <div style="clear:both;"></div>
         </ul>
         </form>

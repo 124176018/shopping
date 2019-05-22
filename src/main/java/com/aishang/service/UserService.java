@@ -25,4 +25,9 @@ public class UserService implements IUserService{
     public User findUser(User user) {
         return userMapper.findUser(user);
     }
+
+    @Override
+    public void changeperson(User user) {
+        userMapper.changeperson(user);
+    }
 }

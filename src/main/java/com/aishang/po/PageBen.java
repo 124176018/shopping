@@ -3,7 +3,7 @@ import java.util.List;
 public class PageBen<T> {
     private List<T> list;
     private  Integer pageNow=1;
-    private  Integer pageSize=10;
+    private  Integer pageSize=5;
     private  Integer pageCount;
     private  Integer totalCount;
 

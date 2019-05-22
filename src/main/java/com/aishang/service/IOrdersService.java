@@ -19,4 +19,6 @@ public interface IOrdersService {
    OrdersExt findOrderByOid(Integer oid);
 
     void changeState(OrdersExt ordersExt);
+    /*查询订单分页*/
+    PageBenForOrder<OrdersExt>findOrders(PageBenForOrder<OrdersExt> pageBenForOrder);
 }

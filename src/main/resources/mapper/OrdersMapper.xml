@@ -71,5 +71,26 @@ select * from user where uid=#{uid}
     <update id="changeState" parameterType="OrdersExt">
         update orders set state = #{state} where oid = #{oid}
     </update>
+  <!--查询某个用户下的订单个数-->
+    <select id="findOrdersCount" parameterType="pageBenForOrder" resultType="int">
+        select count(*)
+        from orders inner join orderitem
+        on orders.oid = orderitem.oid
+        inner join product
+        on orderitem.pid =product.pid
+        where orders.uid= #{uid}
+    </select>
+    <!--查询某个用户下的订单列表-->
+    <select id="findOrdersByUid" parameterType="pageBenForOrder" resultMap="OrderByOid">
+        select *
+        from(select *
+        from orders
+        where orders.uid=#{uid}
+         limit #{startIndex},#{pageSize}) a inner join orderitem
+         on a.oid= orderitem.oid
+         inner join product
+         on orderitem.pid = product.pid
+         ORDER BY a.oid desc
+    </select>
 
 </mapper>

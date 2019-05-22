@@ -20,6 +20,27 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jQuery.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhonglin.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/zhongling2.js"></script>
+    <script type="text/javascript">
+
+        function addCart(pid){
+            var proCount =$("#proCount"+pid);
+            $.ajax({
+                url:"${pageContext.request.contextPath}/cart/addCartItem.do?pid="+pid,
+                type:"get",
+                data:{
+                    proCount:proCount.val()
+                },
+                dateType:"text",
+                success:function (data) {
+
+                        alert("添加购物车成功");
+
+
+                }
+            });
+
+        }
+    </script>
 </head>
 
 <body style="position:relative;">
@@ -27,12 +48,22 @@
 <div class="zl-header">
     <div class="zl-hd w1200">
         <p class="hd-p1 f-l">
-            Hi!您好，欢迎来到宅客微购<a href="${pageContext.request.contextPath}/注册.html">【${su.username}】</a>
+            <c:if test="${su!=null}" >
+        <p class="hd-p1 f-l">
+            Hi!您好，欢迎来到宅客微购  <a href="JavaScript:">【${su.username}】</a>
+        </p>
+        </c:if>
+        <c:if test="${su==null}">
+            <p class="hd-p1 f-l">
+                Hi!您好，欢迎来到宅客微购<a href="${pageContext.request.contextPath}/user/getRegistration.do">【注册】</a>
+            </p>
+        </c:if>
         </p>
         <p class="hd-p2 f-r">
-            <a href="${pageContext.request.contextPath}/index.html">返回首页 (个人中心)</a><span>|</span>
+            <a href="${pageContext.request.contextPath}/cate/selectCateName.do">返回首页</a><span>|</span>
+            <a href="${pageContext.request.contextPath}/user/personaldata.do"> 个人中心</a><span>|</span>
             <a href="${pageContext.request.contextPath}/cart/getCart.do">我的购物车</a><span>|</span>
-            <a href="${pageContext.request.contextPath}/我的订单.html">我的订单</a>
+            <a href="${pageContext.request.contextPath}/order/myOrders.do?pageNow=${allProduct.pageNow}&uid=${su.uid}">我的订单</a>
         </p>
         <div style="clear:both;"></div>
     </div>
@@ -44,130 +75,10 @@
         <div class="logo f-l">
             <a href="${pageContext.request.contextPath}/index.html" title="中林logo"><img src="${pageContext.request.contextPath}/images/zl2-01.gif" /></a>
         </div>
-        <div class="shangjia f-l">
-            <a href="${pageContext.request.contextPath}/JavaScript:;" class="shangjia-a1">[ 切换城市 ]</a>
-            <a href="${pageContext.request.contextPath}/JavaScript:;" class="shangjia-a2">商家入口</a>
-            <div class="select-city">
-                <div class="sl-city-top">
-                    <p class="f-l">切换城市</p>
-                    <a class="close-select-city f-r" href="${pageContext.request.contextPath}/JavaScript:;">
-                        <img src="${pageContext.request.contextPath}/images/close-select-city.gif" />
-                    </a>
-                </div>
-                <div class="sl-city-con">
-                    <p>西北</p>
-                    <dl>
-                        <dt>重庆市</dt>
-                        <dd>
-                            <a href="JavaScript:;">长寿区</a>
-                            <a href="JavaScript:;">巴南区</a>
-                            <a href="JavaScript:;">南岸区</a>
-                            <a href="JavaScript:;">九龙坡区</a>
-                            <a href="JavaScript:;">沙坪坝区</a>
-                            <a href="JavaScript:;">北碚</a>
-                            <a href="JavaScript:;">江北区</a>
-                            <a href="JavaScript:;">渝北区</a>
-                            <a href="JavaScript:;">大渡口区</a>
-                            <a href="JavaScript:;">渝中区</a>
-                            <a href="JavaScript:;">万州</a>
-                            <a href="JavaScript:;">武隆</a>
-                            <a href="JavaScript:;">晏家</a>
-                            <a href="JavaScript:;">长寿湖</a>
-                            <a href="JavaScript:;">云集</a>
-                            <a href="JavaScript:;">华中</a>
-                            <a href="JavaScript:;">林封</a>
-                            <a href="JavaScript:;">双龙</a>
-                            <a href="JavaScript:;">石回</a>
-                            <a href="JavaScript:;">龙凤呈祥</a>
-                            <a href="JavaScript:;">朝天门</a>
-                            <a href="JavaScript:;">中华</a>
-                            <a href="JavaScript:;">玉溪</a>
-                            <a href="JavaScript:;">云烟</a>
-                            <a href="JavaScript:;">红塔山</a>
-                            <a href="JavaScript:;">真龙</a>
-                            <a href="JavaScript:;">天子</a>
-                            <a href="JavaScript:;">娇子</a>
-                        </dd>
-                        <div style="clear:both;"></div>
-                    </dl>
-                    <dl>
-                        <dt>新疆</dt>
-                        <dd>
-                            <a href="JavaScript:;">齐乌鲁木</a>
-                            <a href="JavaScript:;">昌吉</a>
-                            <a href="JavaScript:;">巴音</a>
-                            <a href="JavaScript:;">郭楞</a>
-                            <a href="JavaScript:;">伊犁</a>
-                            <a href="JavaScript:;">阿克苏</a>
-                            <a href="JavaScript:;">喀什</a>
-                            <a href="JavaScript:;">哈密</a>
-                            <a href="JavaScript:;">克拉玛依</a>
-                            <a href="JavaScript:;">博尔塔拉</a>
-                            <a href="JavaScript:;">吐鲁番</a>
-                            <a href="JavaScript:;">和田</a>
-                            <a href="JavaScript:;">石河子</a>
-                            <a href="JavaScript:;">克孜勒苏</a>
-                            <a href="JavaScript:;">阿拉尔</a>
-                            <a href="JavaScript:;">五家渠</a>
-                            <a href="JavaScript:;">图木舒克</a>
-                            <a href="JavaScript:;">库尔勒</a>
-                        </dd>
-                        <div style="clear:both;"></div>
-                    </dl>
-                    <dl>
-                        <dt>甘肃</dt>
-                        <dd>
-                            <a href="JavaScript:;">兰州</a>
-                            <a href="JavaScript:;">天水</a>
-                            <a href="JavaScript:;">巴音</a>
-                            <a href="JavaScript:;">白银</a>
-                            <a href="JavaScript:;">庆阳</a>
-                            <a href="JavaScript:;">平凉</a>
-                            <a href="JavaScript:;">酒泉</a>
-                            <a href="JavaScript:;">张掖</a>
-                            <a href="JavaScript:;">武威</a>
-                            <a href="JavaScript:;">定西</a>
-                            <a href="JavaScript:;">金昌</a>
-                            <a href="JavaScript:;">陇南</a>
-                            <a href="JavaScript:;">临夏</a>
-                            <a href="JavaScript:;">嘉峪关</a>
-                            <a href="JavaScript:;">甘南</a>
-                        </dd>
-                        <div style="clear:both;"></div>
-                    </dl>
-                    <dl>
-                        <dt>宁夏</dt>
-                        <dd>
-                            <a href="JavaScript:;">银川</a>
-                            <a href="JavaScript:;">吴忠</a>
-                            <a href="JavaScript:;">石嘴山</a>
-                            <a href="JavaScript:;">中卫</a>
-                            <a href="JavaScript:;">固原</a>
-                        </dd>
-                        <div style="clear:both;"></div>
-                    </dl>
-                    <dl>
-                        <dt>青海</dt>
-                        <dd>
-                            <a href="JavaScript:;">西宁</a>
-                            <a href="JavaScript:;">海西</a>
-                            <a href="JavaScript:;">海北</a>
-                            <a href="JavaScript:;">果洛</a>
-                            <a href="JavaScript:;">海东</a>
-                            <a href="JavaScript:;">黄南</a>
-                            <a href="JavaScript:;">玉树</a>
-                            <a href="JavaScript:;">海南</a>
-                        </dd>
-                        <div style="clear:both;"></div>
-                    </dl>
-                </div>
-            </div>
-        </div>
-        <div style="clear:both;"></div>
     </div>
-    <div class="erweima f-r">
+   <%-- <div class="erweima f-r">
         <a href="JavaScript:;"><img src="${pageContext.request.contextPath}/images/zl2-04.gif" /></a>
-    </div>
+    </div>--%>
     <div class="search f-r">
         <form action="${pageContext.request.contextPath}/cate/doproducts.do?cid=${allProduct.cid}&csid=${allProduct.csid}" method="post">
             <div class="search-info">
@@ -182,6 +93,7 @@
     </div>
     <div style="clear:both;"></div>
 </div>
+
 
 <!--nav-->
 <div class="nav-box">
@@ -240,7 +152,7 @@
                 <div class="dt-qie-con f-l">
                     <ul qie-xiao="">
                         <c:forEach items="${dproduct.productImage}" var="ioo">
-                        <li class="current"><a href="#"><img src="${pageContext.request.contextPath}/${ioo.thumbnail}" width="60" height="60"/></a></li>
+                        <li class="current"><a href="#"><img src="http://localhost:80/manager/${ioo.thumbnail}"width="60" height="60"></a></li>
                     </c:forEach>
 
                         <div style="clear:both;"></div>
@@ -264,7 +176,7 @@
                     <dt>宅购价</dt>
                     <dd>
                         <p class="p1">
-                            <span class="sp1">¥17.50</span><span class="sp2">29.50</span>
+                            <span class="sp1">¥${dproduct.market_price}</span>
                         </p>
                         <p class="p2">
                             <span class="sp1"><img src="${pageContext.request.contextPath}/images/dt-ifm-sp1-img.gif" />5分</span><span class="sp2">共有 2 条评价</span>
@@ -281,48 +193,16 @@
                 </dd>
                 <div style="clear:both;"></div>
             </dl>
-            <dl class="dt-ifm-box1">
-                <dt>送时</dt>
-                <dd>
-                    <select>
-                        <option>请选择配送日期</option>
-                        <option>2015-8-31</option>
-                        <option>2015-8-32</option>
-                    </select>
-                    <select>
-                        <option>请选择配送时段</option>
-                        <option>上午</option>
-                        <option>下午</option>
-                    </select>
-                    <p>每天会有4个时间段统一配送，还有一个加急送，如果提前两天预定，还可以享受折扣哦！</p>
-                </dd>
-                <div style="clear:both;"></div>
-            </dl>
-            <dl class="dt-ifm-box2">
-                <dt>送至</dt>
-                <dd>
-                    <select>
-                        <option>新疆   乌鲁木齐</option>
-                        <option>新疆   乌鲁</option>
-                        <option>新疆   木齐</option>
-                    </select>
-                    <span>请选择配送地址</span>
-                </dd>
-                <div style="clear:both;"></div>
-            </dl>
             <dl class="dt-ifm-box3">
                 <dt>数量</dt>
                 <dd>
-                    <a class="box3-left" href="JavaScript:;">-</a>
-                    <input type="text" value="1">
-                    <a class="box3-right" href="JavaScript:;">+</a>
+                    <input type="number" id="proCount${pid}" name="proCount"value="1" class="md-l-l f-l" ap="" min="1">
                 </dd>
                 <div style="clear:both;"></div>
             </dl>
             <div class="dt-ifm-box4">
                 <button class="btn1">立即购买</button>
-                <button class="btn2">加入购物车</button>
-                <button class="btn3">收藏</button>
+                <button class="btn2" onclick="addCart(${pid})" >加入购物车</button>
             </div>
         </div>
 
@@ -437,7 +317,7 @@
 
                 <ul class="if2-tu4">
                     <c:forEach items="${dproduct.productImage}" var="imm">
-                    <li><img src="${pageContext.request.contextPath}/${imm.image}"/></li>
+                    <li><img src="http://localhost:80/manager/${imm.thumbnail}"width="359" height="360"></li>
                     </c:forEach>
                     <div style="clear:both;"></div>
                 </ul>

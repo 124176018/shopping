@@ -25,11 +25,12 @@ public class CartController {
 
     @RequestMapping("getCart.do")
     public String getCart() {
+
         return "cart";
     }
 
     @RequestMapping("addCartItem.do")
-    public void addCartItem(HttpServletRequest request, CartItem cartItem, Integer pid, HttpServletResponse response) throws IOException {
+    public String addCartItem(HttpServletRequest request, CartItem cartItem, Integer pid, HttpServletResponse response) throws IOException {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
         ProductImageExt product = productService.findProduct(pid);
@@ -45,7 +46,8 @@ public class CartController {
             cart1.addCartItem(cartItem);
 
         }
-        out.print("yes");
+       /* out.print("yes");*/
+        return "redirect:/order/getOder.do";
     }
 
     /*加数量*/

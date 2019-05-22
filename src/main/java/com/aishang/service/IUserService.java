@@ -9,5 +9,7 @@ public interface IUserService {
     User findUserByName(String username);
     /*根据查询user表验证是否存在这个用户用于登录验证*/
     User findUser(User user);
+    /*修改个人信息*/
+    void changeperson(User user);
 
 }

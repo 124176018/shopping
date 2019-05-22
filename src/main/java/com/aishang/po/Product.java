@@ -10,7 +10,7 @@ public class Product {
     private String pdesc;
     private String pdate;
     private Integer csid;
-    private Integer pstate;
+    private String pstate;
     private String pimage;
 
     public String getPimage() {
@@ -77,11 +77,11 @@ public class Product {
         this.csid = csid;
     }
 
-    public Integer getPstate() {
+    public String getPstate() {
         return pstate;
     }
 
-    public void setPstate(Integer pstate) {
+    public void setPstate(String pstate) {
         this.pstate = pstate;
     }
 

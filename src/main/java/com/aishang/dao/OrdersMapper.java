@@ -15,5 +15,9 @@ public interface OrdersMapper {
     OrdersExt findOrderByOid(Integer oid);
     /*根据订单ID修改订单状态*/
     void changeState(OrdersExt ordersExt);
+    /*查询用户下的订单数*/
+    Integer findOrdersCount(PageBenForOrder<OrdersExt> pageBenForOrder);
+    /*查询某个用户下的订单列表*/
+    List<OrdersExt> findOrdersByUid(PageBenForOrder<OrdersExt> pageBenForOrder);
 
 }

@@ -61,5 +61,16 @@ public class UserController {
         }
 
     }
+    @RequestMapping("personaldata.do")
+    /*修改用户信息*/
+    public String personaldata(){
+        return  "personaldata";
+    }
+    @RequestMapping("upperson.do")
+    public String upperson(User user){
+       userService.changeperson(user);
+        return "login";
+    }
+
 
 }

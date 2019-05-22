@@ -51,5 +51,14 @@ public class OrdersService implements IOrdersService {
     public void changeState(OrdersExt ordersExt){
         ordersMapper.changeState(ordersExt);
     }
+
+    @Override
+    public PageBenForOrder<OrdersExt> findOrders(PageBenForOrder<OrdersExt> pageBenForOrder) {
+        Integer ordersCount = ordersMapper.findOrdersCount(pageBenForOrder);
+        pageBenForOrder.setTotalCount(ordersCount);
+        List<OrdersExt> ordersByUid = ordersMapper.findOrdersByUid(pageBenForOrder);
+        pageBenForOrder.setList(ordersByUid);
+        return pageBenForOrder;
+    }
 }
 

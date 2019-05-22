@@ -96,6 +96,12 @@ public class OrdersController {
         session.removeAttribute("cart");
         return "pay";
     }
+    /*去付款*/
+    @RequestMapping("gotopay.do")
+    public String gotopay(Integer oid,Model model){
+      model.addAttribute("oid",oid);
+        return "pay";
+    }
 @RequestMapping("payNow.do")
     public String payNow(Integer oid,Model model){
         /*根据OID查询订单*/
@@ -106,6 +112,33 @@ public class OrdersController {
     model.addAttribute("ordersExt",ordersExt);
     return "paysuccess";
 }
+@RequestMapping("myOrders.do")
+    public String myOrders(PageBenForOrder<OrdersExt> pageBenForOrder,Model model){
+    if(session.getAttribute("su")==null){
+        return "redirect:/user/getlogin.do";
+    }
+    /*调用Service执行分页*/
+    pageBenForOrder = ordersService.findOrders(pageBenForOrder);
+    model.addAttribute("pageBenForOrder",pageBenForOrder);
+    return "myorders";
+}
+/*确认收货*/
+    @RequestMapping("confirmProduct")
+    public void confirmProduct(Integer oid,HttpServletResponse response) throws IOException {
+        OrdersExt ordersExt = ordersService.findOrderByOid(oid);
+        ordersExt.setState(3);
+        ordersService.changeState(ordersExt);
+        PrintWriter out = response.getWriter();
+        out.print("yes");
 
-
+    }
+    /*提醒发货*/
+@RequestMapping("tixingset")
+    public void tixingset(Integer oid,HttpServletResponse response) throws IOException {
+    OrdersExt ordersExt = ordersService.findOrderByOid(oid);
+    ordersExt.setState(0);
+    ordersService.changeState(ordersExt);
+    PrintWriter out = response.getWriter();
+    out.print("yes");
+}
 }

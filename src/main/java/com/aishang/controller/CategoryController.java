@@ -28,6 +28,8 @@ public class CategoryController {
         model.addAttribute("allProduct", pageBenForCate);
         model.addAttribute("listcateNameseconds",allCateName);
         session.setAttribute("allProduct",pageBenForCate);
+        session.setAttribute("allCateName",allCateName);
+        session.setAttribute("listcateNameseconds",allCateName);
         return "index";
     }
 }
