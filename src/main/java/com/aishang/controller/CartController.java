@@ -2,13 +2,9 @@ package com.aishang.controller;
 
 import com.aishang.po.*;
 import com.aishang.service.ProductService;
-import net.sf.json.JSONArray;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import sun.text.normalizer.NormalizerBase;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -31,7 +27,7 @@ public class CartController {
 
     @RequestMapping("addCartItem.do")
     public String addCartItem(HttpServletRequest request, CartItem cartItem, Integer pid, HttpServletResponse response) throws IOException {
-        PrintWriter out = response.getWriter();
+        /*PrintWriter out = response.getWriter();*/
         HttpSession session = request.getSession();
         ProductImageExt product = productService.findProduct(pid);
         cartItem.setProduct(product);
@@ -65,42 +61,42 @@ public class CartController {
             Cart cart = (Cart) session.getAttribute("cart");
             cart.updateCartItemCount(pid, proCount);
             double newSubTotal = cart.getSubTotal();
-            return newSubTotal+"";
+            return newSubTotal+ "";
     };
     /*减数量*/
     @RequestMapping("upCartItemsub.do")
     @ResponseBody
     public String upCartItemsub(Integer pid,Integer proCount) throws IOException {
         if (proCount > 1) {
-            proCount=proCount-1;
+            proCount = proCount - 1;
         }
-        System.out.println(proCount+"减后商品数量");
-        System.out.println(pid+"减的商品PID");
+        System.out.println(proCount + "减后商品数量");
+        System.out.println(pid + "减的商品PID");
             Cart cart = (Cart)session.getAttribute("cart");
-            cart.updateCartItemCount(pid,proCount);
+            cart.updateCartItemCount(pid, proCount);
             double subSubTotal = cart.getSubTotal();
             System.out.println(subSubTotal);
-            return subSubTotal+"";
+            return subSubTotal + "";
     };
     /*删除购物车里的购物项*/
     @RequestMapping("emptyCart.do")
-    public void emptyCart(HttpServletRequest request ,HttpServletResponse response ,Integer pid) throws IOException {
+    public void emptyCart(HttpServletRequest request, HttpServletResponse response, Integer pid) throws IOException {
         HttpSession session = request.getSession();
         PrintWriter out = response.getWriter();
-            Cart cart = (Cart)session.getAttribute("cart");
+            Cart cart = (Cart) session.getAttribute("cart");
             cart.emptyCartItem(pid);
-            session.setAttribute("cart",cart);
+            session.setAttribute("cart", cart);
             out.print("yes");
 
     }
     /*清空购物车所有的购物信息*/
     @RequestMapping("clearCart.do")
-    public void clearCart(HttpServletRequest request ,HttpServletResponse response) throws IOException {
+    public void clearCart(HttpServletRequest request, HttpServletResponse response) throws IOException {
         HttpSession session = request.getSession();
         PrintWriter out = response.getWriter();
-        Cart cart = (Cart)session.getAttribute("cart");
+        Cart cart = (Cart) session.getAttribute("cart");
         cart.clearItem();
-        session.setAttribute("cart",cart);
+        session.setAttribute("cart", cart);
         out.print("yes");
 
     }

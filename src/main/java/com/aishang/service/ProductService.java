@@ -20,8 +20,6 @@ public class ProductService implements IProductService {
         pageBenForCate.setTotalCount(allCount);/*总条数赋值*/
         List<ProductExt> allProduct = productMapper.findAllProduct(pageBenForCate);
         pageBenForCate.setList(allProduct);
-
-
     }
 
     @Override
