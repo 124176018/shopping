@@ -17,7 +17,7 @@ import java.io.PrintWriter;
 public class CartController {
     @Resource
     private ProductService productService;
-    /*添加商品到购物车*/
+    /*添加商品到购物车000099990009999*/
 
     @RequestMapping("getCart.do")
     public String getCart() {
