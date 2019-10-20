@@ -1,4 +1,5 @@
 package com.aishang.po;
+
 public class ProductExt extends Product {
     private CategoryExt categories;
 

@@ -24,7 +24,7 @@ public class CartItem {
     }
 
     public double getTotal() {
-        return product.getMarket_price()* proCount;
+        return product.getMarket_price() * proCount;
     }
 
     public void setTotal(double total) {

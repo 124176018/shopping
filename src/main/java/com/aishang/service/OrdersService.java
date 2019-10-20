@@ -6,10 +6,12 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
+
 @Service
 public class OrdersService implements IOrdersService {
     @Resource
     private OrdersMapper ordersMapper;
+
     @Override
     public List<Cities> findUserAddr(Integer parent_area_code) {
         return ordersMapper.findUserAddr(parent_area_code);
@@ -34,7 +36,7 @@ public class OrdersService implements IOrdersService {
     public void creatOrder(Orders orders, List<OrderItem> orderItems) {
         ordersMapper.newOrder(orders);
         /*创建订单项*/
-        for (OrderItem orderItem: orderItems){
+        for (OrderItem orderItem : orderItems) {
             /*循环创建订单项*/
             /*为orderItem赋值*/
             orderItem.setOid(orders.getOid());
@@ -43,12 +45,12 @@ public class OrdersService implements IOrdersService {
     }
 
     @Override
-    public OrdersExt findOrderByOid(Integer oid){
+    public OrdersExt findOrderByOid(Integer oid) {
         return ordersMapper.findOrderByOid(oid);
     }
 
     @Override
-    public void changeState(OrdersExt ordersExt){
+    public void changeState(OrdersExt ordersExt) {
         ordersMapper.changeState(ordersExt);
     }
 

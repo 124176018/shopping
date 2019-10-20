@@ -1,11 +1,13 @@
 package com.aishang.po;
+
 import java.util.List;
+
 public class PageBen<T> {
     private List<T> list;
-    private  Integer pageNow=1;
-    private  Integer pageSize=5;
-    private  Integer pageCount;
-    private  Integer totalCount;
+    private Integer pageNow = 1;
+    private Integer pageSize = 5;
+    private Integer pageCount;
+    private Integer totalCount;
 
 
     public Integer getPageNow() {
@@ -43,24 +45,23 @@ public class PageBen<T> {
     public void setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         /*计算pageCount*/
-        if (totalCount%pageSize==0){
-            pageCount=totalCount/pageSize;
-        }else{
-            pageCount=totalCount/pageSize+1;
+        if (totalCount % pageSize == 0) {
+            pageCount = totalCount / pageSize;
+        } else {
+            pageCount = totalCount / pageSize + 1;
         }
         /*计算pageNow*/
-        if (pageNow>pageCount){
-            pageNow=pageCount;
+        if (pageNow > pageCount) {
+            pageNow = pageCount;
         }
-        if (pageNow<0){
-            pageNow=1;
+        if (pageNow < 0) {
+            pageNow = 1;
         }
     }
 
     public Integer getStartIndex() {
-        return (getPageNow()-1)*pageSize>0?(getPageNow()-1)*pageSize:0;
+        return (getPageNow() - 1) * pageSize > 0 ? (getPageNow() - 1) * pageSize : 0;
     }
-
 
 
 }

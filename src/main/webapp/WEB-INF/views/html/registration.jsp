@@ -5,8 +5,8 @@
   Time: 15:52
   To change this template use File | Settings | File Templates.
 --%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -70,20 +70,31 @@
                 }
             })
             /*判断手机号是否符合规则*/
-            $("#phone").blur(function () {
+            /* $("#phone").blur(function () {
+                 var phone = $("#phone").val();
+                 var msg1 = $("#msg1");
+                 var sbb = $("#sbb");
+                 var myreg = /^((0?1[358]\d{9})|((0(10|2[1-3]|[3-9]\d{2}))?[1-9]\d{6,7}))$/;
+                 if (myreg.test(phone)) {
+                     msg1.html("<span  color='red' class='dui'>可以使用</span >");
+                     sbb.attr("disabled", false);
+
+                 } else {
+                     msg1.html("<span  color='blue' class='cuo'>请输入正确的手机号</span >");
+                     sbb.attr("disabled", true);
+                 }
+
+             })*/
+            $("#hpone").blur(function () {
                 var phone = $("#phone").val();
-                var msg1 = $("#msg1");
-                var sbb = $("#sbb");
                 var myreg = /^((0?1[358]\d{9})|((0(10|2[1-3]|[3-9]\d{2}))?[1-9]\d{6,7}))$/;
-                if (myreg.test(phone)) {
-                    msg1.html("<span  color='red' class='dui'>可以使用</span >");
-                    sbb.attr("disabled", false);
-
+                var flag = myreg.test(phone);
+                if (flag) {
+                    $("#hpone").css("border", "");
                 } else {
-                    msg1.html("<span  color='blue' class='cuo'>请输入正确的手机号</span >");
-                    sbb.attr("disabled", true);
+                    $("#hpone").css("border", "1px solid red");
                 }
-
+                return flag;
             })
             /*判断俩吃密码是否一致*/
             $("#password1").blur(function dopassword() {
@@ -147,9 +158,9 @@
 <div class="zl-header">
     <div class="zl-hd w1200">
         <p class="hd-p1 f-l">
-            <c:if test="${su!=null}" >
+            <c:if test="${su!=null}">
         <p class="hd-p1 f-l">
-            Hi!您好，欢迎来到宅客微购  <a href="JavaScript:">【${su.username}】</a>
+            Hi!您好，欢迎来到宅客微购 <a href="JavaScript:">【${su.username}】</a>
         </p>
         </c:if>
         <c:if test="${su==null}">

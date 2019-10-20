@@ -14,5 +14,5 @@ public class ProductImageExt extends Product {
         this.productImage = productImage;
     }
 
-   
+
 }

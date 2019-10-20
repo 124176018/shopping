@@ -28,39 +28,41 @@ public class OrdersController {
     private OrdersService ordersService;
     @Resource
     private HttpSession session;
+
     /*查询user表切割Addr地址
-    * 查询省市表查询出所有的省*/
+     * 查询省市表查询出所有的省*/
     @RequestMapping("getOder.do")
     public String getOder() {
-        if(session.getAttribute("su")==null){
+        if (session.getAttribute("su") == null) {
             return "redirect:/user/getlogin.do";
         }
-            User  useraddr = (User) session.getAttribute("su");
-            if(useraddr!=null){
-                String[] addrsplit = useraddr.getAddr().split("-");
-                session.setAttribute("a",addrsplit[0]);
-                session.setAttribute("b",addrsplit[1]);
-                session.setAttribute("c",addrsplit[2]);
-                List<Cities> userAddr = ordersService.findUserAddr(1);
-                session.setAttribute("userAddr",userAddr);
+        User useraddr = (User) session.getAttribute("su");
+        if (useraddr != null) {
+            String[] addrsplit = useraddr.getAddr().split("-");
+            session.setAttribute("a", addrsplit[0]);
+            session.setAttribute("b", addrsplit[1]);
+            session.setAttribute("c", addrsplit[2]);
+            List<Cities> userAddr = ordersService.findUserAddr(1);
+            session.setAttribute("userAddr", userAddr);
 
-            }
-            return "orderjsp";
+        }
+        return "orderjsp";
 
 
     }
-/*返回JSON数据源城市给前台JSP页面省市联动*/
-    @RequestMapping(value="/getOder1.do",produces = {"text/html;charset=utf-8"})
+
+    /*返回JSON数据源城市给前台JSP页面省市联动*/
+    @RequestMapping(value = "/getOder1.do", produces = {"text/html;charset=utf-8"})
     @ResponseBody
     public String getOder1(Integer parent_area_code) {
         List<Cities> userCity = ordersService.findUserCity(parent_area_code);
-    return JSONArray.fromObject(userCity).toString();
+        return JSONArray.fromObject(userCity).toString();
     }
 
-    @RequestMapping(value="/getNewAddr.do",produces = {"text/html;charset=utf-8"})
+    @RequestMapping(value = "/getNewAddr.do", produces = {"text/html;charset=utf-8"})
     @ResponseBody
-    public String getNewAddr(User user,String add1,String add2 ,String add3){
-        user.setAddr(add1+"-"+add2+"-"+add3);
+    public String getNewAddr(User user, String add1, String add2, String add3) {
+        user.setAddr(add1 + "-" + add2 + "-" + add3);
         ordersService.updateAddr(user);
         User userByUid = ordersService.findUserByUid(user.getUid());
         System.out.println(JSONArray.fromObject(userByUid).toString());
@@ -68,10 +70,10 @@ public class OrdersController {
     }
 
     @RequestMapping("creatOrder.do")
-    public String creatOrder(Orders orders,User user,Model model){
+    public String creatOrder(Orders orders, User user, Model model) {
         /*添加邮寄地址用户信息到Orders表里*/
         User userByUid = ordersService.findUserByUid(user.getUid());
-        orders.setName( userByUid.getName());
+        orders.setName(userByUid.getName());
         orders.setPhone(userByUid.getPhone());
         orders.setAddr(userByUid.getAddr());
         /*设置时间*/
@@ -82,7 +84,7 @@ public class OrdersController {
         Cart cart = (Cart) session.getAttribute("cart");
         /*封装OrderItem信息*/
         List<OrderItem> orderItemList = new ArrayList<>();
-        for (CartItem cartItem: cart.getCartItems()) {
+        for (CartItem cartItem : cart.getCartItems()) {
             OrderItem orderItem = new OrderItem();
             orderItem.setPid(cartItem.getProduct().getPid());
             orderItem.setSubtotal(cart.getSubTotal());
@@ -90,41 +92,45 @@ public class OrdersController {
             orderItemList.add(orderItem);
         }
         /*调用Service,创建订单*/
-        ordersService.creatOrder(orders,orderItemList);
-        model.addAttribute("oid",orders.getOid());
+        ordersService.creatOrder(orders, orderItemList);
+        model.addAttribute("oid", orders.getOid());
         /*清除购物车*/
         session.removeAttribute("cart");
         return "pay";
     }
+
     /*去付款*/
     @RequestMapping("gotopay.do")
-    public String gotopay(Integer oid,Model model){
-      model.addAttribute("oid",oid);
+    public String gotopay(Integer oid, Model model) {
+        model.addAttribute("oid", oid);
         return "pay";
     }
-@RequestMapping("payNow.do")
-    public String payNow(Integer oid,Model model){
+
+    @RequestMapping("payNow.do")
+    public String payNow(Integer oid, Model model) {
         /*根据OID查询订单*/
-    OrdersExt ordersExt = ordersService.findOrderByOid(oid);
-      /*修改订单状态*/
-    ordersExt.setState(1);
-    ordersService.changeState(ordersExt);
-    model.addAttribute("ordersExt",ordersExt);
-    return "paysuccess";
-}
-@RequestMapping("myOrders.do")
-    public String myOrders(PageBenForOrder<OrdersExt> pageBenForOrder,Model model){
-    if(session.getAttribute("su")==null){
-        return "redirect:/user/getlogin.do";
+        OrdersExt ordersExt = ordersService.findOrderByOid(oid);
+        /*修改订单状态*/
+        ordersExt.setState(1);
+        ordersService.changeState(ordersExt);
+        model.addAttribute("ordersExt", ordersExt);
+        return "paysuccess";
     }
-    /*调用Service执行分页*/
-    pageBenForOrder = ordersService.findOrders(pageBenForOrder);
-    model.addAttribute("pageBenForOrder",pageBenForOrder);
-    return "myorders";
-}
-/*确认收货*/
+
+    @RequestMapping("myOrders.do")
+    public String myOrders(PageBenForOrder<OrdersExt> pageBenForOrder, Model model) {
+        if (session.getAttribute("su") == null) {
+            return "redirect:/user/getlogin.do";
+        }
+        /*调用Service执行分页*/
+        pageBenForOrder = ordersService.findOrders(pageBenForOrder);
+        model.addAttribute("pageBenForOrder", pageBenForOrder);
+        return "myorders";
+    }
+
+    /*确认收货*/
     @RequestMapping("confirmProduct")
-    public void confirmProduct(Integer oid,HttpServletResponse response) throws IOException {
+    public void confirmProduct(Integer oid, HttpServletResponse response) throws IOException {
         OrdersExt ordersExt = ordersService.findOrderByOid(oid);
         ordersExt.setState(3);
         ordersService.changeState(ordersExt);
@@ -132,13 +138,14 @@ public class OrdersController {
         out.print("yes");
 
     }
+
     /*提醒发货*/
-@RequestMapping("tixingset")
-    public void tixingset(Integer oid,HttpServletResponse response) throws IOException {
-    OrdersExt ordersExt = ordersService.findOrderByOid(oid);
-    ordersExt.setState(0);
-    ordersService.changeState(ordersExt);
-    PrintWriter out = response.getWriter();
-    out.print("yes");
-}
+    @RequestMapping("tixingset")
+    public void tixingset(Integer oid, HttpServletResponse response) throws IOException {
+        OrdersExt ordersExt = ordersService.findOrderByOid(oid);
+        ordersExt.setState(0);
+        ordersService.changeState(ordersExt);
+        PrintWriter out = response.getWriter();
+        out.print("yes");
+    }
 }

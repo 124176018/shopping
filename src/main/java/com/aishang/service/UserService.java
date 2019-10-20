@@ -1,11 +1,13 @@
 package com.aishang.service;
+
 import com.aishang.dao.UserMapper;
 import com.aishang.po.User;
 import org.springframework.stereotype.Service;
+
 import javax.annotation.Resource;
 
 @Service("userService")
-public class UserService implements IUserService{
+public class UserService implements IUserService {
     @Resource
     private UserMapper userMapper;
 

@@ -1,7 +1,7 @@
 package com.aishang.po;
 
 public class OrderitemExt extends OrderItem {
- private Product product;
+    private Product product;
 
     public Product getProduct() {
         return product;
